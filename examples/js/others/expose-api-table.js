@@ -1,7 +1,7 @@
 /* eslint max-len: 0 */
 /* eslint no-alert: 0 */
 import React from 'react';
-import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
+import { BootstrapTable, TableHeaderColumn } from 'tm-react-bootstrap-table';
 
 const products = [];
 

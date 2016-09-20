@@ -1,7 +1,7 @@
 /* eslint max-len: 0 */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
+import { BootstrapTable, TableHeaderColumn } from 'tm-react-bootstrap-table';
 require('../../customMultiSelect.css');
 
 const products = [];

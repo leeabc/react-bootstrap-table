@@ -1,5 +1,5 @@
 import React from 'react';
-import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
+import { BootstrapTable, TableHeaderColumn } from 'tm-react-bootstrap-table';
 
 export default class RemoteSearch extends React.Component {
   constructor(props) {
