@@ -40,12 +40,12 @@ gulp.task('prod', ['umdBuild'], function() {
     .pipe(babel())
     .pipe(gulp.dest('./lib'));
   // build the css
-  gulp.src('./css/react-bootstrap-table.css')
-    .pipe(concatCss("./react-bootstrap-table.min.css"))
+  gulp.src('./css/tm-react-bootstrap-table.css')
+    .pipe(concatCss("./tm-react-bootstrap-table.min.css"))
     .pipe(cssmin())
     .pipe(gulp.dest('./dist'));
-  gulp.src(['./css/react-bootstrap-table.css', './css/toastr.css'])
-    .pipe(concatCss('./react-bootstrap-table-all.min.css'))
+  gulp.src(['./css/tm-react-bootstrap-table.css', './css/toastr.css'])
+    .pipe(concatCss('./tm-react-bootstrap-table-all.min.css'))
     .pipe(cssmin())
     .pipe(gulp.dest('./dist'));
 });
@@ -87,53 +87,3 @@ gulp.task('example-server', function() {
   });
 
 });
-
-// TODO: consider dropping browserify and just use webpack
-//------------
-// DEMO
-// -----------
-// gulp.task("dev", function() {
-//   watching = true;
-//   buildDemoCode();
-// });
-
-// function buildDemoCode() {
-//   demo = true;
-//   browserifing("./demo/js/demo.js", "demo.bundle.js", "./demo/js");
-// }
-
-// function browserifing(main, bundleName, dest) {
-//   var b = browserify({
-//     entries: [main],
-//     transform: ["babelify"],
-//     cache: {},
-//     debug: true,
-//     packageCache: {},
-//     fullPaths: true,
-//   });
-//
-//   if (demo)
-//     b = b.require(require.resolve('./src/index.js'), {
-//       expose: 'react-bootstrap-table'
-//     });
-//
-//   if (watching) {
-//     b = watchify(b);
-//     b.on('update', function() {
-//       bundle(b, bundleName, dest);
-//     });
-//   }
-//   bundle(b, bundleName, dest);
-// }
-
-// function bundle(b, bundleName, dest) {
-//   b.bundle()
-//     .on('error', function(err) {
-//       console.log(err.message);
-//     })
-//     .on('end', function() {
-//       console.log("building success.");
-//     })
-//     .pipe(source(bundleName))
-//     .pipe(gulp.dest(dest));
-// }

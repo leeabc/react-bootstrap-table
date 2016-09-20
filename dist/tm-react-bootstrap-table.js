@@ -54,13 +54,14 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
 	'use strict';
 
-	Object.defineProperty(exports, '__esModule', {
+	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	exports.TableHeaderColumn = exports.BootstrapTable = undefined;
 
 	var _BootstrapTable = __webpack_require__(1);
 
@@ -70,36 +71,32 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _TableHeaderColumn2 = _interopRequireDefault(_TableHeaderColumn);
 
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 	if (typeof window !== 'undefined') {
-	  window.BootstrapTable = _BootstrapTable2['default'];
-	  window.TableHeaderColumn = _TableHeaderColumn2['default'];
+	  window.BootstrapTable = _BootstrapTable2.default;
+	  window.TableHeaderColumn = _TableHeaderColumn2.default;
 	}
-	exports.BootstrapTable = _BootstrapTable2['default'];
-	exports.TableHeaderColumn = _TableHeaderColumn2['default'];
+	exports.BootstrapTable = _BootstrapTable2.default;
+	exports.TableHeaderColumn = _TableHeaderColumn2.default;
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "index.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
 /* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* eslint no-alert: 0 */
-	/* eslint max-len: 0 */
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
 	'use strict';
 
-	Object.defineProperty(exports, '__esModule', {
+	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(2);
 
@@ -121,19 +118,19 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _TableBody2 = _interopRequireDefault(_TableBody);
 
-	var _paginationPaginationList = __webpack_require__(32);
+	var _PaginationList = __webpack_require__(32);
 
-	var _paginationPaginationList2 = _interopRequireDefault(_paginationPaginationList);
+	var _PaginationList2 = _interopRequireDefault(_PaginationList);
 
-	var _toolbarToolBar = __webpack_require__(34);
+	var _ToolBar = __webpack_require__(34);
 
-	var _toolbarToolBar2 = _interopRequireDefault(_toolbarToolBar);
+	var _ToolBar2 = _interopRequireDefault(_ToolBar);
 
 	var _TableFilter = __webpack_require__(35);
 
 	var _TableFilter2 = _interopRequireDefault(_TableFilter);
 
-	var _storeTableDataStore = __webpack_require__(36);
+	var _TableDataStore = __webpack_require__(36);
 
 	var _util = __webpack_require__(37);
 
@@ -145,17 +142,25 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Filter = __webpack_require__(42);
 
-	var BootstrapTable = (function (_Component) {
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /* eslint no-alert: 0 */
+	/* eslint max-len: 0 */
+
+
+	var BootstrapTable = function (_Component) {
 	  _inherits(BootstrapTable, _Component);
 
 	  function BootstrapTable(props) {
-	    var _this = this;
-
 	    _classCallCheck(this, BootstrapTable);
 
-	    _get(Object.getPrototypeOf(BootstrapTable.prototype), 'constructor', this).call(this, props);
+	    var _this = _possibleConstructorReturn(this, (BootstrapTable.__proto__ || Object.getPrototypeOf(BootstrapTable)).call(this, props));
 
-	    this.handleSort = function (order, sortField) {
+	    _this.handleSort = function (order, sortField) {
 	      if (_this.props.options.onSortChange) {
 	        _this.props.options.onSortChange(sortField, order, _this.props);
 	      }
@@ -171,10 +176,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	      });
 	    };
 
-	    this.handlePaginationData = function (page, sizePerPage) {
-	      var _props$options = _this.props.options;
-	      var onPageChange = _props$options.onPageChange;
-	      var pageStartIndex = _props$options.pageStartIndex;
+	    _this.handlePaginationData = function (page, sizePerPage) {
+	      var _this$props$options = _this.props.options;
+	      var onPageChange = _this$props$options.onPageChange;
+	      var pageStartIndex = _this$props$options.pageStartIndex;
 
 	      if (onPageChange) {
 	        onPageChange(page, sizePerPage);
@@ -191,9 +196,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	      // We calculate an offset here in order to properly fetch the indexed data,
 	      // despite the page start index not always being 1
-	      var normalizedPage = undefined;
+	      var normalizedPage = void 0;
 	      if (pageStartIndex !== undefined) {
-	        var offset = Math.abs(_Const2['default'].PAGE_START_INDEX - pageStartIndex);
+	        var offset = Math.abs(_Const2.default.PAGE_START_INDEX - pageStartIndex);
 	        normalizedPage = page + offset;
 	      } else {
 	        normalizedPage = page;
@@ -204,43 +209,43 @@ return /******/ (function(modules) { // webpackBootstrap
 	      _this.setState({ data: result });
 	    };
 
-	    this.handleMouseLeave = function () {
+	    _this.handleMouseLeave = function () {
 	      if (_this.props.options.onMouseLeave) {
 	        _this.props.options.onMouseLeave();
 	      }
 	    };
 
-	    this.handleMouseEnter = function () {
+	    _this.handleMouseEnter = function () {
 	      if (_this.props.options.onMouseEnter) {
 	        _this.props.options.onMouseEnter();
 	      }
 	    };
 
-	    this.handleRowMouseOut = function (row, event) {
+	    _this.handleRowMouseOut = function (row, event) {
 	      if (_this.props.options.onRowMouseOut) {
 	        _this.props.options.onRowMouseOut(row, event);
 	      }
 	    };
 
-	    this.handleRowMouseOver = function (row, event) {
+	    _this.handleRowMouseOver = function (row, event) {
 	      if (_this.props.options.onRowMouseOver) {
 	        _this.props.options.onRowMouseOver(row, event);
 	      }
 	    };
 
-	    this.handleRowClick = function (row) {
+	    _this.handleRowClick = function (row) {
 	      if (_this.props.options.onRowClick) {
 	        _this.props.options.onRowClick(row);
 	      }
 	    };
 
-	    this.handleSelectAllRow = function (e) {
+	    _this.handleSelectAllRow = function (e) {
 	      var isSelected = e.currentTarget.checked;
 	      var keyField = _this.store.getKeyField();
-	      var _props$selectRow = _this.props.selectRow;
-	      var onSelectAll = _props$selectRow.onSelectAll;
-	      var unselectable = _props$selectRow.unselectable;
-	      var selected = _props$selectRow.selected;
+	      var _this$props$selectRow = _this.props.selectRow;
+	      var onSelectAll = _this$props$selectRow.onSelectAll;
+	      var unselectable = _this$props$selectRow.unselectable;
+	      var selected = _this$props$selectRow.selected;
 
 	      var selectedRowKeys = [];
 	      var result = true;
@@ -280,9 +285,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 	    };
 
-	    this.handleShowOnlySelected = function () {
+	    _this.handleShowOnlySelected = function () {
 	      _this.store.ignoreNonSelected();
-	      var result = undefined;
+	      var result = void 0;
 	      if (_this.props.pagination) {
 	        result = _this.store.page(1, _this.state.sizePerPage).get();
 	      } else {
@@ -290,11 +295,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 	      _this.setState({
 	        data: result,
-	        currPage: _this.props.options.pageStartIndex || _Const2['default'].PAGE_START_INDEX
+	        currPage: _this.props.options.pageStartIndex || _Const2.default.PAGE_START_INDEX
 	      });
 	    };
 
-	    this.handleSelectRow = function (row, isSelected, e) {
+	    _this.handleSelectRow = function (row, isSelected, e) {
 	      var result = true;
 	      var currSelected = _this.store.getSelectedRowKeys();
 	      var rowKey = row[_this.store.getKeyField()];
@@ -305,7 +310,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 
 	      if (typeof result === 'undefined' || result !== false) {
-	        if (selectRow.mode === _Const2['default'].ROW_SELECT_SINGLE) {
+	        if (selectRow.mode === _Const2.default.ROW_SELECT_SINGLE) {
 	          currSelected = isSelected ? [rowKey] : [];
 	        } else {
 	          if (isSelected) {
@@ -324,7 +329,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 	    };
 
-	    this.handleAddRow = function (newObj) {
+	    _this.handleAddRow = function (newObj) {
 	      var onAddRow = _this.props.options.onAddRow;
 
 	      if (onAddRow) {
@@ -347,7 +352,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      _this._handleAfterAddingRow(newObj);
 	    };
 
-	    this.getPageByRowKey = function (rowKey) {
+	    _this.getPageByRowKey = function (rowKey) {
 	      var sizePerPage = _this.state.sizePerPage;
 
 	      var currentData = _this.store.getCurrentDisplayData();
@@ -362,7 +367,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 	    };
 
-	    this.handleDropRow = function (rowKeys) {
+	    _this.handleDropRow = function (rowKeys) {
 	      var dropRowKeys = rowKeys ? rowKeys : _this.store.getSelectedRowKeys();
 	      // add confirm before the delete action if that option is set.
 	      if (dropRowKeys && dropRowKeys.length > 0) {
@@ -376,7 +381,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 	    };
 
-	    this.handleFilterData = function (filterObj) {
+	    _this.handleFilterData = function (filterObj) {
 	      var onFilterChange = _this.props.options.onFilterChange;
 
 	      if (onFilterChange) {
@@ -385,7 +390,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 
 	      _this.setState({
-	        currPage: _this.props.options.pageStartIndex || _Const2['default'].PAGE_START_INDEX
+	        currPage: _this.props.options.pageStartIndex || _Const2.default.PAGE_START_INDEX
 	      });
 
 	      if (_this.isRemoteDataSource()) {
@@ -403,7 +408,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _this.store.sort(sortObj.order, sortObj.sortField);
 	      }
 
-	      var result = undefined;
+	      var result = void 0;
 
 	      if (_this.props.pagination) {
 	        var sizePerPage = _this.state.sizePerPage;
@@ -420,7 +425,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      });
 	    };
 
-	    this.handleExportCSV = function () {
+	    _this.handleExportCSV = function () {
 	      var result = {};
 
 	      var csvFileName = _this.props.csvFileName;
@@ -434,7 +439,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	      var keys = [];
 	      _this.props.children.map(function (column) {
-	        if (column.props['export'] === true || typeof column.props['export'] === 'undefined' && column.props.hidden === false) {
+	        if (column.props.export === true || typeof column.props.export === 'undefined' && column.props.hidden === false) {
 	          keys.push({
 	            field: column.props.dataField,
 	            format: column.props.csvFormat,
@@ -447,10 +452,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	        csvFileName = csvFileName();
 	      }
 
-	      (0, _csv_export_util2['default'])(result, keys, csvFileName);
+	      (0, _csv_export_util2.default)(result, keys, csvFileName);
 	    };
 
-	    this.handleSearch = function (searchText) {
+	    _this.handleSearch = function (searchText) {
 	      var onSearchChange = _this.props.options.onSearchChange;
 
 	      if (onSearchChange) {
@@ -459,7 +464,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 
 	      _this.setState({
-	        currPage: _this.props.options.pageStartIndex || _Const2['default'].PAGE_START_INDEX
+	        currPage: _this.props.options.pageStartIndex || _Const2.default.PAGE_START_INDEX
 	      });
 
 	      if (_this.isRemoteDataSource()) {
@@ -477,7 +482,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _this.store.sort(sortObj.order, sortObj.sortField);
 	      }
 
-	      var result = undefined;
+	      var result = void 0;
 	      if (_this.props.pagination) {
 	        var sizePerPage = _this.state.sizePerPage;
 
@@ -493,22 +498,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	      });
 	    };
 
-	    this._scrollHeader = function (e) {
+	    _this._scrollHeader = function (e) {
 	      _this.refs.header.refs.container.scrollLeft = e.currentTarget.scrollLeft;
 	    };
 
-	    this._adjustTable = function () {
+	    _this._adjustTable = function () {
 	      _this._adjustHeaderWidth();
 	      _this._adjustHeight();
 	    };
 
-	    this._adjustHeaderWidth = function () {
+	    _this._adjustHeaderWidth = function () {
 	      var header = _this.refs.header.refs.header;
 	      var headerContainer = _this.refs.header.refs.container;
 	      var tbody = _this.refs.body.refs.tbody;
 	      var firstRow = tbody.childNodes[0];
 	      var isScroll = headerContainer.offsetWidth !== tbody.parentNode.offsetWidth;
-	      var scrollBarWidth = isScroll ? _util2['default'].getScrollBarWidth() : 0;
+	      var scrollBarWidth = isScroll ? _util2.default.getScrollBarWidth() : 0;
 	      if (firstRow && _this.store.getDataNum()) {
 	        var cells = firstRow.childNodes;
 	        for (var i = 0; i < cells.length; i++) {
@@ -532,7 +537,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          header.childNodes[i].style.minWidth = result;
 	        }
 	      } else {
-	        _react2['default'].Children.forEach(_this.props.children, function (child, i) {
+	        _react2.default.Children.forEach(_this.props.children, function (child, i) {
 	          if (child.props.width) {
 	            header.childNodes[i].style.width = child.props.width + 'px';
 	            header.childNodes[i].style.minWidth = child.props.width + 'px';
@@ -541,7 +546,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 	    };
 
-	    this._adjustHeight = function () {
+	    _this._adjustHeight = function () {
 	      var height = _this.props.height;
 	      var maxHeight = _this.props.maxHeight;
 
@@ -555,39 +560,40 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 	    };
 
-	    this.isIE = false;
-	    this._attachCellEditFunc();
-	    if (_util2['default'].canUseDOM()) {
-	      this.isIE = document.documentMode;
+	    _this.isIE = false;
+	    _this._attachCellEditFunc();
+	    if (_util2.default.canUseDOM()) {
+	      _this.isIE = document.documentMode;
 	    }
 
-	    this.store = new _storeTableDataStore.TableDataStore(this.props.data.slice());
+	    _this.store = new _TableDataStore.TableDataStore(_this.props.data.slice());
 
-	    this.initTable(this.props);
+	    _this.initTable(_this.props);
 
-	    if (this.filter) {
-	      this.filter.on('onFilterChange', function (currentFilter) {
+	    if (_this.filter) {
+	      _this.filter.on('onFilterChange', function (currentFilter) {
 	        _this.handleFilterData(currentFilter);
 	      });
 	    }
 
-	    if (this.props.selectRow && this.props.selectRow.selected) {
-	      var copy = this.props.selectRow.selected.slice();
-	      this.store.setSelectedRowKey(copy);
+	    if (_this.props.selectRow && _this.props.selectRow.selected) {
+	      var copy = _this.props.selectRow.selected.slice();
+	      _this.store.setSelectedRowKey(copy);
 	    }
-	    var currPage = _Const2['default'].PAGE_START_INDEX;
-	    if (typeof this.props.options.page !== 'undefined') {
-	      currPage = this.props.options.page;
-	    } else if (typeof this.props.options.pageStartIndex !== 'undefined') {
-	      currPage = this.props.options.pageStartIndex;
+	    var currPage = _Const2.default.PAGE_START_INDEX;
+	    if (typeof _this.props.options.page !== 'undefined') {
+	      currPage = _this.props.options.page;
+	    } else if (typeof _this.props.options.pageStartIndex !== 'undefined') {
+	      currPage = _this.props.options.pageStartIndex;
 	    }
 
-	    this.state = {
-	      data: this.getTableData(),
+	    _this.state = {
+	      data: _this.getTableData(),
 	      currPage: currPage,
-	      sizePerPage: this.props.options.sizePerPage || _Const2['default'].SIZE_PER_PAGE_LIST[0],
-	      selectedRowKeys: this.store.getSelectedRowKeys()
+	      sizePerPage: _this.props.options.sizePerPage || _Const2.default.SIZE_PER_PAGE_LIST[0],
+	      selectedRowKeys: _this.store.getSelectedRowKeys()
 	    };
+	    return _this;
 	  }
 
 	  _createClass(BootstrapTable, [{
@@ -597,8 +603,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	      var keyField = props.keyField;
 
+
 	      var isKeyFieldDefined = typeof keyField === 'string' && keyField.length;
-	      _react2['default'].Children.forEach(props.children, function (column) {
+	      _react2.default.Children.forEach(props.children, function (column) {
 	        if (column.props.isKey) {
 	          if (keyField) {
 	            throw 'Error. Multiple key column be detected in TableHeaderColumn.';
@@ -653,13 +660,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 
 	      if (pagination) {
-	        var page = undefined;
-	        var sizePerPage = undefined;
+	        var page = void 0;
+	        var sizePerPage = void 0;
 	        if (this.store.isChangedPage()) {
 	          sizePerPage = this.state.sizePerPage;
 	          page = this.state.currPage;
 	        } else {
-	          sizePerPage = options.sizePerPage || _Const2['default'].SIZE_PER_PAGE_LIST[0];
+	          sizePerPage = options.sizePerPage || _Const2.default.SIZE_PER_PAGE_LIST[0];
 	          page = options.page || 1;
 	        }
 	        result = this.store.page(page, sizePerPage).get();
@@ -673,7 +680,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: function getColumnsDescription(_ref) {
 	      var children = _ref.children;
 
-	      return _react2['default'].Children.map(children, function (column, i) {
+	      return _react2.default.Children.map(children, function (column, i) {
 	        return {
 	          name: column.props.dataField,
 	          align: column.props.dataAlign,
@@ -693,7 +700,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          text: column.props.children,
 	          sortFunc: column.props.sortFunc,
 	          sortFuncExtraData: column.props.sortFuncExtraData,
-	          'export': column.props['export'],
+	          export: column.props.export,
 	          index: i
 	        };
 	      });
@@ -704,6 +711,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      this.initTable(nextProps);
 	      var options = nextProps.options;
 	      var selectRow = nextProps.selectRow;
+
 
 	      this.store.setData(nextProps.data.slice());
 
@@ -783,7 +791,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	      if (cellEdit) {
 	        this.props.cellEdit.__onCompleteEdit__ = this.handleEditCell.bind(this);
-	        if (cellEdit.mode !== _Const2['default'].CELL_EDIT_NONE) {
+	        if (cellEdit.mode !== _Const2.default.CELL_EDIT_NONE) {
 	          this.props.selectRow.clickToSelect = false;
 	        }
 	      }
@@ -796,6 +804,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * @param  {Object}  [props] Optional. If not given, this.props will be used
 	     * @return {Boolean}
 	     */
+
 	  }, {
 	    key: 'isRemoteDataSource',
 	    value: function isRemoteDataSource(props) {
@@ -817,20 +826,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var isSelectAll = this.isSelectAll();
 	      var sortIndicator = this.props.options.sortIndicator;
 	      if (typeof this.props.options.sortIndicator === 'undefined') sortIndicator = true;
-	      return _react2['default'].createElement(
+	      return _react2.default.createElement(
 	        'div',
-	        { className: (0, _classnames2['default'])('react-bs-table-container', this.props.containerClass),
+	        { className: (0, _classnames2.default)('react-bs-table-container', this.props.containerClass),
 	          style: this.props.containerStyle },
 	        toolBar,
-	        _react2['default'].createElement(
+	        _react2.default.createElement(
 	          'div',
 	          { ref: 'table',
-	            className: (0, _classnames2['default'])('react-bs-table', this.props.tableContainerClass),
+	            className: (0, _classnames2.default)('react-bs-table', this.props.tableContainerClass),
 	            style: _extends({}, style, this.props.tableStyle),
 	            onMouseEnter: this.handleMouseEnter,
 	            onMouseLeave: this.handleMouseLeave },
-	          _react2['default'].createElement(
-	            _TableHeader2['default'],
+	          _react2.default.createElement(
+	            _TableHeader2.default,
 	            {
 	              ref: 'header',
 	              headerContainerClass: this.props.headerContainerClass,
@@ -850,7 +859,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	              isSelectAll: isSelectAll },
 	            this.props.children
 	          ),
-	          _react2['default'].createElement(_TableBody2['default'], { ref: 'body',
+	          _react2.default.createElement(_TableBody2.default, { ref: 'body',
 	            bodyContainerClass: this.props.bodyContainerClass,
 	            tableBodyClass: this.props.tableBodyClass,
 	            style: _extends({}, style, this.props.bodyStyle),
@@ -916,8 +925,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var beforeSaveCell = _props$cellEdit.beforeSaveCell;
 	      var afterSaveCell = _props$cellEdit.afterSaveCell;
 
-	      var fieldName = undefined;
-	      _react2['default'].Children.forEach(this.props.children, function (column, i) {
+	      var fieldName = void 0;
+	      _react2.default.Children.forEach(this.props.children, function (column, i) {
 	        if (i === colIndex) {
 	          fieldName = column.props.dataField;
 	          return false;
@@ -998,7 +1007,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 
 	      this.store.remove(dropRowKeys); // remove selected Row
-	      var result = undefined;
+	      var result = void 0;
 	      if (this.props.pagination) {
 	        var sizePerPage = this.state.sizePerPage;
 
@@ -1027,7 +1036,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    key: 'renderPagination',
 	    value: function renderPagination() {
 	      if (this.props.pagination) {
-	        var dataSize = undefined;
+	        var dataSize = void 0;
 	        if (this.isRemoteDataSource()) {
 	          dataSize = this.props.fetchInfo.dataTotalSize;
 	        } else {
@@ -1036,25 +1045,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	        var options = this.props.options;
 
 	        if (Math.ceil(dataSize / this.state.sizePerPage) <= 1 && this.props.ignoreSinglePage) return null;
-	        return _react2['default'].createElement(
+	        return _react2.default.createElement(
 	          'div',
 	          { className: 'react-bs-table-pagination' },
-	          _react2['default'].createElement(_paginationPaginationList2['default'], {
+	          _react2.default.createElement(_PaginationList2.default, {
 	            ref: 'pagination',
 	            currPage: this.state.currPage,
 	            changePage: this.handlePaginationData,
 	            sizePerPage: this.state.sizePerPage,
-	            sizePerPageList: options.sizePerPageList || _Const2['default'].SIZE_PER_PAGE_LIST,
+	            sizePerPageList: options.sizePerPageList || _Const2.default.SIZE_PER_PAGE_LIST,
 	            pageStartIndex: options.pageStartIndex,
 	            paginationShowsTotal: options.paginationShowsTotal,
-	            paginationSize: options.paginationSize || _Const2['default'].PAGINATION_SIZE,
+	            paginationSize: options.paginationSize || _Const2.default.PAGINATION_SIZE,
 	            remote: this.isRemoteDataSource(),
 	            dataSize: dataSize,
 	            onSizePerPageList: options.onSizePerPageList,
-	            prePage: options.prePage || _Const2['default'].PRE_PAGE,
-	            nextPage: options.nextPage || _Const2['default'].NEXT_PAGE,
-	            firstPage: options.firstPage || _Const2['default'].FIRST_PAGE,
-	            lastPage: options.lastPage || _Const2['default'].LAST_PAGE,
+	            prePage: options.prePage || _Const2.default.PRE_PAGE,
+	            nextPage: options.nextPage || _Const2.default.NEXT_PAGE,
+	            firstPage: options.firstPage || _Const2.default.FIRST_PAGE,
+	            lastPage: options.lastPage || _Const2.default.LAST_PAGE,
 	            hideSizePerPage: options.hideSizePerPage })
 	        );
 	      }
@@ -1072,7 +1081,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	      var enableShowOnlySelected = selectRow && selectRow.showOnlySelected;
 	      if (enableShowOnlySelected || insertRow || deleteRow || search || this.props.exportCSV) {
-	        var columns = undefined;
+	        var columns = void 0;
 	        if (Array.isArray(children)) {
 	          columns = children.map(function (column, r) {
 	            var props = column.props;
@@ -1098,10 +1107,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	            hiddenOnInsert: children.props.hiddenOnInsert
 	          }];
 	        }
-	        return _react2['default'].createElement(
+	        return _react2.default.createElement(
 	          'div',
 	          { className: 'react-bs-table-tool-bar' },
-	          _react2['default'].createElement(_toolbarToolBar2['default'], {
+	          _react2.default.createElement(_ToolBar2.default, {
 	            defaultSearch: this.props.options.defaultSearch,
 	            clearSearch: this.props.options.clearSearch,
 	            searchDelayTime: this.props.options.searchDelayTime,
@@ -1132,7 +1141,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    key: 'renderTableFilter',
 	    value: function renderTableFilter(columns) {
 	      if (this.props.columnFilter) {
-	        return _react2['default'].createElement(_TableFilter2['default'], { columns: columns,
+	        return _react2.default.createElement(_TableFilter2.default, { columns: columns,
 	          rowSelectType: this.props.selectRow.mode,
 	          onFilter: this.handleFilterData });
 	      } else {
@@ -1142,7 +1151,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }, {
 	    key: '_handleAfterAddingRow',
 	    value: function _handleAfterAddingRow(newObj) {
-	      var result = undefined;
+	      var result = void 0;
 	      if (this.props.pagination) {
 	        // if pagination is enabled and insert row be trigger, change to last page
 	        var sizePerPage = this.state.sizePerPage;
@@ -1167,7 +1176,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }]);
 
 	  return BootstrapTable;
-	})(_react.Component);
+	}(_react.Component);
 
 	BootstrapTable.propTypes = {
 	  keyField: _react.PropTypes.string,
@@ -1182,7 +1191,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  pagination: _react.PropTypes.bool,
 	  searchPlaceholder: _react.PropTypes.string,
 	  selectRow: _react.PropTypes.shape({
-	    mode: _react.PropTypes.oneOf([_Const2['default'].ROW_SELECT_NONE, _Const2['default'].ROW_SELECT_SINGLE, _Const2['default'].ROW_SELECT_MULTI]),
+	    mode: _react.PropTypes.oneOf([_Const2.default.ROW_SELECT_NONE, _Const2.default.ROW_SELECT_SINGLE, _Const2.default.ROW_SELECT_MULTI]),
 	    customComponent: _react.PropTypes.func,
 	    bgColor: _react.PropTypes.string,
 	    selected: _react.PropTypes.array,
@@ -1238,11 +1247,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	    onSortChange: _react.PropTypes.func,
 	    onPageChange: _react.PropTypes.func,
 	    onSizePerPageList: _react.PropTypes.func,
-	    onFilterChange: _react2['default'].PropTypes.func,
-	    onSearchChange: _react2['default'].PropTypes.func,
-	    onAddRow: _react2['default'].PropTypes.func,
-	    onExportToCSV: _react2['default'].PropTypes.func,
-	    onCellEdit: _react2['default'].PropTypes.func,
+	    onFilterChange: _react2.default.PropTypes.func,
+	    onSearchChange: _react2.default.PropTypes.func,
+	    onAddRow: _react2.default.PropTypes.func,
+	    onExportToCSV: _react2.default.PropTypes.func,
+	    onCellEdit: _react2.default.PropTypes.func,
 	    noDataText: _react.PropTypes.oneOfType([_react.PropTypes.string, _react.PropTypes.object]),
 	    handleConfirmDeleteRow: _react.PropTypes.func,
 	    prePage: _react.PropTypes.string,
@@ -1275,8 +1284,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	  pagination: false,
 	  searchPlaceholder: undefined,
 	  selectRow: {
-	    mode: _Const2['default'].ROW_SELECT_NONE,
-	    bgColor: _Const2['default'].ROW_SELECT_BG_COLOR,
+	    mode: _Const2.default.ROW_SELECT_NONE,
+	    bgColor: _Const2.default.ROW_SELECT_BG_COLOR,
 	    selected: [],
 	    onSelect: undefined,
 	    onSelectAll: undefined,
@@ -1288,7 +1297,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    customComponent: undefined
 	  },
 	  cellEdit: {
-	    mode: _Const2['default'].CELL_EDIT_NONE,
+	    mode: _Const2.default.CELL_EDIT_NONE,
 	    blurToSave: false,
 	    beforeSaveCell: undefined,
 	    afterSaveCell: undefined
@@ -1328,24 +1337,24 @@ return /******/ (function(modules) { // webpackBootstrap
 	    onRowMouseOver: undefined,
 	    page: undefined,
 	    paginationShowsTotal: false,
-	    sizePerPageList: _Const2['default'].SIZE_PER_PAGE_LIST,
+	    sizePerPageList: _Const2.default.SIZE_PER_PAGE_LIST,
 	    sizePerPage: undefined,
-	    paginationSize: _Const2['default'].PAGINATION_SIZE,
+	    paginationSize: _Const2.default.PAGINATION_SIZE,
 	    hideSizePerPage: false,
 	    onSizePerPageList: undefined,
 	    noDataText: undefined,
 	    handleConfirmDeleteRow: undefined,
-	    prePage: _Const2['default'].PRE_PAGE,
-	    nextPage: _Const2['default'].NEXT_PAGE,
-	    firstPage: _Const2['default'].FIRST_PAGE,
-	    lastPage: _Const2['default'].LAST_PAGE,
+	    prePage: _Const2.default.PRE_PAGE,
+	    nextPage: _Const2.default.NEXT_PAGE,
+	    firstPage: _Const2.default.FIRST_PAGE,
+	    lastPage: _Const2.default.LAST_PAGE,
 	    pageStartIndex: undefined,
 	    searchDelayTime: undefined,
-	    exportCSVText: _Const2['default'].EXPORT_CSV_TEXT,
-	    insertText: _Const2['default'].INSERT_BTN_TEXT,
-	    deleteText: _Const2['default'].DELETE_BTN_TEXT,
-	    saveText: _Const2['default'].SAVE_BTN_TEXT,
-	    closeText: _Const2['default'].CLOSE_BTN_TEXT,
+	    exportCSVText: _Const2.default.EXPORT_CSV_TEXT,
+	    insertText: _Const2.default.INSERT_BTN_TEXT,
+	    deleteText: _Const2.default.DELETE_BTN_TEXT,
+	    saveText: _Const2.default.SAVE_BTN_TEXT,
+	    closeText: _Const2.default.CLOSE_BTN_TEXT,
 	    ignoreEditable: false,
 	    defaultSearch: ''
 	  },
@@ -1357,8 +1366,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  ignoreSinglePage: false
 	};
 
-	exports['default'] = BootstrapTable;
-	module.exports = exports['default'];
+	exports.default = BootstrapTable;
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "BootstrapTable.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
 /* 2 */
@@ -1422,14 +1432,16 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 4 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 	'use strict';
 
-	Object.defineProperty(exports, '__esModule', {
+	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	exports['default'] = {
+	exports.default = {
 	  SORT_DESC: 'desc',
 	  SORT_ASC: 'asc',
 	  SIZE_PER_PAGE: 10,
@@ -1465,27 +1477,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	    CUSTOM: 'CustomFilter'
 	  }
 	};
-	module.exports = exports['default'];
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "Const.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
 /* 5 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
 	'use strict';
 
-	Object.defineProperty(exports, '__esModule', {
+	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(2);
 
@@ -1507,13 +1514,21 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _SelectRowHeaderColumn2 = _interopRequireDefault(_SelectRowHeaderColumn);
 
-	var Checkbox = (function (_Component) {
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Checkbox = function (_Component) {
 	  _inherits(Checkbox, _Component);
 
 	  function Checkbox() {
 	    _classCallCheck(this, Checkbox);
 
-	    _get(Object.getPrototypeOf(Checkbox.prototype), 'constructor', this).apply(this, arguments);
+	    return _possibleConstructorReturn(this, (Checkbox.__proto__ || Object.getPrototypeOf(Checkbox)).apply(this, arguments));
 	  }
 
 	  _createClass(Checkbox, [{
@@ -1529,12 +1544,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }, {
 	    key: 'update',
 	    value: function update(checked) {
-	      _reactDom2['default'].findDOMNode(this).indeterminate = checked === 'indeterminate';
+	      _reactDom2.default.findDOMNode(this).indeterminate = checked === 'indeterminate';
 	    }
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      return _react2['default'].createElement('input', { className: 'react-bs-select-all',
+	      return _react2.default.createElement('input', { className: 'react-bs-select-all',
 	        type: 'checkbox',
 	        checked: this.props.checked,
 	        onChange: this.props.onChange });
@@ -1542,45 +1557,45 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }]);
 
 	  return Checkbox;
-	})(_react.Component);
+	}(_react.Component);
 
-	var TableHeader = (function (_Component2) {
+	var TableHeader = function (_Component2) {
 	  _inherits(TableHeader, _Component2);
 
 	  function TableHeader() {
 	    _classCallCheck(this, TableHeader);
 
-	    _get(Object.getPrototypeOf(TableHeader.prototype), 'constructor', this).apply(this, arguments);
+	    return _possibleConstructorReturn(this, (TableHeader.__proto__ || Object.getPrototypeOf(TableHeader)).apply(this, arguments));
 	  }
 
 	  _createClass(TableHeader, [{
 	    key: 'render',
 	    value: function render() {
-	      var _this = this;
+	      var _this3 = this;
 
-	      var containerClasses = (0, _classnames2['default'])('react-bs-container-header', 'table-header-wrapper', this.props.headerContainerClass);
-	      var tableClasses = (0, _classnames2['default'])('table', 'table-hover', {
+	      var containerClasses = (0, _classnames2.default)('react-bs-container-header', 'table-header-wrapper', this.props.headerContainerClass);
+	      var tableClasses = (0, _classnames2.default)('table', 'table-hover', {
 	        'table-bordered': this.props.bordered,
 	        'table-condensed': this.props.condensed
 	      }, this.props.tableHeaderClass);
 	      var selectRowHeaderCol = null;
 	      if (!this.props.hideSelectColumn) selectRowHeaderCol = this.renderSelectRowHeader();
 	      var i = 0;
-	      return _react2['default'].createElement(
+	      return _react2.default.createElement(
 	        'div',
 	        { ref: 'container', className: containerClasses, style: this.props.style },
-	        _react2['default'].createElement(
+	        _react2.default.createElement(
 	          'table',
 	          { className: tableClasses },
-	          _react2['default'].createElement(
+	          _react2.default.createElement(
 	            'thead',
 	            null,
-	            _react2['default'].createElement(
+	            _react2.default.createElement(
 	              'tr',
 	              { ref: 'header' },
 	              selectRowHeaderCol,
-	              _react2['default'].Children.map(this.props.children, function (elm) {
-	                var _props = _this.props;
+	              _react2.default.Children.map(this.props.children, function (elm) {
+	                var _props = _this3.props;
 	                var sortIndicator = _props.sortIndicator;
 	                var sortName = _props.sortName;
 	                var sortOrder = _props.sortOrder;
@@ -1590,7 +1605,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                var dataSort = _elm$props.dataSort;
 
 	                var sort = dataSort && dataField === sortName ? sortOrder : undefined;
-	                return _react2['default'].cloneElement(elm, { key: i++, onSort: onSort, sort: sort, sortIndicator: sortIndicator });
+	                return _react2.default.cloneElement(elm, { key: i++, onSort: onSort, sort: sort, sortIndicator: sortIndicator });
 	              })
 	            )
 	          )
@@ -1602,20 +1617,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: function renderSelectRowHeader() {
 	      if (this.props.customComponent) {
 	        var CustomComponent = this.props.customComponent;
-	        return _react2['default'].createElement(
-	          _SelectRowHeaderColumn2['default'],
+	        return _react2.default.createElement(
+	          _SelectRowHeaderColumn2.default,
 	          null,
-	          _react2['default'].createElement(CustomComponent, { type: 'checkbox', checked: this.props.isSelectAll,
+	          _react2.default.createElement(CustomComponent, { type: 'checkbox', checked: this.props.isSelectAll,
 	            indeterminate: this.props.isSelectAll === 'indeterminate', disabled: false,
 	            onChange: this.props.onSelectAllRow, rowIndex: 'Header' })
 	        );
-	      } else if (this.props.rowSelectType === _Const2['default'].ROW_SELECT_SINGLE) {
-	        return _react2['default'].createElement(_SelectRowHeaderColumn2['default'], null);
-	      } else if (this.props.rowSelectType === _Const2['default'].ROW_SELECT_MULTI) {
-	        return _react2['default'].createElement(
-	          _SelectRowHeaderColumn2['default'],
+	      } else if (this.props.rowSelectType === _Const2.default.ROW_SELECT_SINGLE) {
+	        return _react2.default.createElement(_SelectRowHeaderColumn2.default, null);
+	      } else if (this.props.rowSelectType === _Const2.default.ROW_SELECT_MULTI) {
+	        return _react2.default.createElement(
+	          _SelectRowHeaderColumn2.default,
 	          null,
-	          _react2['default'].createElement(Checkbox, {
+	          _react2.default.createElement(Checkbox, {
 	            onChange: this.props.onSelectAllRow,
 	            checked: this.props.isSelectAll })
 	        );
@@ -1626,7 +1641,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }]);
 
 	  return TableHeader;
-	})(_react.Component);
+	}(_react.Component);
 
 	TableHeader.propTypes = {
 	  headerContainerClass: _react.PropTypes.string,
@@ -1646,8 +1661,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  customComponent: _react.PropTypes.func
 	};
 
-	exports['default'] = TableHeader;
-	module.exports = exports['default'];
+	exports.default = TableHeader;
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "TableHeader.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
 /* 6 */
@@ -1659,39 +1675,41 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
 	'use strict';
 
-	Object.defineProperty(exports, '__esModule', {
+	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(2);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var SelectRowHeaderColumn = (function (_Component) {
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var SelectRowHeaderColumn = function (_Component) {
 	  _inherits(SelectRowHeaderColumn, _Component);
 
 	  function SelectRowHeaderColumn() {
 	    _classCallCheck(this, SelectRowHeaderColumn);
 
-	    _get(Object.getPrototypeOf(SelectRowHeaderColumn.prototype), 'constructor', this).apply(this, arguments);
+	    return _possibleConstructorReturn(this, (SelectRowHeaderColumn.__proto__ || Object.getPrototypeOf(SelectRowHeaderColumn)).apply(this, arguments));
 	  }
 
 	  _createClass(SelectRowHeaderColumn, [{
 	    key: 'render',
 	    value: function render() {
-	      return _react2['default'].createElement(
+	      return _react2.default.createElement(
 	        'th',
 	        { style: { textAlign: 'center' } },
 	        this.props.children
@@ -1700,33 +1718,28 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }]);
 
 	  return SelectRowHeaderColumn;
-	})(_react.Component);
+	}(_react.Component);
 
 	SelectRowHeaderColumn.propTypes = {
 	  children: _react.PropTypes.node
 	};
-	exports['default'] = SelectRowHeaderColumn;
-	module.exports = exports['default'];
+	exports.default = SelectRowHeaderColumn;
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "SelectRowHeaderColumn.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
 /* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
 	'use strict';
 
-	Object.defineProperty(exports, '__esModule', {
+	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-	var _get = function get(_x3, _x4, _x5) { var _again = true; _function: while (_again) { var object = _x3, property = _x4, receiver = _x5; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x3 = parent; _x4 = property; _x5 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(2);
 
@@ -1752,35 +1765,41 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
 	var isFun = function isFun(obj) {
 	  return obj && typeof obj === 'function';
 	};
 
-	var TableBody = (function (_Component) {
+	var TableBody = function (_Component) {
 	  _inherits(TableBody, _Component);
 
 	  function TableBody(props) {
-	    var _this = this;
-
 	    _classCallCheck(this, TableBody);
 
-	    _get(Object.getPrototypeOf(TableBody.prototype), 'constructor', this).call(this, props);
+	    var _this = _possibleConstructorReturn(this, (TableBody.__proto__ || Object.getPrototypeOf(TableBody)).call(this, props));
 
-	    this.handleRowMouseOut = function (rowIndex, event) {
+	    _this.handleRowMouseOut = function (rowIndex, event) {
 	      var targetRow = _this.props.data[rowIndex];
 	      _this.props.onRowMouseOut(targetRow, event);
 	    };
 
-	    this.handleRowMouseOver = function (rowIndex, event) {
+	    _this.handleRowMouseOver = function (rowIndex, event) {
 	      var targetRow = _this.props.data[rowIndex];
 	      _this.props.onRowMouseOver(targetRow, event);
 	    };
 
-	    this.handleRowClick = function (rowIndex) {
-	      var selectedRow = undefined;
-	      var _props = _this.props;
-	      var data = _props.data;
-	      var onRowClick = _props.onRowClick;
+	    _this.handleRowClick = function (rowIndex) {
+	      var selectedRow = void 0;
+	      var _this$props = _this.props;
+	      var data = _this$props.data;
+	      var onRowClick = _this$props.onRowClick;
 
 	      data.forEach(function (row, i) {
 	        if (i === rowIndex - 1) {
@@ -1790,11 +1809,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	      onRowClick(selectedRow);
 	    };
 
-	    this.handleSelectRow = function (rowIndex, isSelected, e) {
-	      var selectedRow = undefined;
-	      var _props2 = _this.props;
-	      var data = _props2.data;
-	      var onSelectRow = _props2.onSelectRow;
+	    _this.handleSelectRow = function (rowIndex, isSelected, e) {
+	      var selectedRow = void 0;
+	      var _this$props2 = _this.props;
+	      var data = _this$props2.data;
+	      var onSelectRow = _this$props2.onSelectRow;
 
 	      data.forEach(function (row, i) {
 	        if (i === rowIndex - 1) {
@@ -1805,13 +1824,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	      onSelectRow(selectedRow, isSelected, e);
 	    };
 
-	    this.handleSelectRowColumChange = function (e, rowIndex) {
+	    _this.handleSelectRowColumChange = function (e, rowIndex) {
 	      if (!_this.props.selectRow.clickToSelect || !_this.props.selectRow.clickToSelectAndEditCell) {
 	        _this.handleSelectRow(rowIndex + 1, e.currentTarget.checked, e);
 	      }
 	    };
 
-	    this.handleEditCell = function (rowIndex, columnIndex, e) {
+	    _this.handleEditCell = function (rowIndex, columnIndex, e) {
+	      _this.editing = true;
 	      if (_this._isSelectRowDefined()) {
 	        columnIndex--;
 	        if (_this.props.selectRow.hideSelectColumn) columnIndex++;
@@ -1824,29 +1844,31 @@ return /******/ (function(modules) { // webpackBootstrap
 	        }
 	      };
 
-	      if (_this.props.selectRow.clickToSelectAndEditCell && _this.props.cellEdit.mode !== _Const2['default'].CELL_EDIT_DBCLICK) {
+	      if (_this.props.selectRow.clickToSelectAndEditCell && _this.props.cellEdit.mode !== _Const2.default.CELL_EDIT_DBCLICK) {
 	        var selected = _this.props.selectedRowKeys.indexOf(_this.props.data[rowIndex][_this.props.keyField]) !== -1;
 	        _this.handleSelectRow(rowIndex + 1, !selected, e);
 	      }
 	      _this.setState(stateObj);
 	    };
 
-	    this.handleCompleteEditCell = function (newVal, rowIndex, columnIndex) {
+	    _this.handleCompleteEditCell = function (newVal, rowIndex, columnIndex) {
 	      _this.setState({ currEditCell: null });
 	      if (newVal !== null) {
 	        _this.props.cellEdit.__onCompleteEdit__(newVal, rowIndex, columnIndex);
 	      }
 	    };
 
-	    this.state = {
+	    _this.state = {
 	      currEditCell: null
 	    };
+	    _this.editing = false;
+	    return _this;
 	  }
 
 	  _createClass(TableBody, [{
 	    key: 'render',
 	    value: function render() {
-	      var tableClasses = (0, _classnames2['default'])('table', {
+	      var tableClasses = (0, _classnames2.default)('table', {
 	        'table-striped': this.props.striped,
 	        'table-bordered': this.props.bordered,
 	        'table-hover': this.props.hover,
@@ -1856,7 +1878,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var unselectable = this.props.selectRow.unselectable || [];
 	      var isSelectRowDefined = this._isSelectRowDefined();
 	      var tableHeader = this.renderTableHeader(isSelectRowDefined);
-	      var inputType = this.props.selectRow.mode === _Const2['default'].ROW_SELECT_SINGLE ? 'radio' : 'checkbox';
+	      var inputType = this.props.selectRow.mode === _Const2.default.ROW_SELECT_SINGLE ? 'radio' : 'checkbox';
 	      var CustomComponent = this.props.selectRow.customComponent;
 
 	      var tableRows = this.props.data.map(function (data, r) {
@@ -1873,10 +1895,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	              editable = column.editable(fieldValue, data, r, i);
 	            }
 
-	            return _react2['default'].createElement(_TableEditColumn2['default'], {
-	              completeEdit: this.handleCompleteEditCell,
+	            return _react2.default.createElement(_TableEditColumn2.default, {
+	              completeEdit: this.handleCompleteEditCell
 	              // add by bluespring for column editor customize
-	              editable: editable,
+	              , editable: editable,
 	              customEditor: column.customEditor,
 	              format: column.format ? format : false,
 	              key: i,
@@ -1896,8 +1918,8 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	            if (typeof column.format !== 'undefined') {
 	              var formattedValue = column.format(fieldValue, data, column.formatExtraData, r);
-	              if (!_react2['default'].isValidElement(formattedValue)) {
-	                columnChild = _react2['default'].createElement('div', { dangerouslySetInnerHTML: { __html: formattedValue } });
+	              if (!_react2.default.isValidElement(formattedValue)) {
+	                columnChild = _react2.default.createElement('div', { dangerouslySetInnerHTML: { __html: formattedValue } });
 	              } else {
 	                columnChild = formattedValue;
 	                columnTitle = column.columnTitle && formattedValue ? formattedValue.toString() : null;
@@ -1905,8 +1927,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	            } else {
 	              columnTitle = column.columnTitle && fieldValue ? fieldValue.toString() : null;
 	            }
-	            return _react2['default'].createElement(
-	              _TableColumn2['default'],
+	            return _react2.default.createElement(
+	              _TableColumn2.default,
 	              { key: i,
 	                dataAlign: column.align,
 	                className: tdClassName,
@@ -1928,11 +1950,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	        if (isFun(this.props.trClassName)) {
 	          trClassName = this.props.trClassName(data, r);
 	        }
-	        return _react2['default'].createElement(
-	          _TableRow2['default'],
+	        return _react2.default.createElement(
+	          _TableRow2.default,
 	          { isSelected: selected, key: key, className: trClassName,
 	            selectRow: isSelectRowDefined ? this.props.selectRow : undefined,
-	            enableCellEdit: this.props.cellEdit.mode !== _Const2['default'].CELL_EDIT_NONE,
+	            enableCellEdit: this.props.cellEdit.mode !== _Const2.default.CELL_EDIT_NONE,
 	            onRowClick: this.handleRowClick,
 	            onRowMouseOver: this.handleRowMouseOver,
 	            onRowMouseOut: this.handleRowMouseOut,
@@ -1944,28 +1966,30 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }, this);
 
 	      if (tableRows.length === 0) {
-	        tableRows.push(_react2['default'].createElement(
-	          _TableRow2['default'],
+	        tableRows.push(_react2.default.createElement(
+	          _TableRow2.default,
 	          { key: '##table-empty##' },
-	          _react2['default'].createElement(
+	          _react2.default.createElement(
 	            'td',
 	            { colSpan: this.props.columns.length + (isSelectRowDefined ? 1 : 0),
 	              className: 'react-bs-table-no-data' },
-	            this.props.noDataText || _Const2['default'].NO_DATA_TEXT
+	            this.props.noDataText || _Const2.default.NO_DATA_TEXT
 	          )
 	        ));
 	      }
 
-	      return _react2['default'].createElement(
+	      this.editing = false;
+
+	      return _react2.default.createElement(
 	        'div',
 	        { ref: 'container',
-	          className: (0, _classnames2['default'])('react-bs-container-body', this.props.bodyContainerClass),
+	          className: (0, _classnames2.default)('react-bs-container-body', this.props.bodyContainerClass),
 	          style: this.props.style },
-	        _react2['default'].createElement(
+	        _react2.default.createElement(
 	          'table',
 	          { className: tableClasses },
 	          tableHeader,
-	          _react2['default'].createElement(
+	          _react2.default.createElement(
 	            'tbody',
 	            { ref: 'tbody' },
 	            tableRows
@@ -1984,7 +2008,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          minWidth: 30
 	        };
 	        if (!this.props.selectRow.hideSelectColumn) {
-	          selectRowHeader = _react2['default'].createElement('col', { style: style, key: -1 });
+	          selectRowHeader = _react2.default.createElement('col', { style: style, key: -1 });
 	        }
 	      }
 	      var theader = this.props.columns.map(function (column, i) {
@@ -1998,10 +2022,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	          not eq offsetWidth in large column table **/
 	          style.minWidth = width;
 	        }
-	        return _react2['default'].createElement('col', { style: style, key: i, className: column.className });
+	        return _react2.default.createElement('col', { style: style, key: i, className: column.className });
 	      });
 
-	      return _react2['default'].createElement(
+	      return _react2.default.createElement(
 	        'colgroup',
 	        { ref: 'header' },
 	        selectRowHeader,
@@ -2016,15 +2040,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var CustomComponent = arguments.length <= 3 || arguments[3] === undefined ? null : arguments[3];
 	      var rowIndex = arguments.length <= 4 || arguments[4] === undefined ? null : arguments[4];
 
-	      return _react2['default'].createElement(
-	        _TableColumn2['default'],
+	      return _react2.default.createElement(
+	        _TableColumn2.default,
 	        { dataAlign: 'center' },
-	        CustomComponent ? _react2['default'].createElement(CustomComponent, { type: inputType, checked: selected, disabled: disabled,
+	        CustomComponent ? _react2.default.createElement(CustomComponent, { type: inputType, checked: selected, disabled: disabled,
 	          rowIndex: rowIndex,
-	          onChange: function (e) {
+	          onChange: function onChange(e) {
 	            return _this2.handleSelectRowColumChange(e, e.currentTarget.parentElement.parentElement.parentElement.rowIndex);
-	          } }) : _react2['default'].createElement('input', { type: inputType, checked: selected, disabled: disabled,
-	          onChange: function (e) {
+	          } }) : _react2.default.createElement('input', { type: inputType, checked: selected, disabled: disabled,
+	          onChange: function onChange(e) {
 	            return _this2.handleSelectRowColumChange(e, e.currentTarget.parentElement.parentElement.rowIndex);
 	          } })
 	      );
@@ -2032,12 +2056,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }, {
 	    key: '_isSelectRowDefined',
 	    value: function _isSelectRowDefined() {
-	      return this.props.selectRow.mode === _Const2['default'].ROW_SELECT_SINGLE || this.props.selectRow.mode === _Const2['default'].ROW_SELECT_MULTI;
+	      return this.props.selectRow.mode === _Const2.default.ROW_SELECT_SINGLE || this.props.selectRow.mode === _Const2.default.ROW_SELECT_MULTI;
 	    }
 	  }]);
 
 	  return TableBody;
-	})(_react.Component);
+	}(_react.Component);
 
 	TableBody.propTypes = {
 	  data: _react.PropTypes.array,
@@ -2055,30 +2079,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	  tableBodyClass: _react.PropTypes.string,
 	  bodyContainerClass: _react.PropTypes.string
 	};
-	exports['default'] = TableBody;
-	module.exports = exports['default'];
+	exports.default = TableBody;
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "TableBody.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
 /* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
 	'use strict';
 
-	Object.defineProperty(exports, '__esModule', {
+	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _classnames = __webpack_require__(3);
 
@@ -2088,25 +2107,31 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var TableRow = (function (_Component) {
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var TableRow = function (_Component) {
 	  _inherits(TableRow, _Component);
 
 	  function TableRow(props) {
-	    var _this = this;
-
 	    _classCallCheck(this, TableRow);
 
-	    _get(Object.getPrototypeOf(TableRow.prototype), 'constructor', this).call(this, props);
+	    var _this = _possibleConstructorReturn(this, (TableRow.__proto__ || Object.getPrototypeOf(TableRow)).call(this, props));
 
-	    this.rowClick = function (e) {
+	    _this.rowClick = function (e) {
 	      if (e.target.tagName !== 'INPUT' && e.target.tagName !== 'SELECT' && e.target.tagName !== 'TEXTAREA') {
 	        (function () {
 	          var rowIndex = e.currentTarget.rowIndex + 1;
-	          var _props = _this.props;
-	          var selectRow = _props.selectRow;
-	          var unselectableRow = _props.unselectableRow;
-	          var isSelected = _props.isSelected;
-	          var onSelectRow = _props.onSelectRow;
+	          var _this$props = _this.props;
+	          var selectRow = _this$props.selectRow;
+	          var unselectableRow = _this$props.unselectableRow;
+	          var isSelected = _this$props.isSelected;
+	          var onSelectRow = _this$props.onSelectRow;
 
 	          if (selectRow) {
 	            if (selectRow.clickToSelect && !unselectableRow) {
@@ -2130,19 +2155,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 	    };
 
-	    this.rowMouseOut = function (e) {
+	    _this.rowMouseOut = function (e) {
 	      if (_this.props.onRowMouseOut) {
 	        _this.props.onRowMouseOut(e.currentTarget.rowIndex, e);
 	      }
 	    };
 
-	    this.rowMouseOver = function (e) {
+	    _this.rowMouseOver = function (e) {
 	      if (_this.props.onRowMouseOver) {
 	        _this.props.onRowMouseOver(e.currentTarget.rowIndex, e);
 	      }
 	    };
 
-	    this.clickNum = 0;
+	    _this.clickNum = 0;
+	    return _this;
 	  }
 
 	  _createClass(TableRow, [{
@@ -2153,11 +2179,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	        style: {
 	          backgroundColor: this.props.isSelected ? this.props.selectRow.bgColor : null
 	        },
-	        className: (0, _classnames2['default'])(this.props.isSelected ? this.props.selectRow.className : null, this.props.className)
+	        className: (0, _classnames2.default)(this.props.isSelected ? this.props.selectRow.className : null, this.props.className)
 	      };
 
 	      if (this.props.selectRow && (this.props.selectRow.clickToSelect || this.props.selectRow.clickToSelectAndEditCell) || this.props.onRowClick) {
-	        return _react2['default'].createElement(
+	        return _react2.default.createElement(
 	          'tr',
 	          _extends({}, trCss, {
 	            onMouseOver: this.rowMouseOver,
@@ -2166,7 +2192,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          this.props.children
 	        );
 	      } else {
-	        return _react2['default'].createElement(
+	        return _react2.default.createElement(
 	          'tr',
 	          trCss,
 	          this.props.children
@@ -2176,7 +2202,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }]);
 
 	  return TableRow;
-	})(_react.Component);
+	}(_react.Component);
 
 	TableRow.propTypes = {
 	  isSelected: _react.PropTypes.bool,
@@ -2190,30 +2216,27 @@ return /******/ (function(modules) { // webpackBootstrap
 	TableRow.defaultProps = {
 	  onRowClick: undefined
 	};
-	exports['default'] = TableRow;
-	module.exports = exports['default'];
+	exports.default = TableRow;
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "TableRow.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
 /* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
 	'use strict';
 
-	Object.defineProperty(exports, '__esModule', {
+	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
 
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(2);
 
@@ -2223,18 +2246,24 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Const2 = _interopRequireDefault(_Const);
 
-	var TableColumn = (function (_Component) {
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var TableColumn = function (_Component) {
 	  _inherits(TableColumn, _Component);
 
 	  function TableColumn(props) {
-	    var _this = this;
-
 	    _classCallCheck(this, TableColumn);
 
-	    _get(Object.getPrototypeOf(TableColumn.prototype), 'constructor', this).call(this, props);
+	    var _this = _possibleConstructorReturn(this, (TableColumn.__proto__ || Object.getPrototypeOf(TableColumn)).call(this, props));
 
-	    this.handleCellEdit = function (e) {
-	      if (_this.props.cellEdit.mode === _Const2['default'].CELL_EDIT_DBCLICK) {
+	    _this.handleCellEdit = function (e) {
+	      if (_this.props.cellEdit.mode === _Const2.default.CELL_EDIT_DBCLICK) {
 	        if (document.selection && document.selection.empty) {
 	          document.selection.empty();
 	        } else if (window.getSelection) {
@@ -2244,22 +2273,24 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 	      _this.props.onEdit(e.currentTarget.parentElement.rowIndex + 1, e.currentTarget.cellIndex, e);
 	    };
-	  }
 
+	    return _this;
+	  }
 	  /* eslint no-unused-vars: [0, { "args": "after-used" }] */
+
 
 	  _createClass(TableColumn, [{
 	    key: 'shouldComponentUpdate',
 	    value: function shouldComponentUpdate(nextProps, nextState) {
 	      var children = this.props.children;
 
-	      var shouldUpdated = this.props.width !== nextProps.width || this.props.className !== nextProps.className || this.props.hidden !== nextProps.hidden || this.props.dataAlign !== nextProps.dataAlign || typeof children !== typeof nextProps.children || ('' + this.props.onEdit).toString() !== ('' + nextProps.onEdit).toString();
+	      var shouldUpdated = this.props.width !== nextProps.width || this.props.className !== nextProps.className || this.props.hidden !== nextProps.hidden || this.props.dataAlign !== nextProps.dataAlign || (typeof children === 'undefined' ? 'undefined' : _typeof(children)) !== _typeof(nextProps.children) || ('' + this.props.onEdit).toString() !== ('' + nextProps.onEdit).toString();
 
 	      if (shouldUpdated) {
 	        return shouldUpdated;
 	      }
 
-	      if (typeof children === 'object' && children !== null && children.props !== null) {
+	      if ((typeof children === 'undefined' ? 'undefined' : _typeof(children)) === 'object' && children !== null && children.props !== null) {
 	        if (children.props.type === 'checkbox' || children.props.type === 'radio') {
 	          shouldUpdated = shouldUpdated || children.props.type !== nextProps.children.props.type || children.props.checked !== nextProps.children.props.checked || children.props.disabled !== nextProps.children.props.disabled;
 	        } else {
@@ -2289,13 +2320,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	      var opts = {};
 	      if (this.props.cellEdit) {
-	        if (this.props.cellEdit.mode === _Const2['default'].CELL_EDIT_CLICK) {
+	        if (this.props.cellEdit.mode === _Const2.default.CELL_EDIT_CLICK) {
 	          opts.onClick = this.handleCellEdit;
-	        } else if (this.props.cellEdit.mode === _Const2['default'].CELL_EDIT_DBCLICK) {
+	        } else if (this.props.cellEdit.mode === _Const2.default.CELL_EDIT_DBCLICK) {
 	          opts.onDoubleClick = this.handleCellEdit;
 	        }
 	      }
-	      return _react2['default'].createElement(
+	      return _react2.default.createElement(
 	        'td',
 	        _extends({ style: tdStyle,
 	          title: this.props.columnTitle,
@@ -2307,7 +2338,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }]);
 
 	  return TableColumn;
-	})(_react.Component);
+	}(_react.Component);
 
 	TableColumn.propTypes = {
 	  dataAlign: _react.PropTypes.string,
@@ -2322,30 +2353,27 @@ return /******/ (function(modules) { // webpackBootstrap
 	  hidden: false,
 	  className: ''
 	};
-	exports['default'] = TableColumn;
-	module.exports = exports['default'];
+	exports.default = TableColumn;
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "TableColumn.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
 /* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
 	'use strict';
 
-	Object.defineProperty(exports, '__esModule', {
+	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
 
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(2);
 
@@ -2355,25 +2383,31 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Editor2 = _interopRequireDefault(_Editor);
 
-	var _NotificationJs = __webpack_require__(13);
+	var _Notification = __webpack_require__(13);
 
-	var _NotificationJs2 = _interopRequireDefault(_NotificationJs);
+	var _Notification2 = _interopRequireDefault(_Notification);
 
 	var _classnames = __webpack_require__(3);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
-	var TableEditColumn = (function (_Component) {
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var TableEditColumn = function (_Component) {
 	  _inherits(TableEditColumn, _Component);
 
 	  function TableEditColumn(props) {
-	    var _this = this;
-
 	    _classCallCheck(this, TableEditColumn);
 
-	    _get(Object.getPrototypeOf(TableEditColumn.prototype), 'constructor', this).call(this, props);
+	    var _this = _possibleConstructorReturn(this, (TableEditColumn.__proto__ || Object.getPrototypeOf(TableEditColumn)).call(this, props));
 
-	    this.handleKeyPress = function (e) {
+	    _this.handleKeyPress = function (e) {
 	      if (e.keyCode === 13) {
 	        // Pressed ENTER
 	        var value = e.currentTarget.type === 'checkbox' ? _this._getCheckBoxValue(e) : e.currentTarget.value;
@@ -2386,15 +2420,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _this.props.completeEdit(null, _this.props.rowIndex, _this.props.colIndex);
 	      } else if (e.type === 'click' && !_this.props.blurToSave) {
 	        // textarea click save button
-	        var value = e.target.parentElement.firstChild.value;
-	        if (!_this.validator(value)) {
+	        var _value = e.target.parentElement.firstChild.value;
+	        if (!_this.validator(_value)) {
 	          return;
 	        }
-	        _this.props.completeEdit(value, _this.props.rowIndex, _this.props.colIndex);
+	        _this.props.completeEdit(_value, _this.props.rowIndex, _this.props.colIndex);
 	      }
 	    };
 
-	    this.handleBlur = function (e) {
+	    _this.handleBlur = function (e) {
 	      e.stopPropagation();
 	      if (_this.props.blurToSave) {
 	        var value = e.currentTarget.type === 'checkbox' ? _this._getCheckBoxValue(e) : e.currentTarget.value;
@@ -2405,18 +2439,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 	    };
 
-	    this.handleCustomUpdate = function (value) {
+	    _this.handleCustomUpdate = function (value) {
 	      _this.props.completeEdit(value, _this.props.rowIndex, _this.props.colIndex);
 	    };
 
-	    this.timeouteClear = 0;
-	    this.state = {
+	    _this.timeouteClear = 0;
+	    _this.state = {
 	      shakeEditor: false
 	    };
+	    return _this;
 	  }
 
 	  _createClass(TableEditColumn, [{
 	    key: 'validator',
+
 
 	    // modified by iuculanop
 	    // BEGIN
@@ -2426,7 +2462,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      if (ts.props.editable.validator) {
 	        var input = ts.refs.inputRef;
 	        var checkVal = ts.props.editable.validator(value);
-	        var responseType = typeof checkVal;
+	        var responseType = typeof checkVal === 'undefined' ? 'undefined' : _typeof(checkVal);
 	        if (responseType !== 'object' && checkVal !== true) {
 	          valid = false;
 	          ts.refs.notifier.notice('error', checkVal, 'Pressed ESC can cancel');
@@ -2447,12 +2483,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 	      return valid;
 	    }
-
 	    // END
 
 	  }, {
 	    key: 'clearTimeout',
-	    value: (function (_clearTimeout) {
+	    value: function (_clearTimeout) {
 	      function clearTimeout() {
 	        return _clearTimeout.apply(this, arguments);
 	      }
@@ -2462,7 +2497,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      };
 
 	      return clearTimeout;
-	    })(function () {
+	    }(function () {
 	      if (this.timeouteClear !== 0) {
 	        clearTimeout(this.timeouteClear);
 	        this.timeouteClear = 0;
@@ -2493,12 +2528,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	        onBlur: this.handleBlur
 	      };
 	      var fieldValue = this.props.fieldValue;
-
 	      // put placeholder if exist
+
 	      editable.placeholder && (attr.placeholder = editable.placeholder);
 
-	      var editorClass = (0, _classnames2['default'])({ 'animated': shakeEditor, 'shake': shakeEditor });
-	      var cellEditor = undefined;
+	      var editorClass = (0, _classnames2.default)({ 'animated': shakeEditor, 'shake': shakeEditor });
+	      var cellEditor = void 0;
 	      if (customEditor) {
 	        var customEditorProps = _extends({
 	          row: this.props.row
@@ -2508,14 +2543,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	        cellEditor = customEditor.getElement(this.handleCustomUpdate, customEditorProps);
 	      } else {
 	        fieldValue = fieldValue === 0 ? '0' : fieldValue;
-	        cellEditor = (0, _Editor2['default'])(editable, attr, format, editorClass, fieldValue || '');
+	        cellEditor = (0, _Editor2.default)(editable, attr, format, editorClass, fieldValue || '');
 	      }
 
-	      return _react2['default'].createElement(
+	      return _react2.default.createElement(
 	        'td',
 	        { ref: 'td', style: { position: 'relative' } },
 	        cellEditor,
-	        _react2['default'].createElement(_NotificationJs2['default'], { ref: 'notifier' })
+	        _react2.default.createElement(_Notification2.default, { ref: 'notifier' })
 	      );
 	    }
 	  }, {
@@ -2529,7 +2564,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }]);
 
 	  return TableEditColumn;
-	})(_react.Component);
+	}(_react.Component);
 
 	TableEditColumn.propTypes = {
 	  completeEdit: _react.PropTypes.func,
@@ -2542,41 +2577,46 @@ return /******/ (function(modules) { // webpackBootstrap
 	  fieldValue: _react.PropTypes.oneOfType([_react.PropTypes.string, _react.PropTypes.bool, _react.PropTypes.number, _react.PropTypes.array, _react.PropTypes.object])
 	};
 
-	exports['default'] = TableEditColumn;
-	module.exports = exports['default'];
+	exports.default = TableEditColumn;
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "TableEditColumn.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
 /* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
 	'use strict';
 
-	Object.defineProperty(exports, '__esModule', {
+	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
 
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	var _react = __webpack_require__(2);
 
 	var _react2 = _interopRequireDefault(_react);
 
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 	var editor = function editor(editable, attr, format, editorClass, defaultValue, ignoreEditable) {
 	  if (editable === true || editable === false && ignoreEditable || typeof editable === 'string') {
 	    // simple declare
 	    var type = editable ? 'text' : editable;
-	    return _react2['default'].createElement('input', _extends({}, attr, { type: type, defaultValue: defaultValue,
+	    return _react2.default.createElement('input', _extends({}, attr, { type: type, defaultValue: defaultValue,
 	      className: (editorClass || '') + ' form-control editor edit-text' }));
 	  } else if (!editable) {
-	    var type = editable ? 'text' : editable;
-	    return _react2['default'].createElement('input', _extends({}, attr, { type: type, defaultValue: defaultValue,
+	    var _type = editable ? 'text' : editable;
+	    return _react2.default.createElement('input', _extends({}, attr, { type: _type, defaultValue: defaultValue,
 	      disabled: 'disabled',
 	      className: (editorClass || '') + ' form-control editor edit-text' }));
 	  } else if (editable && (editable.type === undefined || editable.type === null || editable.type.trim() === '')) {
-	    var type = editable ? 'text' : editable;
-	    return _react2['default'].createElement('input', _extends({}, attr, { type: type, defaultValue: defaultValue,
+	    var _type2 = editable ? 'text' : editable;
+	    return _react2.default.createElement('input', _extends({}, attr, { type: _type2, defaultValue: defaultValue,
 	      className: (editorClass || '') + ' form-control editor edit-text' }));
 	  } else if (editable.type) {
 	    // standard declare
@@ -2592,10 +2632,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	      if (Array.isArray(values)) {
 	        (function () {
 	          // only can use arrray data for options
-	          var rowValue = undefined;
+	          var rowValue = void 0;
 	          options = values.map(function (d, i) {
 	            rowValue = format ? format(d) : d;
-	            return _react2['default'].createElement(
+	            return _react2.default.createElement(
 	              'option',
 	              { key: 'option' + i, value: d },
 	              rowValue
@@ -2603,18 +2643,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	          });
 	        })();
 	      }
-	      return _react2['default'].createElement(
+	      return _react2.default.createElement(
 	        'select',
 	        _extends({}, attr, { defaultValue: defaultValue }),
 	        options
 	      );
 	    } else if (editable.type === 'textarea') {
-	      var _ret2 = (function () {
+	      var _ret2 = function () {
 	        // process textarea input
 	        // put other if exist
 	        editable.cols && (attr.cols = editable.cols);
 	        editable.rows && (attr.rows = editable.rows);
-	        var saveBtn = undefined;
+	        var saveBtn = void 0;
 	        var keyUpHandler = attr.onKeyDown;
 	        if (keyUpHandler) {
 	          attr.onKeyDown = function (e) {
@@ -2623,7 +2663,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	              keyUpHandler(e);
 	            }
 	          };
-	          saveBtn = _react2['default'].createElement(
+	          saveBtn = _react2.default.createElement(
 	            'button',
 	            {
 	              className: 'btn btn-info btn-xs textarea-save-btn',
@@ -2632,63 +2672,58 @@ return /******/ (function(modules) { // webpackBootstrap
 	          );
 	        }
 	        return {
-	          v: _react2['default'].createElement(
+	          v: _react2.default.createElement(
 	            'div',
 	            null,
-	            _react2['default'].createElement('textarea', _extends({}, attr, { defaultValue: defaultValue })),
+	            _react2.default.createElement('textarea', _extends({}, attr, { defaultValue: defaultValue })),
 	            saveBtn
 	          )
 	        };
-	      })();
+	      }();
 
-	      if (typeof _ret2 === 'object') return _ret2.v;
+	      if ((typeof _ret2 === 'undefined' ? 'undefined' : _typeof(_ret2)) === "object") return _ret2.v;
 	    } else if (editable.type === 'checkbox') {
-	      var values = 'true:false';
+	      var _values = 'true:false';
 	      if (editable.options && editable.options.values) {
 	        // values = editable.options.values.split(':');
-	        values = editable.options.values;
+	        _values = editable.options.values;
 	      }
 	      attr.className = attr.className.replace('form-control', '');
 	      attr.className += ' checkbox pull-right';
 
-	      var checked = defaultValue && defaultValue.toString() === values.split(':')[0] ? true : false;
+	      var checked = defaultValue && defaultValue.toString() === _values.split(':')[0] ? true : false;
 
-	      return _react2['default'].createElement('input', _extends({}, attr, { type: 'checkbox',
-	        value: values, defaultChecked: checked }));
+	      return _react2.default.createElement('input', _extends({}, attr, { type: 'checkbox',
+	        value: _values, defaultChecked: checked }));
 	    } else if (editable.type === 'datetime') {
-	      return _react2['default'].createElement('input', _extends({}, attr, { type: 'datetime-local', defaultValue: defaultValue }));
+	      return _react2.default.createElement('input', _extends({}, attr, { type: 'datetime-local', defaultValue: defaultValue }));
 	    } else {
 	      // process other input type. as password,url,email...
-	      return _react2['default'].createElement('input', _extends({}, attr, { type: 'text', defaultValue: defaultValue }));
+	      return _react2.default.createElement('input', _extends({}, attr, { type: 'text', defaultValue: defaultValue }));
 	    }
 	  }
 	  // default return for other case of editable
-	  return _react2['default'].createElement('input', _extends({}, attr, { type: 'text',
+	  return _react2.default.createElement('input', _extends({}, attr, { type: 'text',
 	    className: (editorClass || '') + ' form-control editor edit-text' }));
 	};
 
-	exports['default'] = editor;
-	module.exports = exports['default'];
+	exports.default = editor;
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "Editor.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
 /* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
 	'use strict';
 
-	Object.defineProperty(exports, '__esModule', {
+	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(2);
 
@@ -2696,15 +2731,23 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _reactToastr = __webpack_require__(14);
 
-	var ToastrMessageFactory = _react2['default'].createFactory(_reactToastr.ToastMessage.animation);
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var Notification = (function (_Component) {
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var ToastrMessageFactory = _react2.default.createFactory(_reactToastr.ToastMessage.animation);
+
+	var Notification = function (_Component) {
 	  _inherits(Notification, _Component);
 
 	  function Notification() {
 	    _classCallCheck(this, Notification);
 
-	    _get(Object.getPrototypeOf(Notification.prototype), 'constructor', this).apply(this, arguments);
+	    return _possibleConstructorReturn(this, (Notification.__proto__ || Object.getPrototypeOf(Notification)).apply(this, arguments));
 	  }
 
 	  _createClass(Notification, [{
@@ -2723,7 +2766,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      return _react2['default'].createElement(_reactToastr.ToastContainer, { ref: 'toastr',
+	      return _react2.default.createElement(_reactToastr.ToastContainer, { ref: 'toastr',
 	        toastMessageFactory: ToastrMessageFactory,
 	        id: 'toast-container',
 	        className: 'toast-top-right' });
@@ -2731,10 +2774,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }]);
 
 	  return Notification;
-	})(_react.Component);
+	}(_react.Component);
 
-	exports['default'] = Notification;
-	module.exports = exports['default'];
+	exports.default = Notification;
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "Notification.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
 /* 14 */
@@ -4245,7 +4289,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var undefined;
 
 	  /** Used as the semantic version number. */
-	  var VERSION = '4.15.0';
+	  var VERSION = '4.16.0';
 
 	  /** Used as the size to enable large array optimizations. */
 	  var LARGE_ARRAY_SIZE = 200;
@@ -4255,6 +4299,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	  /** Used to stand-in for `undefined` hash values. */
 	  var HASH_UNDEFINED = '__lodash_hash_undefined__';
+
+	  /** Used as the maximum memoize cache size. */
+	  var MAX_MEMOIZE_SIZE = 500;
 
 	  /** Used as the internal argument placeholder. */
 	  var PLACEHOLDER = '__lodash_placeholder__';
@@ -4280,7 +4327,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      DEFAULT_TRUNC_OMISSION = '...';
 
 	  /** Used to detect hot functions by number of calls within a span of milliseconds. */
-	  var HOT_COUNT = 150,
+	  var HOT_COUNT = 500,
 	      HOT_SPAN = 16;
 
 	  /** Used to indicate the type of lazy iteratees. */
@@ -4396,9 +4443,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	  /** Used to match `RegExp` flags from their coerced string values. */
 	  var reFlags = /\w*$/;
-
-	  /** Used to detect hexadecimal string values. */
-	  var reHasHexPrefix = /^0x/i;
 
 	  /** Used to detect bad signed hexadecimal string values. */
 	  var reIsBadHex = /^[-+]0x[0-9a-f]+$/i;
@@ -4594,7 +4638,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    '\u017a': 'z',  '\u017c': 'z', '\u017e': 'z',
 	    '\u0132': 'IJ', '\u0133': 'ij',
 	    '\u0152': 'Oe', '\u0153': 'oe',
-	    '\u0149': "'n", '\u017f': 'ss'
+	    '\u0149': "'n", '\u017f': 's'
 	  };
 
 	  /** Used to map characters to HTML entities. */
@@ -4603,8 +4647,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    '<': '&lt;',
 	    '>': '&gt;',
 	    '"': '&quot;',
-	    "'": '&#39;',
-	    '`': '&#96;'
+	    "'": '&#39;'
 	  };
 
 	  /** Used to map HTML entities to characters. */
@@ -4613,8 +4656,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    '&lt;': '<',
 	    '&gt;': '>',
 	    '&quot;': '"',
-	    '&#39;': "'",
-	    '&#96;': '`'
+	    '&#39;': "'"
 	  };
 
 	  /** Used to escape characters for inclusion in compiled string literals. */
@@ -5055,18 +5097,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * @returns {number} Returns the index of the matched value, else `-1`.
 	   */
 	  function baseIndexOf(array, value, fromIndex) {
-	    if (value !== value) {
-	      return baseFindIndex(array, baseIsNaN, fromIndex);
-	    }
-	    var index = fromIndex - 1,
-	        length = array.length;
-
-	    while (++index < length) {
-	      if (array[index] === value) {
-	        return index;
-	      }
-	    }
-	    return -1;
+	    return value === value
+	      ? strictIndexOf(array, value, fromIndex)
+	      : baseFindIndex(array, baseIsNaN, fromIndex);
 	  }
 
 	  /**
@@ -5271,7 +5304,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 
 	  /**
-	   * Checks if a cache value for `key` exists.
+	   * Checks if a `cache` value for `key` exists.
 	   *
 	   * @private
 	   * @param {Object} cache The cache to query.
@@ -5329,7 +5362,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	    while (length--) {
 	      if (array[length] === placeholder) {
-	        result++;
+	        ++result;
 	      }
 	    }
 	    return result;
@@ -5397,25 +5430,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	   */
 	  function hasUnicodeWord(string) {
 	    return reHasUnicodeWord.test(string);
-	  }
-
-	  /**
-	   * Checks if `value` is a host object in IE < 9.
-	   *
-	   * @private
-	   * @param {*} value The value to check.
-	   * @returns {boolean} Returns `true` if `value` is a host object, else `false`.
-	   */
-	  function isHostObject(value) {
-	    // Many host objects are `Object` objects that can coerce to strings
-	    // despite having improperly defined `toString` methods.
-	    var result = false;
-	    if (value != null && typeof value.toString != 'function') {
-	      try {
-	        result = !!(value + '');
-	      } catch (e) {}
-	    }
-	    return result;
 	  }
 
 	  /**
@@ -5526,6 +5540,48 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 
 	  /**
+	   * A specialized version of `_.indexOf` which performs strict equality
+	   * comparisons of values, i.e. `===`.
+	   *
+	   * @private
+	   * @param {Array} array The array to inspect.
+	   * @param {*} value The value to search for.
+	   * @param {number} fromIndex The index to search from.
+	   * @returns {number} Returns the index of the matched value, else `-1`.
+	   */
+	  function strictIndexOf(array, value, fromIndex) {
+	    var index = fromIndex - 1,
+	        length = array.length;
+
+	    while (++index < length) {
+	      if (array[index] === value) {
+	        return index;
+	      }
+	    }
+	    return -1;
+	  }
+
+	  /**
+	   * A specialized version of `_.lastIndexOf` which performs strict equality
+	   * comparisons of values, i.e. `===`.
+	   *
+	   * @private
+	   * @param {Array} array The array to inspect.
+	   * @param {*} value The value to search for.
+	   * @param {number} fromIndex The index to search from.
+	   * @returns {number} Returns the index of the matched value, else `-1`.
+	   */
+	  function strictLastIndexOf(array, value, fromIndex) {
+	    var index = fromIndex + 1;
+	    while (index--) {
+	      if (array[index] === value) {
+	        return index;
+	      }
+	    }
+	    return index;
+	  }
+
+	  /**
 	   * Gets the number of symbols in `string`.
 	   *
 	   * @private
@@ -5570,7 +5626,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  function unicodeSize(string) {
 	    var result = reUnicode.lastIndex = 0;
 	    while (reUnicode.test(string)) {
-	      result++;
+	      ++result;
 	    }
 	    return result;
 	  }
@@ -5624,13 +5680,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * // => false
 	   * lodash.isFunction(lodash.bar);
 	   * // => true
-	   *
-	   * // Use `context` to stub `Date#getTime` use in `_.now`.
-	   * var stubbed = _.runInContext({
-	   *   'Date': function() {
-	   *     return { 'getTime': stubGetTime };
-	   *   }
-	   * });
 	   *
 	   * // Create a suped-up `defer` in Node.js.
 	   * var defer = _.runInContext({ 'setTimeout': setImmediate }).defer;
@@ -5695,6 +5744,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    var Buffer = moduleExports ? context.Buffer : undefined,
 	        Symbol = context.Symbol,
 	        Uint8Array = context.Uint8Array,
+	        defineProperty = Object.defineProperty,
 	        getPrototype = overArg(Object.getPrototypeOf, Object),
 	        iteratorSymbol = Symbol ? Symbol.iterator : undefined,
 	        objectCreate = Object.create,
@@ -5717,6 +5767,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        nativeKeys = overArg(Object.keys, Object),
 	        nativeMax = Math.max,
 	        nativeMin = Math.min,
+	        nativeNow = Date.now,
 	        nativeParseInt = context.parseInt,
 	        nativeRandom = Math.random,
 	        nativeReverse = arrayProto.reverse;
@@ -5727,21 +5778,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	        Promise = getNative(context, 'Promise'),
 	        Set = getNative(context, 'Set'),
 	        WeakMap = getNative(context, 'WeakMap'),
-	        nativeCreate = getNative(Object, 'create');
-
-	    /* Used to set `toString` methods. */
-	    var defineProperty = (function() {
-	      var func = getNative(Object, 'defineProperty'),
-	          name = getNative.name;
-
-	      return (name && name.length > 2) ? func : undefined;
-	    }());
+	        nativeCreate = getNative(Object, 'create'),
+	        nativeDefineProperty = getNative(Object, 'defineProperty');
 
 	    /** Used to store function metadata. */
 	    var metaMap = WeakMap && new WeakMap;
-
-	    /** Detect if properties shadowing those on `Object.prototype` are non-enumerable. */
-	    var nonEnumShadows = !propertyIsEnumerable.call({ 'valueOf': 1 }, 'valueOf');
 
 	    /** Used to lookup unminified function names. */
 	    var realNames = {};
@@ -6130,6 +6171,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 	    function hashClear() {
 	      this.__data__ = nativeCreate ? nativeCreate(null) : {};
+	      this.size = 0;
 	    }
 
 	    /**
@@ -6143,7 +6185,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * @returns {boolean} Returns `true` if the entry was removed, else `false`.
 	     */
 	    function hashDelete(key) {
-	      return this.has(key) && delete this.__data__[key];
+	      var result = this.has(key) && delete this.__data__[key];
+	      this.size -= result ? 1 : 0;
+	      return result;
 	    }
 
 	    /**
@@ -6190,6 +6234,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 	    function hashSet(key, value) {
 	      var data = this.__data__;
+	      this.size += this.has(key) ? 0 : 1;
 	      data[key] = (nativeCreate && value === undefined) ? HASH_UNDEFINED : value;
 	      return this;
 	    }
@@ -6230,6 +6275,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 	    function listCacheClear() {
 	      this.__data__ = [];
+	      this.size = 0;
 	    }
 
 	    /**
@@ -6254,6 +6300,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      } else {
 	        splice.call(data, index, 1);
 	      }
+	      --this.size;
 	      return true;
 	    }
 
@@ -6301,6 +6348,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          index = assocIndexOf(data, key);
 
 	      if (index < 0) {
+	        ++this.size;
 	        data.push([key, value]);
 	      } else {
 	        data[index][1] = value;
@@ -6343,6 +6391,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * @memberOf MapCache
 	     */
 	    function mapCacheClear() {
+	      this.size = 0;
 	      this.__data__ = {
 	        'hash': new Hash,
 	        'map': new (Map || ListCache),
@@ -6360,7 +6409,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * @returns {boolean} Returns `true` if the entry was removed, else `false`.
 	     */
 	    function mapCacheDelete(key) {
-	      return getMapData(this, key)['delete'](key);
+	      var result = getMapData(this, key)['delete'](key);
+	      this.size -= result ? 1 : 0;
+	      return result;
 	    }
 
 	    /**
@@ -6400,7 +6451,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * @returns {Object} Returns the map cache instance.
 	     */
 	    function mapCacheSet(key, value) {
-	      getMapData(this, key).set(key, value);
+	      var data = getMapData(this, key),
+	          size = data.size;
+
+	      data.set(key, value);
+	      this.size += data.size == size ? 0 : 1;
 	      return this;
 	    }
 
@@ -6473,7 +6528,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * @param {Array} [entries] The key-value pairs to cache.
 	     */
 	    function Stack(entries) {
-	      this.__data__ = new ListCache(entries);
+	      var data = this.__data__ = new ListCache(entries);
+	      this.size = data.size;
 	    }
 
 	    /**
@@ -6485,6 +6541,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 	    function stackClear() {
 	      this.__data__ = new ListCache;
+	      this.size = 0;
 	    }
 
 	    /**
@@ -6497,7 +6554,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * @returns {boolean} Returns `true` if the entry was removed, else `false`.
 	     */
 	    function stackDelete(key) {
-	      return this.__data__['delete'](key);
+	      var data = this.__data__,
+	          result = data['delete'](key);
+
+	      this.size = data.size;
+	      return result;
 	    }
 
 	    /**
@@ -6537,16 +6598,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * @returns {Object} Returns the stack cache instance.
 	     */
 	    function stackSet(key, value) {
-	      var cache = this.__data__;
-	      if (cache instanceof ListCache) {
-	        var pairs = cache.__data__;
+	      var data = this.__data__;
+	      if (data instanceof ListCache) {
+	        var pairs = data.__data__;
 	        if (!Map || (pairs.length < LARGE_ARRAY_SIZE - 1)) {
 	          pairs.push([key, value]);
+	          this.size = ++data.size;
 	          return this;
 	        }
-	        cache = this.__data__ = new MapCache(pairs);
+	        data = this.__data__ = new MapCache(pairs);
 	      }
-	      cache.set(key, value);
+	      data.set(key, value);
+	      this.size = data.size;
 	      return this;
 	    }
 
@@ -6587,6 +6650,44 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 
 	    /**
+	     * A specialized version of `_.sample` for arrays without support for iteratee
+	     * shorthands.
+	     *
+	     * @private
+	     * @param {Array} array The array to sample.
+	     * @returns {*} Returns the random element.
+	     */
+	    function arraySample(array) {
+	      var length = array.length;
+	      return length ? array[baseRandom(0, length - 1)] : undefined;
+	    }
+
+	    /**
+	     * A specialized version of `_.sampleSize` for arrays.
+	     *
+	     * @private
+	     * @param {Array} array The array to sample.
+	     * @param {number} n The number of elements to sample.
+	     * @returns {Array} Returns the random elements.
+	     */
+	    function arraySampleSize(array, n) {
+	      var result = arrayShuffle(array);
+	      result.length = baseClamp(n, 0, result.length);
+	      return result;
+	    }
+
+	    /**
+	     * A specialized version of `_.shuffle` for arrays.
+	     *
+	     * @private
+	     * @param {Array} array The array to shuffle.
+	     * @returns {Array} Returns the new shuffled array.
+	     */
+	    function arrayShuffle(array) {
+	      return shuffleSelf(copyArray(array));
+	    }
+
+	    /**
 	     * Used by `_.defaults` to customize its `_.assignIn` use.
 	     *
 	     * @private
@@ -6616,7 +6717,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    function assignMergeValue(object, key, value) {
 	      if ((value !== undefined && !eq(object[key], value)) ||
 	          (typeof key == 'number' && value === undefined && !(key in object))) {
-	        object[key] = value;
+	        baseAssignValue(object, key, value);
 	      }
 	    }
 
@@ -6634,7 +6735,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var objValue = object[key];
 	      if (!(hasOwnProperty.call(object, key) && eq(objValue, value)) ||
 	          (value === undefined && !(key in object))) {
-	        object[key] = value;
+	        baseAssignValue(object, key, value);
 	      }
 	    }
 
@@ -6685,6 +6786,28 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 	    function baseAssign(object, source) {
 	      return object && copyObject(source, keys(source), object);
+	    }
+
+	    /**
+	     * The base implementation of `assignValue` and `assignMergeValue` without
+	     * value checks.
+	     *
+	     * @private
+	     * @param {Object} object The object to modify.
+	     * @param {string} key The key of the property to assign.
+	     * @param {*} value The value to assign.
+	     */
+	    function baseAssignValue(object, key, value) {
+	      if (key == '__proto__' && defineProperty) {
+	        defineProperty(object, key, {
+	          'configurable': true,
+	          'enumerable': true,
+	          'value': value,
+	          'writable': true
+	        });
+	      } else {
+	        object[key] = value;
+	      }
 	    }
 
 	    /**
@@ -6767,9 +6890,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	          return cloneBuffer(value, isDeep);
 	        }
 	        if (tag == objectTag || tag == argsTag || (isFunc && !object)) {
-	          if (isHostObject(value)) {
-	            return object ? value : {};
-	          }
 	          result = initCloneObject(isFunc ? {} : value);
 	          if (!isDeep) {
 	            return copySymbols(value, baseAssign(result, value));
@@ -7413,8 +7533,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	        othTag = getTag(other);
 	        othTag = othTag == argsTag ? objectTag : othTag;
 	      }
-	      var objIsObj = objTag == objectTag && !isHostObject(object),
-	          othIsObj = othTag == objectTag && !isHostObject(other),
+	      var objIsObj = objTag == objectTag,
+	          othIsObj = othTag == objectTag,
 	          isSameTag = objTag == othTag;
 
 	      if (isSameTag && !objIsObj) {
@@ -7519,7 +7639,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      if (!isObject(value) || isMasked(value)) {
 	        return false;
 	      }
-	      var pattern = (isFunction(value) || isHostObject(value)) ? reIsNative : reIsHostCtor;
+	      var pattern = isFunction(value) ? reIsNative : reIsHostCtor;
 	      return pattern.test(toSource(value));
 	    }
 
@@ -7877,7 +7997,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            value = object[key];
 
 	        if (predicate(value, key)) {
-	          result[key] = value;
+	          baseAssignValue(result, key, value);
 	        }
 	      }
 	      return result;
@@ -8043,24 +8163,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * @returns {Function} Returns the new function.
 	     */
 	    function baseRest(func, start) {
-	      start = nativeMax(start === undefined ? (func.length - 1) : start, 0);
-	      return function() {
-	        var args = arguments,
-	            index = -1,
-	            length = nativeMax(args.length - start, 0),
-	            array = Array(length);
-
-	        while (++index < length) {
-	          array[index] = args[start + index];
-	        }
-	        index = -1;
-	        var otherArgs = Array(start + 1);
-	        while (++index < start) {
-	          otherArgs[index] = args[index];
-	        }
-	        otherArgs[start] = array;
-	        return apply(func, this, otherArgs);
-	      };
+	      return setToString(overRest(func, start, identity), func + '');
 	    }
 
 	    /**
@@ -8104,7 +8207,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 
 	    /**
-	     * The base implementation of `setData` without support for hot loop detection.
+	     * The base implementation of `setData` without support for hot loop shorting.
 	     *
 	     * @private
 	     * @param {Function} func The function to associate metadata with.
@@ -8114,6 +8217,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	    var baseSetData = !metaMap ? identity : function(func, data) {
 	      metaMap.set(func, data);
 	      return func;
+	    };
+
+	    /**
+	     * The base implementation of `setToString` without support for hot loop shorting.
+	     *
+	     * @private
+	     * @param {Function} func The function to modify.
+	     * @param {Function} string The `toString` result.
+	     * @returns {Function} Returns `func`.
+	     */
+	    var baseSetToString = !nativeDefineProperty ? identity : function(func, string) {
+	      return nativeDefineProperty(func, 'toString', {
+	        'configurable': true,
+	        'enumerable': false,
+	        'value': constant(string),
+	        'writable': true
+	      });
 	    };
 
 	    /**
@@ -8531,6 +8651,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 
 	    /**
+	     * A `baseRest` alias which can be replaced with `identity` by module
+	     * replacement plugins.
+	     *
+	     * @private
+	     * @type {Function}
+	     * @param {Function} func The function to apply a rest parameter to.
+	     * @returns {Function} Returns the new function.
+	     */
+	    var castRest = baseRest;
+
+	    /**
 	     * Casts `array` to a slice if it's needed.
 	     *
 	     * @private
@@ -8844,6 +8975,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * @returns {Object} Returns `object`.
 	     */
 	    function copyObject(source, props, object, customizer) {
+	      var isNew = !object;
 	      object || (object = {});
 
 	      var index = -1,
@@ -8856,7 +8988,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	          ? customizer(object[key], source[key], key, object, source)
 	          : undefined;
 
-	        assignValue(object, key, newValue === undefined ? source[key] : newValue);
+	        if (newValue === undefined) {
+	          newValue = source[key];
+	        }
+	        if (isNew) {
+	          baseAssignValue(object, key, newValue);
+	        } else {
+	          assignValue(object, key, newValue);
+	        }
 	      }
 	      return object;
 	    }
@@ -9135,9 +9274,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * @returns {Function} Returns the new flow function.
 	     */
 	    function createFlow(fromRight) {
-	      return baseRest(function(funcs) {
-	        funcs = baseFlatten(funcs, 1);
-
+	      return flatRest(function(funcs) {
 	        var length = funcs.length,
 	            index = length,
 	            prereq = LodashWrapper.prototype.thru;
@@ -9320,11 +9457,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * @returns {Function} Returns the new over function.
 	     */
 	    function createOver(arrayFunc) {
-	      return baseRest(function(iteratees) {
-	        iteratees = (iteratees.length == 1 && isArray(iteratees[0]))
-	          ? arrayMap(iteratees[0], baseUnary(getIteratee()))
-	          : arrayMap(baseFlatten(iteratees, 1), baseUnary(getIteratee()));
-
+	      return flatRest(function(iteratees) {
+	        iteratees = arrayMap(iteratees, baseUnary(getIteratee()));
 	        return baseRest(function(args) {
 	          var thisArg = this;
 	          return arrayFunc(iteratees, function(iteratee) {
@@ -9667,9 +9801,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	        // Recursively compare arrays (susceptible to call stack limits).
 	        if (seen) {
 	          if (!arraySome(other, function(othValue, othIndex) {
-	                if (!seen.has(othIndex) &&
+	                if (!cacheHas(seen, othIndex) &&
 	                    (arrValue === othValue || equalFunc(arrValue, othValue, customizer, bitmask, stack))) {
-	                  return seen.add(othIndex);
+	                  return seen.push(othIndex);
 	                }
 	              })) {
 	            result = false;
@@ -9850,6 +9984,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 
 	    /**
+	     * A specialized version of `baseRest` which flattens the rest array.
+	     *
+	     * @private
+	     * @param {Function} func The function to apply a rest parameter to.
+	     * @returns {Function} Returns the new function.
+	     */
+	    function flatRest(func) {
+	      return setToString(overRest(func, undefined, flatten), func + '');
+	    }
+
+	    /**
 	     * Creates an array of own enumerable property names and symbols of `object`.
 	     *
 	     * @private
@@ -10017,8 +10162,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 	    var getTag = baseGetTag;
 
-	    // Fallback for data views, maps, sets, and weak maps in IE 11,
-	    // for data views in Edge < 14, and promises in Node.js.
+	    // Fallback for data views, maps, sets, and weak maps in IE 11 and promises in Node.js < 6.
 	    if ((DataView && getTag(new DataView(new ArrayBuffer(1))) != dataViewTag) ||
 	        (Map && getTag(new Map) != mapTag) ||
 	        (Promise && getTag(Promise.resolve()) != promiseTag) ||
@@ -10094,9 +10238,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    function hasPath(object, path, hasFunc) {
 	      path = isKey(path, object) ? [path] : castPath(path);
 
-	      var result,
-	          index = -1,
-	          length = path.length;
+	      var index = -1,
+	          length = path.length,
+	          result = false;
 
 	      while (++index < length) {
 	        var key = toKey(path[index]);
@@ -10105,10 +10249,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	        }
 	        object = object[key];
 	      }
-	      if (result) {
+	      if (result || ++index != length) {
 	        return result;
 	      }
-	      var length = object ? object.length : 0;
+	      length = object ? object.length : 0;
 	      return !!length && isLength(length) && isIndex(key, length) &&
 	        (isArray(object) || isArguments(object));
 	    }
@@ -10203,9 +10347,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * @returns {string} Returns the modified source.
 	     */
 	    function insertWrapDetails(source, details) {
-	      var length = details.length,
-	          lastIndex = length - 1;
-
+	      var length = details.length;
+	      if (!length) {
+	        return source;
+	      }
+	      var lastIndex = length - 1;
 	      details[lastIndex] = (length > 1 ? '& ' : '') + details[lastIndex];
 	      details = details.join(length > 2 ? ', ' : ' ');
 	      return source.replace(reWrapComment, '{\n/* [wrapped with ' + details + '] */\n');
@@ -10385,6 +10531,26 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 
 	    /**
+	     * A specialized version of `_.memoize` which clears the memoized function's
+	     * cache when it exceeds `MAX_MEMOIZE_SIZE`.
+	     *
+	     * @private
+	     * @param {Function} func The function to have its output memoized.
+	     * @returns {Function} Returns the new memoized function.
+	     */
+	    function memoizeCapped(func) {
+	      var result = memoize(func, function(key) {
+	        if (cache.size === MAX_MEMOIZE_SIZE) {
+	          cache.clear();
+	        }
+	        return key;
+	      });
+
+	      var cache = result.cache;
+	      return result;
+	    }
+
+	    /**
 	     * Merges the function metadata of `source` into `data`.
 	     *
 	     * Merging metadata reduces the number of wrappers used to invoke a function.
@@ -10498,6 +10664,36 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 
 	    /**
+	     * A specialized version of `baseRest` which transforms the rest array.
+	     *
+	     * @private
+	     * @param {Function} func The function to apply a rest parameter to.
+	     * @param {number} [start=func.length-1] The start position of the rest parameter.
+	     * @param {Function} transform The rest array transform.
+	     * @returns {Function} Returns the new function.
+	     */
+	    function overRest(func, start, transform) {
+	      start = nativeMax(start === undefined ? (func.length - 1) : start, 0);
+	      return function() {
+	        var args = arguments,
+	            index = -1,
+	            length = nativeMax(args.length - start, 0),
+	            array = Array(length);
+
+	        while (++index < length) {
+	          array[index] = args[start + index];
+	        }
+	        index = -1;
+	        var otherArgs = Array(start + 1);
+	        while (++index < start) {
+	          otherArgs[index] = args[index];
+	        }
+	        otherArgs[start] = transform(array);
+	        return apply(func, this, otherArgs);
+	      };
+	    }
+
+	    /**
 	     * Gets the parent value at `path` of `object`.
 	     *
 	     * @private
@@ -10545,25 +10741,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * @param {*} data The metadata.
 	     * @returns {Function} Returns `func`.
 	     */
-	    var setData = (function() {
-	      var count = 0,
-	          lastCalled = 0;
-
-	      return function(key, value) {
-	        var stamp = now(),
-	            remaining = HOT_SPAN - (stamp - lastCalled);
-
-	        lastCalled = stamp;
-	        if (remaining > 0) {
-	          if (++count >= HOT_COUNT) {
-	            return key;
-	          }
-	        } else {
-	          count = 0;
-	        }
-	        return baseSetData(key, value);
-	      };
-	    }());
+	    var setData = shortOut(baseSetData);
 
 	    /**
 	     * A simple wrapper around the global [`setTimeout`](https://mdn.io/setTimeout).
@@ -10578,6 +10756,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 
 	    /**
+	     * Sets the `toString` method of `func` to return `string`.
+	     *
+	     * @private
+	     * @param {Function} func The function to modify.
+	     * @param {Function} string The `toString` result.
+	     * @returns {Function} Returns `func`.
+	     */
+	    var setToString = shortOut(baseSetToString);
+
+	    /**
 	     * Sets the `toString` method of `wrapper` to mimic the source of `reference`
 	     * with wrapper details in a comment at the top of the source body.
 	     *
@@ -10587,14 +10775,61 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * @param {number} bitmask The bitmask flags. See `createWrap` for more details.
 	     * @returns {Function} Returns `wrapper`.
 	     */
-	    var setWrapToString = !defineProperty ? identity : function(wrapper, reference, bitmask) {
+	    function setWrapToString(wrapper, reference, bitmask) {
 	      var source = (reference + '');
-	      return defineProperty(wrapper, 'toString', {
-	        'configurable': true,
-	        'enumerable': false,
-	        'value': constant(insertWrapDetails(source, updateWrapDetails(getWrapDetails(source), bitmask)))
-	      });
-	    };
+	      return setToString(wrapper, insertWrapDetails(source, updateWrapDetails(getWrapDetails(source), bitmask)));
+	    }
+
+	    /**
+	     * Creates a function that'll short out and invoke `identity` instead
+	     * of `func` when it's called `HOT_COUNT` or more times in `HOT_SPAN`
+	     * milliseconds.
+	     *
+	     * @private
+	     * @param {Function} func The function to restrict.
+	     * @returns {Function} Returns the new shortable function.
+	     */
+	    function shortOut(func) {
+	      var count = 0,
+	          lastCalled = 0;
+
+	      return function() {
+	        var stamp = nativeNow(),
+	            remaining = HOT_SPAN - (stamp - lastCalled);
+
+	        lastCalled = stamp;
+	        if (remaining > 0) {
+	          if (++count >= HOT_COUNT) {
+	            return arguments[0];
+	          }
+	        } else {
+	          count = 0;
+	        }
+	        return func.apply(undefined, arguments);
+	      };
+	    }
+
+	    /**
+	     * A specialized version of `arrayShuffle` which mutates `array`.
+	     *
+	     * @private
+	     * @param {Array} array The array to shuffle.
+	     * @returns {Array} Returns `array`.
+	     */
+	    function shuffleSelf(array) {
+	      var index = -1,
+	          length = array.length,
+	          lastIndex = length - 1;
+
+	      while (++index < length) {
+	        var rand = baseRandom(index, lastIndex),
+	            value = array[rand];
+
+	        array[rand] = array[index];
+	        array[index] = value;
+	      }
+	      return array;
+	    }
 
 	    /**
 	     * Converts `string` to a property path array.
@@ -10603,7 +10838,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * @param {string} string The string to convert.
 	     * @returns {Array} Returns the property path array.
 	     */
-	    var stringToPath = memoize(function(string) {
+	    var stringToPath = memoizeCapped(function(string) {
 	      string = toString(string);
 
 	      var result = [];
@@ -10782,24 +11017,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * // => [1]
 	     */
 	    function concat() {
-	      var length = arguments.length,
-	          args = Array(length ? length - 1 : 0),
+	      var length = arguments.length;
+	      if (!length) {
+	        return [];
+	      }
+	      var args = Array(length - 1),
 	          array = arguments[0],
 	          index = length;
 
 	      while (index--) {
 	        args[index - 1] = arguments[index];
 	      }
-	      return length
-	        ? arrayPush(isArray(array) ? copyArray(array) : [array], baseFlatten(args, 1))
-	        : [];
+	      return arrayPush(isArray(array) ? copyArray(array) : [array], baseFlatten(args, 1));
 	    }
 
 	    /**
 	     * Creates an array of `array` values not included in the other given arrays
 	     * using [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
-	     * for equality comparisons. The order of result values is determined by the
-	     * order they occur in the first array.
+	     * for equality comparisons. The order and references of result values are
+	     * determined by the first array.
 	     *
 	     * **Note:** Unlike `_.pullAll`, this method returns a new array.
 	     *
@@ -10825,8 +11061,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    /**
 	     * This method is like `_.difference` except that it accepts `iteratee` which
 	     * is invoked for each element of `array` and `values` to generate the criterion
-	     * by which they're compared. Result values are chosen from the first array.
-	     * The iteratee is invoked with one argument: (value).
+	     * by which they're compared. The order and references of result values are
+	     * determined by the first array. The iteratee is invoked with one argument:
+	     * (value).
 	     *
 	     * **Note:** Unlike `_.pullAllBy`, this method returns a new array.
 	     *
@@ -10859,9 +11096,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	    /**
 	     * This method is like `_.difference` except that it accepts `comparator`
-	     * which is invoked to compare elements of `array` to `values`. Result values
-	     * are chosen from the first array. The comparator is invoked with two arguments:
-	     * (arrVal, othVal).
+	     * which is invoked to compare elements of `array` to `values`. The order and
+	     * references of result values are determined by the first array. The comparator
+	     * is invoked with two arguments: (arrVal, othVal).
 	     *
 	     * **Note:** Unlike `_.pullAllWith`, this method returns a new array.
 	     *
@@ -11355,8 +11592,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    /**
 	     * Creates an array of unique values that are included in all given arrays
 	     * using [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
-	     * for equality comparisons. The order of result values is determined by the
-	     * order they occur in the first array.
+	     * for equality comparisons. The order and references of result values are
+	     * determined by the first array.
 	     *
 	     * @static
 	     * @memberOf _
@@ -11379,8 +11616,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    /**
 	     * This method is like `_.intersection` except that it accepts `iteratee`
 	     * which is invoked for each element of each `arrays` to generate the criterion
-	     * by which they're compared. Result values are chosen from the first array.
-	     * The iteratee is invoked with one argument: (value).
+	     * by which they're compared. The order and references of result values are
+	     * determined by the first array. The iteratee is invoked with one argument:
+	     * (value).
 	     *
 	     * @static
 	     * @memberOf _
@@ -11414,9 +11652,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	    /**
 	     * This method is like `_.intersection` except that it accepts `comparator`
-	     * which is invoked to compare elements of `arrays`. Result values are chosen
-	     * from the first array. The comparator is invoked with two arguments:
-	     * (arrVal, othVal).
+	     * which is invoked to compare elements of `arrays`. The order and references
+	     * of result values are determined by the first array. The comparator is
+	     * invoked with two arguments: (arrVal, othVal).
 	     *
 	     * @static
 	     * @memberOf _
@@ -11514,21 +11752,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var index = length;
 	      if (fromIndex !== undefined) {
 	        index = toInteger(fromIndex);
-	        index = (
-	          index < 0
-	            ? nativeMax(length + index, 0)
-	            : nativeMin(index, length - 1)
-	        ) + 1;
+	        index = index < 0 ? nativeMax(length + index, 0) : nativeMin(index, length - 1);
 	      }
-	      if (value !== value) {
-	        return baseFindIndex(array, baseIsNaN, index - 1, true);
-	      }
-	      while (index--) {
-	        if (array[index] === value) {
-	          return index;
-	        }
-	      }
-	      return -1;
+	      return value === value
+	        ? strictLastIndexOf(array, value, index)
+	        : baseFindIndex(array, baseIsNaN, index, true);
 	    }
 
 	    /**
@@ -11690,9 +11918,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * console.log(pulled);
 	     * // => ['b', 'd']
 	     */
-	    var pullAt = baseRest(function(array, indexes) {
-	      indexes = baseFlatten(indexes, 1);
-
+	    var pullAt = flatRest(function(array, indexes) {
 	      var length = array ? array.length : 0,
 	          result = baseAt(array, indexes);
 
@@ -12267,8 +12493,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    /**
 	     * Creates a duplicate-free version of an array, using
 	     * [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
-	     * for equality comparisons, in which only the first occurrence of each
-	     * element is kept.
+	     * for equality comparisons, in which only the first occurrence of each element
+	     * is kept. The order of result values is determined by the order they occur
+	     * in the array.
 	     *
 	     * @static
 	     * @memberOf _
@@ -12290,7 +12517,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    /**
 	     * This method is like `_.uniq` except that it accepts `iteratee` which is
 	     * invoked for each element in `array` to generate the criterion by which
-	     * uniqueness is computed. The iteratee is invoked with one argument: (value).
+	     * uniqueness is computed. The order of result values is determined by the
+	     * order they occur in the array. The iteratee is invoked with one argument:
+	     * (value).
 	     *
 	     * @static
 	     * @memberOf _
@@ -12317,8 +12546,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	    /**
 	     * This method is like `_.uniq` except that it accepts `comparator` which
-	     * is invoked to compare elements of `array`. The comparator is invoked with
-	     * two arguments: (arrVal, othVal).
+	     * is invoked to compare elements of `array`. The order of result values is
+	     * determined by the order they occur in the array.The comparator is invoked
+	     * with two arguments: (arrVal, othVal).
 	     *
 	     * @static
 	     * @memberOf _
@@ -12460,8 +12690,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    /**
 	     * This method is like `_.xor` except that it accepts `iteratee` which is
 	     * invoked for each element of each `arrays` to generate the criterion by
-	     * which by which they're compared. The iteratee is invoked with one argument:
-	     * (value).
+	     * which by which they're compared. The order of result values is determined
+	     * by the order they occur in the arrays. The iteratee is invoked with one
+	     * argument: (value).
 	     *
 	     * @static
 	     * @memberOf _
@@ -12490,8 +12721,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	    /**
 	     * This method is like `_.xor` except that it accepts `comparator` which is
-	     * invoked to compare elements of `arrays`. The comparator is invoked with
-	     * two arguments: (arrVal, othVal).
+	     * invoked to compare elements of `arrays`. The order of result values is
+	     * determined by the order they occur in the arrays. The comparator is invoked
+	     * with two arguments: (arrVal, othVal).
 	     *
 	     * @static
 	     * @memberOf _
@@ -12708,8 +12940,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * _(object).at(['a[0].b.c', 'a[1]']).value();
 	     * // => [3, 4]
 	     */
-	    var wrapperAt = baseRest(function(paths) {
-	      paths = baseFlatten(paths, 1);
+	    var wrapperAt = flatRest(function(paths) {
 	      var length = paths.length,
 	          start = length ? paths[0] : 0,
 	          value = this.__wrapped__,
@@ -12974,7 +13205,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * // => { '3': 2, '5': 1 }
 	     */
 	    var countBy = createAggregator(function(result, value, key) {
-	      hasOwnProperty.call(result, key) ? ++result[key] : (result[key] = 1);
+	      if (hasOwnProperty.call(result, key)) {
+	        ++result[key];
+	      } else {
+	        baseAssignValue(result, key, 1);
+	      }
 	    });
 
 	    /**
@@ -13229,7 +13464,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * @see _.forEachRight
 	     * @example
 	     *
-	     * _([1, 2]).forEach(function(value) {
+	     * _.forEach([1, 2], function(value) {
 	     *   console.log(value);
 	     * });
 	     * // => Logs `1` then `2`.
@@ -13297,7 +13532,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      if (hasOwnProperty.call(result, key)) {
 	        result[key].push(value);
 	      } else {
-	        result[key] = [value];
+	        baseAssignValue(result, key, [value]);
 	      }
 	    });
 
@@ -13410,7 +13645,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * // => { 'left': { 'dir': 'left', 'code': 97 }, 'right': { 'dir': 'right', 'code': 100 } }
 	     */
 	    var keyBy = createAggregator(function(result, value, key) {
-	      result[key] = value;
+	      baseAssignValue(result, key, value);
 	    });
 
 	    /**
@@ -13670,10 +13905,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * // => 2
 	     */
 	    function sample(collection) {
-	      var array = isArrayLike(collection) ? collection : values(collection),
-	          length = array.length;
-
-	      return length > 0 ? array[baseRandom(0, length - 1)] : undefined;
+	      return arraySample(isArrayLike(collection) ? collection : values(collection));
 	    }
 
 	    /**
@@ -13697,25 +13929,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * // => [2, 3, 1]
 	     */
 	    function sampleSize(collection, n, guard) {
-	      var index = -1,
-	          result = toArray(collection),
-	          length = result.length,
-	          lastIndex = length - 1;
-
 	      if ((guard ? isIterateeCall(collection, n, guard) : n === undefined)) {
 	        n = 1;
 	      } else {
-	        n = baseClamp(toInteger(n), 0, length);
+	        n = toInteger(n);
 	      }
-	      while (++index < n) {
-	        var rand = baseRandom(index, lastIndex),
-	            value = result[rand];
-
-	        result[rand] = result[index];
-	        result[index] = value;
-	      }
-	      result.length = n;
-	      return result;
+	      return arraySampleSize(isArrayLike(collection) ? collection : values(collection), n);
 	    }
 
 	    /**
@@ -13734,7 +13953,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * // => [4, 1, 3, 2]
 	     */
 	    function shuffle(collection) {
-	      return sampleSize(collection, MAX_ARRAY_LENGTH);
+	      return shuffleSelf(isArrayLike(collection)
+	        ? copyArray(collection)
+	        : values(collection)
+	      );
 	    }
 
 	    /**
@@ -13839,16 +14061,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	     *   { 'user': 'barney', 'age': 34 }
 	     * ];
 	     *
-	     * _.sortBy(users, function(o) { return o.user; });
+	     * _.sortBy(users, [function(o) { return o.user; }]);
 	     * // => objects for [['barney', 36], ['barney', 34], ['fred', 48], ['fred', 40]]
 	     *
 	     * _.sortBy(users, ['user', 'age']);
 	     * // => objects for [['barney', 34], ['barney', 36], ['fred', 40], ['fred', 48]]
-	     *
-	     * _.sortBy(users, 'user', function(o) {
-	     *   return Math.floor(o.age / 10);
-	     * });
-	     * // => objects for [['barney', 36], ['barney', 34], ['fred', 48], ['fred', 40]]
 	     */
 	    var sortBy = baseRest(function(collection, iteratees) {
 	      if (collection == null) {
@@ -14363,7 +14580,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * _.defer(function(text) {
 	     *   console.log(text);
 	     * }, 'deferred');
-	     * // => Logs 'deferred' after one or more milliseconds.
+	     * // => Logs 'deferred' after one millisecond.
 	     */
 	    var defer = baseRest(function(func, args) {
 	      return baseDelay(func, 1, args);
@@ -14471,14 +14688,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	          return cache.get(key);
 	        }
 	        var result = func.apply(this, args);
-	        memoized.cache = cache.set(key, result);
+	        memoized.cache = cache.set(key, result) || cache;
 	        return result;
 	      };
 	      memoized.cache = new (memoize.Cache || MapCache);
 	      return memoized;
 	    }
 
-	    // Assign cache to `_.memoize`.
+	    // Expose `MapCache`.
 	    memoize.Cache = MapCache;
 
 	    /**
@@ -14570,7 +14787,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * func(10, 5);
 	     * // => [100, 10]
 	     */
-	    var overArgs = baseRest(function(func, transforms) {
+	    var overArgs = castRest(function(func, transforms) {
 	      transforms = (transforms.length == 1 && isArray(transforms[0]))
 	        ? arrayMap(transforms[0], baseUnary(getIteratee()))
 	        : arrayMap(baseFlatten(transforms, 1), baseUnary(getIteratee()));
@@ -14684,8 +14901,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * rearged('b', 'c', 'a')
 	     * // => ['a', 'b', 'c']
 	     */
-	    var rearg = baseRest(function(func, indexes) {
-	      return createWrap(func, REARG_FLAG, undefined, undefined, undefined, baseFlatten(indexes, 1));
+	    var rearg = flatRest(function(func, indexes) {
+	      return createWrap(func, REARG_FLAG, undefined, undefined, undefined, indexes);
 	    });
 
 	    /**
@@ -15361,7 +15578,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * // => false
 	     */
 	    function isElement(value) {
-	      return !!value && value.nodeType === 1 && isObjectLike(value) && !isPlainObject(value);
+	      return value != null && value.nodeType === 1 && isObjectLike(value) && !isPlainObject(value);
 	    }
 
 	    /**
@@ -15407,7 +15624,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      if (tag == mapTag || tag == setTag) {
 	        return !value.size;
 	      }
-	      if (nonEnumShadows || isPrototype(value)) {
+	      if (isPrototype(value)) {
 	        return !nativeKeys(value).length;
 	      }
 	      for (var key in value) {
@@ -15656,7 +15873,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 	    function isObject(value) {
 	      var type = typeof value;
-	      return !!value && (type == 'object' || type == 'function');
+	      return value != null && (type == 'object' || type == 'function');
 	    }
 
 	    /**
@@ -15684,7 +15901,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * // => false
 	     */
 	    function isObjectLike(value) {
-	      return !!value && typeof value == 'object';
+	      return value != null && typeof value == 'object';
 	    }
 
 	    /**
@@ -15948,8 +16165,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * // => true
 	     */
 	    function isPlainObject(value) {
-	      if (!isObjectLike(value) ||
-	          objectToString.call(value) != objectTag || isHostObject(value)) {
+	      if (!isObjectLike(value) || objectToString.call(value) != objectTag) {
 	        return false;
 	      }
 	      var proto = getPrototype(value);
@@ -16506,7 +16722,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * // => { 'a': 1, 'c': 3 }
 	     */
 	    var assign = createAssigner(function(object, source) {
-	      if (nonEnumShadows || isPrototype(source) || isArrayLike(source)) {
+	      if (isPrototype(source) || isArrayLike(source)) {
 	        copyObject(source, keys(source), object);
 	        return;
 	      }
@@ -16634,9 +16850,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * _.at(object, ['a[0].b.c', 'a[1]']);
 	     * // => [3, 4]
 	     */
-	    var at = baseRest(function(object, paths) {
-	      return baseAt(object, baseFlatten(paths, 1));
-	    });
+	    var at = flatRest(baseAt);
 
 	    /**
 	     * Creates an object that inherits from the `prototype` object. If a
@@ -17239,7 +17453,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      iteratee = getIteratee(iteratee, 3);
 
 	      baseForOwn(object, function(value, key, object) {
-	        result[iteratee(value, key, object)] = value;
+	        baseAssignValue(result, iteratee(value, key, object), value);
 	      });
 	      return result;
 	    }
@@ -17277,7 +17491,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      iteratee = getIteratee(iteratee, 3);
 
 	      baseForOwn(object, function(value, key, object) {
-	        result[key] = iteratee(value, key, object);
+	        baseAssignValue(result, key, iteratee(value, key, object));
 	      });
 	      return result;
 	    }
@@ -17321,7 +17535,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * This method is like `_.merge` except that it accepts `customizer` which
 	     * is invoked to produce the merged values of the destination and source
 	     * properties. If `customizer` returns `undefined`, merging is handled by the
-	     * method instead. The `customizer` is invoked with seven arguments:
+	     * method instead. The `customizer` is invoked with six arguments:
 	     * (objValue, srcValue, key, object, source, stack).
 	     *
 	     * **Note:** This method mutates `object`.
@@ -17371,11 +17585,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * _.omit(object, ['a', 'c']);
 	     * // => { 'b': '2' }
 	     */
-	    var omit = baseRest(function(object, props) {
+	    var omit = flatRest(function(object, props) {
 	      if (object == null) {
 	        return {};
 	      }
-	      props = arrayMap(baseFlatten(props, 1), toKey);
+	      props = arrayMap(props, toKey);
 	      return basePick(object, baseDifference(getAllKeysIn(object), props));
 	    });
 
@@ -17420,8 +17634,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * _.pick(object, ['a', 'c']);
 	     * // => { 'a': 1, 'c': 3 }
 	     */
-	    var pick = baseRest(function(object, props) {
-	      return object == null ? {} : basePick(object, arrayMap(baseFlatten(props, 1), toKey));
+	    var pick = flatRest(function(object, props) {
+	      return object == null ? {} : basePick(object, arrayMap(props, toKey));
 	    });
 
 	    /**
@@ -18075,8 +18289,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 
 	    /**
-	     * Converts the characters "&", "<", ">", '"', "'", and "\`" in `string` to
-	     * their corresponding HTML entities.
+	     * Converts the characters "&", "<", ">", '"', and "'" in `string` to their
+	     * corresponding HTML entities.
 	     *
 	     * **Note:** No other characters are escaped. To escape additional
 	     * characters use a third-party library like [_he_](https://mths.be/he).
@@ -18086,12 +18300,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * unless they're part of a tag or unquoted attribute value. See
 	     * [Mathias Bynens's article](https://mathiasbynens.be/notes/ambiguous-ampersands)
 	     * (under "semi-related fun fact") for more details.
-	     *
-	     * Backticks are escaped because in IE < 9, they can break out of
-	     * attribute values or HTML comments. See [#59](https://html5sec.org/#59),
-	     * [#102](https://html5sec.org/#102), [#108](https://html5sec.org/#108), and
-	     * [#133](https://html5sec.org/#133) of the
-	     * [HTML5 Security Cheatsheet](https://html5sec.org/) for more details.
 	     *
 	     * When working with HTML you should always
 	     * [quote attribute values](http://wonko.com/post/html-escaping) to reduce
@@ -18335,15 +18543,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * // => [6, 8, 10]
 	     */
 	    function parseInt(string, radix, guard) {
-	      // Chrome fails to trim leading <BOM> whitespace characters.
-	      // See https://bugs.chromium.org/p/v8/issues/detail?id=3109 for more details.
 	      if (guard || radix == null) {
 	        radix = 0;
 	      } else if (radix) {
 	        radix = +radix;
 	      }
-	      string = toString(string).replace(reTrim, '');
-	      return nativeParseInt(string, radix || (reHasHexPrefix.test(string) ? 16 : 10));
+	      return nativeParseInt(toString(string), radix || 0);
 	    }
 
 	    /**
@@ -18582,7 +18787,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * compiled({ 'user': 'barney' });
 	     * // => 'hello barney!'
 	     *
-	     * // Use the ES delimiter as an alternative to the default "interpolate" delimiter.
+	     * // Use the ES template literal delimiter as an "interpolate" delimiter.
+	     * // Disable support by replacing the "interpolate" delimiter.
 	     * var compiled = _.template('hello ${ user }!');
 	     * compiled({ 'user': 'pebbles' });
 	     * // => 'hello pebbles!'
@@ -18983,7 +19189,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	    /**
 	     * The inverse of `_.escape`; this method converts the HTML entities
-	     * `&amp;`, `&lt;`, `&gt;`, `&quot;`, `&#39;`, and `&#96;` in `string` to
+	     * `&amp;`, `&lt;`, `&gt;`, `&quot;`, and `&#39;` in `string` to
 	     * their corresponding characters.
 	     *
 	     * **Note:** No other HTML entities are unescaped. To unescape additional
@@ -19137,10 +19343,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * jQuery(element).on('click', view.click);
 	     * // => Logs 'clicked docs' when clicked.
 	     */
-	    var bindAll = baseRest(function(object, methodNames) {
-	      arrayEach(baseFlatten(methodNames, 1), function(key) {
+	    var bindAll = flatRest(function(object, methodNames) {
+	      arrayEach(methodNames, function(key) {
 	        key = toKey(key);
-	        object[key] = bind(object[key], object);
+	        baseAssignValue(object, key, bind(object[key], object));
 	      });
 	      return object;
 	    });
@@ -20987,53 +21193,60 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
 	'use strict';
 
-	Object.defineProperty(exports, '__esModule', {
+	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(2);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _PageButtonJs = __webpack_require__(33);
+	var _PageButton = __webpack_require__(33);
 
-	var _PageButtonJs2 = _interopRequireDefault(_PageButtonJs);
+	var _PageButton2 = _interopRequireDefault(_PageButton);
 
 	var _Const = __webpack_require__(4);
 
 	var _Const2 = _interopRequireDefault(_Const);
 
-	var PaginationList = (function (_Component) {
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var PaginationList = function (_Component) {
 	  _inherits(PaginationList, _Component);
 
 	  function PaginationList() {
-	    var _this = this;
+	    var _ref;
+
+	    var _temp, _this, _ret;
 
 	    _classCallCheck(this, PaginationList);
 
-	    _get(Object.getPrototypeOf(PaginationList.prototype), 'constructor', this).apply(this, arguments);
+	    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+	      args[_key] = arguments[_key];
+	    }
 
-	    this.changePage = function (page) {
-	      var _props = _this.props;
-	      var pageStartIndex = _props.pageStartIndex;
-	      var prePage = _props.prePage;
-	      var currPage = _props.currPage;
-	      var nextPage = _props.nextPage;
-	      var lastPage = _props.lastPage;
-	      var firstPage = _props.firstPage;
-	      var sizePerPage = _props.sizePerPage;
+	    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = PaginationList.__proto__ || Object.getPrototypeOf(PaginationList)).call.apply(_ref, [this].concat(args))), _this), _this.changePage = function (page) {
+	      var _this$props = _this.props;
+	      var pageStartIndex = _this$props.pageStartIndex;
+	      var prePage = _this$props.prePage;
+	      var currPage = _this$props.currPage;
+	      var nextPage = _this$props.nextPage;
+	      var lastPage = _this$props.lastPage;
+	      var firstPage = _this$props.firstPage;
+	      var sizePerPage = _this$props.sizePerPage;
+
 
 	      if (page === prePage) {
 	        page = currPage - 1 < pageStartIndex ? pageStartIndex : currPage - 1;
@@ -21050,9 +21263,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      if (page !== currPage) {
 	        _this.props.changePage(page, sizePerPage);
 	      }
-	    };
-
-	    this.changeSizePerPage = function (e) {
+	    }, _this.changeSizePerPage = function (e) {
 	      e.preventDefault();
 
 	      var selectSize = parseInt(e.currentTarget.getAttribute('data-page'), 10);
@@ -21067,7 +21278,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          _this.props.onSizePerPageList(selectSize);
 	        }
 	      }
-	    };
+	    }, _temp), _possibleConstructorReturn(_this, _ret);
 	  }
 
 	  _createClass(PaginationList, [{
@@ -21075,14 +21286,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: function render() {
 	      var _this2 = this;
 
-	      var _props2 = this.props;
-	      var currPage = _props2.currPage;
-	      var dataSize = _props2.dataSize;
-	      var sizePerPage = _props2.sizePerPage;
-	      var sizePerPageList = _props2.sizePerPageList;
-	      var paginationShowsTotal = _props2.paginationShowsTotal;
-	      var pageStartIndex = _props2.pageStartIndex;
-	      var hideSizePerPage = _props2.hideSizePerPage;
+	      var _props = this.props;
+	      var currPage = _props.currPage;
+	      var dataSize = _props.dataSize;
+	      var sizePerPage = _props.sizePerPage;
+	      var sizePerPageList = _props.sizePerPageList;
+	      var paginationShowsTotal = _props.paginationShowsTotal;
+	      var pageStartIndex = _props.pageStartIndex;
+	      var hideSizePerPage = _props.hideSizePerPage;
+
 
 	      this.totalPages = Math.ceil(dataSize / sizePerPage);
 	      this.lastPage = this.props.pageStartIndex + this.totalPages - 1;
@@ -21096,10 +21308,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var sizePerPageOptions = sizePerPageList.map(function (_sizePerPage) {
 	        var pageText = _sizePerPage.text || _sizePerPage;
 	        var pageNum = _sizePerPage.value || _sizePerPage;
-	        return _react2['default'].createElement(
+	        return _react2.default.createElement(
 	          'li',
 	          { key: pageText, role: 'presentation' },
-	          _react2['default'].createElement(
+	          _react2.default.createElement(
 	            'a',
 	            { role: 'menuitem',
 	              tabIndex: '-1', href: '#',
@@ -21110,12 +21322,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	        );
 	      });
 
-	      var offset = Math.abs(_Const2['default'].PAGE_START_INDEX - pageStartIndex);
+	      var offset = Math.abs(_Const2.default.PAGE_START_INDEX - pageStartIndex);
 	      var start = (currPage - pageStartIndex) * sizePerPage;
 	      start = dataSize === 0 ? 0 : start + 1;
 	      var to = Math.min(sizePerPage * (currPage + offset) - 1, dataSize);
 	      if (to >= dataSize) to--;
-	      var total = paginationShowsTotal ? _react2['default'].createElement(
+	      var total = paginationShowsTotal ? _react2.default.createElement(
 	        'span',
 	        null,
 	        'Showing rows ',
@@ -21134,61 +21346,61 @@ return /******/ (function(modules) { // webpackBootstrap
 	        visibility: hideSizePerPage ? 'hidden' : 'visible'
 	      };
 
-	      return _react2['default'].createElement(
+	      return _react2.default.createElement(
 	        'div',
 	        { className: 'row', style: { marginTop: 15 } },
-	        sizePerPageList.length > 1 ? _react2['default'].createElement(
+	        sizePerPageList.length > 1 ? _react2.default.createElement(
 	          'div',
 	          null,
-	          _react2['default'].createElement(
+	          _react2.default.createElement(
 	            'div',
 	            { className: 'col-md-6' },
 	            total,
 	            ' ',
-	            _react2['default'].createElement(
+	            _react2.default.createElement(
 	              'span',
 	              { className: 'dropdown', style: dropDownStyle },
-	              _react2['default'].createElement(
+	              _react2.default.createElement(
 	                'button',
 	                { className: 'btn btn-default dropdown-toggle',
 	                  type: 'button', id: 'pageDropDown', 'data-toggle': 'dropdown',
 	                  'aria-expanded': 'true' },
 	                sizePerPage,
-	                _react2['default'].createElement(
+	                _react2.default.createElement(
 	                  'span',
 	                  null,
 	                  ' ',
-	                  _react2['default'].createElement('span', { className: 'caret' })
+	                  _react2.default.createElement('span', { className: 'caret' })
 	                )
 	              ),
-	              _react2['default'].createElement(
+	              _react2.default.createElement(
 	                'ul',
 	                { className: 'dropdown-menu', role: 'menu', 'aria-labelledby': 'pageDropDown' },
 	                sizePerPageOptions
 	              )
 	            )
 	          ),
-	          _react2['default'].createElement(
+	          _react2.default.createElement(
 	            'div',
 	            { className: 'col-md-6' },
-	            _react2['default'].createElement(
+	            _react2.default.createElement(
 	              'ul',
 	              { className: 'pagination', style: pageListStyle },
 	              pageBtns
 	            )
 	          )
-	        ) : _react2['default'].createElement(
+	        ) : _react2.default.createElement(
 	          'div',
 	          null,
-	          _react2['default'].createElement(
+	          _react2.default.createElement(
 	            'div',
 	            { className: 'col-md-6' },
 	            total
 	          ),
-	          _react2['default'].createElement(
+	          _react2.default.createElement(
 	            'div',
 	            { className: 'col-md-6' },
-	            _react2['default'].createElement(
+	            _react2.default.createElement(
 	              'ul',
 	              { className: 'pagination', style: pageListStyle },
 	              pageBtns
@@ -21213,8 +21425,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	          disabled = true;
 	          hidden = true;
 	        }
-	        return _react2['default'].createElement(
-	          _PageButtonJs2['default'],
+	        return _react2.default.createElement(
+	          _PageButton2.default,
 	          { key: page,
 	            changePage: this.changePage,
 	            active: isActive,
@@ -21227,7 +21439,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }, {
 	    key: 'getPages',
 	    value: function getPages() {
-	      var pages = undefined;
+	      var pages = void 0;
 	      var endPage = this.totalPages;
 	      if (endPage <= 0) return [];
 	      var startPage = Math.max(this.props.currPage - Math.floor(this.props.paginationSize / 2), this.props.pageStartIndex);
@@ -21262,7 +21474,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }]);
 
 	  return PaginationList;
-	})(_react.Component);
+	}(_react.Component);
 
 	PaginationList.propTypes = {
 	  currPage: _react.PropTypes.number,
@@ -21280,32 +21492,27 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 	PaginationList.defaultProps = {
-	  sizePerPage: _Const2['default'].SIZE_PER_PAGE,
-	  pageStartIndex: _Const2['default'].PAGE_START_INDEX
+	  sizePerPage: _Const2.default.SIZE_PER_PAGE,
+	  pageStartIndex: _Const2.default.PAGE_START_INDEX
 	};
 
-	exports['default'] = PaginationList;
-	module.exports = exports['default'];
+	exports.default = PaginationList;
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "PaginationList.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
 /* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
 	'use strict';
 
-	Object.defineProperty(exports, '__esModule', {
+	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(2);
 
@@ -21315,35 +21522,43 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
-	var PageButton = (function (_Component) {
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var PageButton = function (_Component) {
 	  _inherits(PageButton, _Component);
 
 	  function PageButton(props) {
-	    var _this = this;
-
 	    _classCallCheck(this, PageButton);
 
-	    _get(Object.getPrototypeOf(PageButton.prototype), 'constructor', this).call(this, props);
+	    var _this = _possibleConstructorReturn(this, (PageButton.__proto__ || Object.getPrototypeOf(PageButton)).call(this, props));
 
-	    this.pageBtnClick = function (e) {
+	    _this.pageBtnClick = function (e) {
 	      e.preventDefault();
 	      _this.props.changePage(e.currentTarget.textContent);
 	    };
+
+	    return _this;
 	  }
 
 	  _createClass(PageButton, [{
 	    key: 'render',
 	    value: function render() {
-	      var classes = (0, _classnames2['default'])({
+	      var classes = (0, _classnames2.default)({
 	        'active': this.props.active,
 	        'disabled': this.props.disable,
 	        'hidden': this.props.hidden,
 	        'page-item': true
 	      });
-	      return _react2['default'].createElement(
+	      return _react2.default.createElement(
 	        'li',
 	        { className: classes },
-	        _react2['default'].createElement(
+	        _react2.default.createElement(
 	          'a',
 	          { href: '#', onClick: this.pageBtnClick, className: 'page-link' },
 	          this.props.children
@@ -21353,7 +21568,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }]);
 
 	  return PageButton;
-	})(_react.Component);
+	}(_react.Component);
 
 	PageButton.propTypes = {
 	  changePage: _react.PropTypes.func,
@@ -21363,28 +21578,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	  children: _react.PropTypes.node
 	};
 
-	exports['default'] = PageButton;
-	module.exports = exports['default'];
+	exports.default = PageButton;
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "PageButton.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
 /* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
 	'use strict';
 
-	Object.defineProperty(exports, '__esModule', {
+	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
 
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(2);
 
@@ -21402,28 +21614,29 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Editor2 = _interopRequireDefault(_Editor);
 
-	var _NotificationJs = __webpack_require__(13);
+	var _Notification = __webpack_require__(13);
 
-	var _NotificationJs2 = _interopRequireDefault(_NotificationJs);
+	var _Notification2 = _interopRequireDefault(_Notification);
 
-	var ToolBar = (function (_Component) {
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var ToolBar = function (_Component) {
 	  _inherits(ToolBar, _Component);
 
-	  _createClass(ToolBar, null, [{
-	    key: 'modalSeq',
-	    value: 0,
-	    enumerable: true
-	  }]);
-
 	  function ToolBar(props) {
-	    var _this = this,
-	        _arguments2 = arguments;
+	    var _arguments = arguments;
 
 	    _classCallCheck(this, ToolBar);
 
-	    _get(Object.getPrototypeOf(ToolBar.prototype), 'constructor', this).call(this, props);
+	    var _this = _possibleConstructorReturn(this, (ToolBar.__proto__ || Object.getPrototypeOf(ToolBar)).call(this, props));
 
-	    this.handleSaveBtnClick = function () {
+	    _this.handleSaveBtnClick = function () {
 	      var newObj = _this.checkAndParseForm();
 	      if (!newObj) {
 	        // validate errors
@@ -21456,26 +21669,26 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 	    };
 
-	    this.handleShowOnlyToggle = function () {
+	    _this.handleShowOnlyToggle = function () {
 	      _this.setState({
 	        showSelected: !_this.state.showSelected
 	      });
 	      _this.props.onShowOnlySelected();
 	    };
 
-	    this.handleDropRowBtnClick = function () {
+	    _this.handleDropRowBtnClick = function () {
 	      _this.props.onDropRow();
 	    };
 
-	    this.handleDebounce = function (func, wait, immediate) {
-	      var timeout = undefined;
+	    _this.handleDebounce = function (func, wait, immediate) {
+	      var timeout = void 0;
 
 	      return function () {
 	        var later = function later() {
 	          timeout = null;
 
 	          if (!immediate) {
-	            func.apply(_this, _arguments2);
+	            func.apply(_this, _arguments);
 	          }
 	        };
 
@@ -21486,33 +21699,34 @@ return /******/ (function(modules) { // webpackBootstrap
 	        timeout = setTimeout(later, wait || 0);
 
 	        if (callNow) {
-	          func.appy(_this, _arguments2);
+	          func.appy(_this, _arguments);
 	        }
 	      };
 	    };
 
-	    this.handleKeyUp = function (event) {
+	    _this.handleKeyUp = function (event) {
 	      event.persist();
 	      _this.debounceCallback(event);
 	    };
 
-	    this.handleExportCSV = function () {
+	    _this.handleExportCSV = function () {
 	      _this.props.onExportCSV();
 	    };
 
-	    this.handleClearBtnClick = function () {
+	    _this.handleClearBtnClick = function () {
 	      _this.refs.seachInput.value = '';
 	      _this.props.onSearch('');
 	    };
 
-	    this.timeouteClear = 0;
-	    this.modalClassName;
-	    this.state = {
+	    _this.timeouteClear = 0;
+	    _this.modalClassName;
+	    _this.state = {
 	      isInsertRowTrigger: true,
 	      validateState: null,
 	      shakeEditor: false,
 	      showSelected: false
 	    };
+	    return _this;
 	  }
 
 	  _createClass(ToolBar, [{
@@ -21532,7 +21746,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  }, {
 	    key: 'clearTimeout',
-	    value: (function (_clearTimeout) {
+	    value: function (_clearTimeout) {
 	      function clearTimeout() {
 	        return _clearTimeout.apply(this, arguments);
 	      }
@@ -21542,7 +21756,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      };
 
 	      return clearTimeout;
-	    })(function () {
+	    }(function () {
 	      if (this.timeouteClear) {
 	        clearTimeout(this.timeouteClear);
 	        this.timeouteClear = 0;
@@ -21551,6 +21765,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	    // modified by iuculanop
 	    // BEGIN
+
 	  }, {
 	    key: 'checkAndParseForm',
 	    value: function checkAndParseForm() {
@@ -21559,9 +21774,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var newObj = {};
 	      var validateState = {};
 	      var isValid = true;
-	      var checkVal = undefined;
-	      var responseType = undefined;
-	      var tempValue = undefined;
+	      var checkVal = void 0;
+	      var responseType = void 0;
+	      var tempValue = void 0;
 
 	      this.props.columns.forEach(function (column, i) {
 	        if (column.autoValue) {
@@ -21582,7 +21797,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          if (column.editable && column.editable.validator) {
 	            // process validate
 	            checkVal = column.editable.validator(tempValue);
-	            responseType = typeof checkVal;
+	            responseType = typeof checkVal === 'undefined' ? 'undefined' : _typeof(checkVal);
 	            if (responseType !== 'object' && checkVal !== true) {
 	              this.refs.notifier.notice('error', 'Form validate errors, please checking!', 'Pressed ESC can cancel');
 	              isValid = false;
@@ -21610,7 +21825,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	        return null;
 	      }
 	    }
-
 	    // END
 
 	  }, {
@@ -21628,20 +21842,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var showSelectedOnlyBtn = null;
 
 	      if (this.props.enableInsert) {
-	        insertBtn = _react2['default'].createElement(
+	        insertBtn = _react2.default.createElement(
 	          'button',
 	          { type: 'button',
 	            className: 'btn btn-info react-bs-table-add-btn',
 	            'data-toggle': 'modal',
 	            'data-target': '.' + this.modalClassName },
-	          _react2['default'].createElement('i', { className: 'glyphicon glyphicon-plus' }),
+	          _react2.default.createElement('i', { className: 'glyphicon glyphicon-plus' }),
 	          ' ',
 	          this.props.insertText
 	        );
 	      }
 
 	      if (this.props.enableDelete) {
-	        deleteBtn = _react2['default'].createElement(
+	        deleteBtn = _react2.default.createElement(
 	          'button',
 	          { type: 'button',
 	            className: 'btn btn-warning react-bs-table-del-btn',
@@ -21649,31 +21863,31 @@ return /******/ (function(modules) { // webpackBootstrap
 	            'data-placement': 'right',
 	            title: 'Drop selected row',
 	            onClick: this.handleDropRowBtnClick },
-	          _react2['default'].createElement('i', { className: 'glyphicon glyphicon-trash' }),
+	          _react2.default.createElement('i', { className: 'glyphicon glyphicon-trash' }),
 	          ' ',
 	          this.props.deleteText
 	        );
 	      }
 
 	      if (this.props.enableShowOnlySelected) {
-	        showSelectedOnlyBtn = _react2['default'].createElement(
+	        showSelectedOnlyBtn = _react2.default.createElement(
 	          'button',
 	          { type: 'button',
 	            onClick: this.handleShowOnlyToggle,
 	            className: 'btn btn-primary',
 	            'data-toggle': 'button',
 	            'aria-pressed': 'false' },
-	          this.state.showSelected ? _Const2['default'].SHOW_ALL : _Const2['default'].SHOW_ONLY_SELECT
+	          this.state.showSelected ? _Const2.default.SHOW_ALL : _Const2.default.SHOW_ONLY_SELECT
 	        );
 	      }
 
 	      if (this.props.enableExportCSV) {
-	        exportCSV = _react2['default'].createElement(
+	        exportCSV = _react2.default.createElement(
 	          'button',
 	          { type: 'button',
 	            className: 'btn btn-success hidden-print',
 	            onClick: this.handleExportCSV },
-	          _react2['default'].createElement('i', { className: 'glyphicon glyphicon-export' }),
+	          _react2.default.createElement('i', { className: 'glyphicon glyphicon-export' }),
 	          this.props.exportCSVText
 	        );
 	      }
@@ -21681,13 +21895,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var searchTextInput = this.renderSearchPanel();
 	      var modal = this.props.enableInsert ? this.renderInsertRowModal() : null;
 
-	      return _react2['default'].createElement(
+	      return _react2.default.createElement(
 	        'div',
 	        { className: 'row' },
-	        _react2['default'].createElement(
+	        _react2.default.createElement(
 	          'div',
 	          { className: 'col-xs-12 col-sm-6 col-md-6 col-lg-8' },
-	          _react2['default'].createElement(
+	          _react2.default.createElement(
 	            'div',
 	            { className: 'btn-group btn-group-sm', role: 'group' },
 	            exportCSV,
@@ -21696,12 +21910,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	            showSelectedOnlyBtn
 	          )
 	        ),
-	        _react2['default'].createElement(
+	        _react2.default.createElement(
 	          'div',
 	          { className: 'col-xs-12 col-sm-6 col-md-6 col-lg-4' },
 	          searchTextInput
 	        ),
-	        _react2['default'].createElement(_NotificationJs2['default'], { ref: 'notifier' }),
+	        _react2.default.createElement(_Notification2.default, { ref: 'notifier' }),
 	        modal
 	      );
 	    }
@@ -21712,10 +21926,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	        var classNames = 'form-group form-group-sm react-bs-table-search-form';
 	        var clearBtn = null;
 	        if (this.props.clearSearch) {
-	          clearBtn = _react2['default'].createElement(
+	          clearBtn = _react2.default.createElement(
 	            'span',
 	            { className: 'input-group-btn' },
-	            _react2['default'].createElement(
+	            _react2.default.createElement(
 	              'button',
 	              {
 	                className: 'btn btn-default',
@@ -21727,10 +21941,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	          classNames += ' input-group input-group-sm';
 	        }
 
-	        return _react2['default'].createElement(
+	        return _react2.default.createElement(
 	          'div',
 	          { className: classNames },
-	          _react2['default'].createElement('input', { ref: 'seachInput',
+	          _react2.default.createElement('input', { ref: 'seachInput',
 	            className: 'form-control',
 	            type: 'text',
 	            defaultValue: this.props.defaultSearch,
@@ -21767,7 +21981,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          // and not allow edit, for example ID field
 	          return null;
 	        }
-	        var error = validateState[field] ? _react2['default'].createElement(
+	        var error = validateState[field] ? _react2.default.createElement(
 	          'span',
 	          { className: 'help-block bg-danger' },
 	          validateState[field]
@@ -21775,76 +21989,76 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	        // let editor = Editor(editable,attr,format);
 	        // if(editor.props.type && editor.props.type == 'checkbox'){
-	        return _react2['default'].createElement(
+	        return _react2.default.createElement(
 	          'div',
 	          { className: 'form-group', key: field },
-	          _react2['default'].createElement(
+	          _react2.default.createElement(
 	            'label',
 	            null,
 	            name
 	          ),
-	          (0, _Editor2['default'])(editable, attr, format, '', undefined, _this4.props.ignoreEditable),
+	          (0, _Editor2.default)(editable, attr, format, '', undefined, _this4.props.ignoreEditable),
 	          error
 	        );
 	      });
-	      var modalClass = (0, _classnames2['default'])('modal', 'fade', this.modalClassName, {
+	      var modalClass = (0, _classnames2.default)('modal', 'fade', this.modalClassName, {
 	        // hack prevent bootstrap modal hide by reRender
 	        'in': shakeEditor || this.state.validateState
 	      });
-	      var dialogClass = (0, _classnames2['default'])('modal-dialog', 'modal-sm', {
+	      var dialogClass = (0, _classnames2.default)('modal-dialog', 'modal-sm', {
 	        'animated': shakeEditor,
 	        'shake': shakeEditor
 	      });
-	      return _react2['default'].createElement(
+	      return _react2.default.createElement(
 	        'div',
 	        { ref: 'modal', className: modalClass, tabIndex: '-1', role: 'dialog' },
-	        _react2['default'].createElement(
+	        _react2.default.createElement(
 	          'div',
 	          { className: dialogClass },
-	          _react2['default'].createElement(
+	          _react2.default.createElement(
 	            'div',
 	            { className: 'modal-content' },
-	            _react2['default'].createElement(
+	            _react2.default.createElement(
 	              'div',
 	              { className: 'modal-header' },
-	              _react2['default'].createElement(
+	              _react2.default.createElement(
 	                'button',
 	                { type: 'button',
 	                  className: 'close',
 	                  'data-dismiss': 'modal',
 	                  'aria-label': 'Close' },
-	                _react2['default'].createElement(
+	                _react2.default.createElement(
 	                  'span',
 	                  { 'aria-hidden': 'true' },
 	                  '×'
 	                )
 	              ),
-	              _react2['default'].createElement(
+	              _react2.default.createElement(
 	                'h4',
 	                { className: 'modal-title' },
 	                'New Record'
 	              )
 	            ),
-	            _react2['default'].createElement(
+	            _react2.default.createElement(
 	              'div',
 	              { className: 'modal-body' },
-	              _react2['default'].createElement(
+	              _react2.default.createElement(
 	                'form',
 	                { ref: 'form' },
 	                inputField
 	              )
 	            ),
-	            _react2['default'].createElement(
+	            _react2.default.createElement(
 	              'div',
 	              { className: 'modal-footer' },
-	              _react2['default'].createElement(
+	              _react2.default.createElement(
 	                'button',
 	                { type: 'button',
 	                  className: 'btn btn-default',
 	                  'data-dismiss': 'modal' },
 	                this.props.closeText
 	              ),
-	              _react2['default'].createElement(
+	              _react2.default.createElement(
 	                'button',
 	                { type: 'button',
 	                  className: 'btn btn-primary',
@@ -21859,7 +22073,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }]);
 
 	  return ToolBar;
-	})(_react.Component);
+	}(_react.Component);
+
+	ToolBar.modalSeq = 0;
+
 
 	ToolBar.propTypes = {
 	  onAddRow: _react.PropTypes.func,
@@ -21888,35 +22105,30 @@ return /******/ (function(modules) { // webpackBootstrap
 	  enableShowOnlySelected: false,
 	  clearSearch: false,
 	  ignoreEditable: false,
-	  exportCSVText: _Const2['default'].EXPORT_CSV_TEXT,
-	  insertText: _Const2['default'].INSERT_BTN_TEXT,
-	  deleteText: _Const2['default'].DELETE_BTN_TEXT,
-	  saveText: _Const2['default'].SAVE_BTN_TEXT,
-	  closeText: _Const2['default'].CLOSE_BTN_TEXT
+	  exportCSVText: _Const2.default.EXPORT_CSV_TEXT,
+	  insertText: _Const2.default.INSERT_BTN_TEXT,
+	  deleteText: _Const2.default.DELETE_BTN_TEXT,
+	  saveText: _Const2.default.SAVE_BTN_TEXT,
+	  closeText: _Const2.default.CLOSE_BTN_TEXT
 	};
 
-	exports['default'] = ToolBar;
-	module.exports = exports['default'];
+	exports.default = ToolBar;
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "ToolBar.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
 /* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
 	'use strict';
 
-	Object.defineProperty(exports, '__esModule', {
+	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(2);
 
@@ -21930,17 +22142,23 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
-	var TableFilter = (function (_Component) {
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var TableFilter = function (_Component) {
 	  _inherits(TableFilter, _Component);
 
 	  function TableFilter(props) {
-	    var _this = this;
-
 	    _classCallCheck(this, TableFilter);
 
-	    _get(Object.getPrototypeOf(TableFilter.prototype), 'constructor', this).call(this, props);
+	    var _this = _possibleConstructorReturn(this, (TableFilter.__proto__ || Object.getPrototypeOf(TableFilter)).call(this, props));
 
-	    this.handleKeyUp = function (e) {
+	    _this.handleKeyUp = function (e) {
 	      var _e$currentTarget = e.currentTarget;
 	      var value = _e$currentTarget.value;
 	      var name = _e$currentTarget.name;
@@ -21953,7 +22171,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	      _this.props.onFilter(_this.filterObj);
 	    };
 
-	    this.filterObj = {};
+	    _this.filterObj = {};
+	    return _this;
 	  }
 
 	  _createClass(TableFilter, [{
@@ -21965,19 +22184,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var rowSelectType = _props.rowSelectType;
 	      var columns = _props.columns;
 
-	      var tableClasses = (0, _classnames2['default'])('table', {
+	      var tableClasses = (0, _classnames2.default)('table', {
 	        'table-striped': striped,
 	        'table-condensed': condensed
 	      });
 	      var selectRowHeader = null;
 
-	      if (rowSelectType === _Const2['default'].ROW_SELECT_SINGLE || rowSelectType === _Const2['default'].ROW_SELECT_MULTI) {
+	      if (rowSelectType === _Const2.default.ROW_SELECT_SINGLE || rowSelectType === _Const2.default.ROW_SELECT_MULTI) {
 	        var style = {
 	          width: 35,
 	          paddingLeft: 0,
 	          paddingRight: 0
 	        };
-	        selectRowHeader = _react2['default'].createElement(
+	        selectRowHeader = _react2.default.createElement(
 	          'th',
 	          { style: style, key: -1 },
 	          'Filter'
@@ -21993,25 +22212,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	          display: hidden ? 'none' : null,
 	          width: width
 	        };
-	        return _react2['default'].createElement(
+	        return _react2.default.createElement(
 	          'th',
 	          { key: name, style: thStyle },
-	          _react2['default'].createElement(
+	          _react2.default.createElement(
 	            'div',
 	            { className: 'th-inner table-header-column' },
-	            _react2['default'].createElement('input', { size: '10', type: 'text',
+	            _react2.default.createElement('input', { size: '10', type: 'text',
 	              placeholder: name, name: name, onKeyUp: this.handleKeyUp })
 	          )
 	        );
 	      }, this);
 
-	      return _react2['default'].createElement(
+	      return _react2.default.createElement(
 	        'table',
 	        { className: tableClasses, style: { marginTop: 5 } },
-	        _react2['default'].createElement(
+	        _react2.default.createElement(
 	          'thead',
 	          null,
-	          _react2['default'].createElement(
+	          _react2.default.createElement(
 	            'tr',
 	            { style: { borderBottomStyle: 'hidden' } },
 	            selectRowHeader,
@@ -22023,44 +22242,50 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }]);
 
 	  return TableFilter;
-	})(_react.Component);
+	}(_react.Component);
 
 	TableFilter.propTypes = {
 	  columns: _react.PropTypes.array,
 	  rowSelectType: _react.PropTypes.string,
 	  onFilter: _react.PropTypes.func
 	};
-	exports['default'] = TableFilter;
-	module.exports = exports['default'];
+	exports.default = TableFilter;
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "TableFilter.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
 /* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* eslint no-nested-ternary: 0 */
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.TableDataStore = undefined;
+
+	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }(); /* eslint no-nested-ternary: 0 */
 	/* eslint guard-for-in: 0 */
 	/* eslint no-console: 0 */
 	/* eslint eqeqeq: 0 */
 	/* eslint one-var: 0 */
-	'use strict';
 
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
 	var _Const = __webpack_require__(4);
 
 	var _Const2 = _interopRequireDefault(_Const);
 
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 	function _sort(arr, sortField, order, sortFunc, sortFuncExtraData) {
 	  order = order.toLowerCase();
-	  var isDesc = order === _Const2['default'].SORT_DESC;
+	  var isDesc = order === _Const2.default.SORT_DESC;
 	  arr.sort(function (a, b) {
 	    if (sortFunc) {
 	      return sortFunc(a, b, order, sortField, sortFuncExtraData);
@@ -22086,7 +22311,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  return arr;
 	}
 
-	var TableDataStore = (function () {
+	var TableDataStore = function () {
 	  function TableDataStore(data) {
 	    _classCallCheck(this, TableDataStore);
 
@@ -22224,7 +22449,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    key: 'edit',
 	    value: function edit(newVal, rowIndex, fieldName) {
 	      var currentDisplayData = this.getCurrentDisplayData();
-	      var rowKeyCache = undefined;
+	      var rowKeyCache = void 0;
 	      if (!this.enablePagination) {
 	        currentDisplayData[rowIndex][fieldName] = newVal;
 	        rowKeyCache = currentDisplayData[rowIndex][this.keyField];
@@ -22446,7 +22671,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }, {
 	    key: 'filterCustom',
 	    value: function filterCustom(targetVal, filterVal, callbackInfo) {
-	      if (callbackInfo !== null && typeof callbackInfo === 'object') {
+	      if (callbackInfo !== null && (typeof callbackInfo === 'undefined' ? 'undefined' : _typeof(callbackInfo)) === 'object') {
 	        return callbackInfo.callback(targetVal, callbackInfo.callbackParameters);
 	      }
 
@@ -22466,6 +22691,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    /* General search function
 	     * It will search for the text if the input includes that text;
 	     */
+
 	  }, {
 	    key: 'search',
 	    value: function search(searchText) {
@@ -22492,7 +22718,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var filterObj = this.filterObj;
 	      this.filteredData = source.filter(function (row, r) {
 	        var valid = true;
-	        var filterVal = undefined;
+	        var filterVal = void 0;
 	        for (var key in filterObj) {
 	          var targetVal = row[key];
 	          if (targetVal === null || targetVal === undefined) {
@@ -22500,22 +22726,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	          }
 
 	          switch (filterObj[key].type) {
-	            case _Const2['default'].FILTER_TYPE.NUMBER:
+	            case _Const2.default.FILTER_TYPE.NUMBER:
 	              {
 	                filterVal = filterObj[key].value.number;
 	                break;
 	              }
-	            case _Const2['default'].FILTER_TYPE.CUSTOM:
+	            case _Const2.default.FILTER_TYPE.CUSTOM:
 	              {
-	                filterVal = typeof filterObj[key].value === 'object' ? undefined : typeof filterObj[key].value === 'string' ? filterObj[key].value.toLowerCase() : filterObj[key].value;
+	                filterVal = _typeof(filterObj[key].value) === 'object' ? undefined : typeof filterObj[key].value === 'string' ? filterObj[key].value.toLowerCase() : filterObj[key].value;
 	                break;
 	              }
-	            case _Const2['default'].FILTER_TYPE.DATE:
+	            case _Const2.default.FILTER_TYPE.DATE:
 	              {
 	                filterVal = filterObj[key].value.date;
 	                break;
 	              }
-	            case _Const2['default'].FILTER_TYPE.REGEX:
+	            case _Const2.default.FILTER_TYPE.REGEX:
 	              {
 	                filterVal = filterObj[key].value;
 	                break;
@@ -22530,10 +22756,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	                break;
 	              }
 	          }
-	          var format = undefined,
-	              filterFormatted = undefined,
-	              formatExtraData = undefined,
-	              filterValue = undefined;
+	          var format = void 0,
+	              filterFormatted = void 0,
+	              formatExtraData = void 0,
+	              filterValue = void 0;
 	          if (_this4.colInfos[key]) {
 	            format = _this4.colInfos[key].format;
 	            filterFormatted = _this4.colInfos[key].filterFormatted;
@@ -22547,29 +22773,29 @@ return /******/ (function(modules) { // webpackBootstrap
 	          }
 
 	          switch (filterObj[key].type) {
-	            case _Const2['default'].FILTER_TYPE.NUMBER:
+	            case _Const2.default.FILTER_TYPE.NUMBER:
 	              {
 	                valid = _this4.filterNumber(targetVal, filterVal, filterObj[key].value.comparator);
 	                break;
 	              }
-	            case _Const2['default'].FILTER_TYPE.DATE:
+	            case _Const2.default.FILTER_TYPE.DATE:
 	              {
 	                valid = _this4.filterDate(targetVal, filterVal, filterObj[key].value.comparator);
 	                break;
 	              }
-	            case _Const2['default'].FILTER_TYPE.REGEX:
+	            case _Const2.default.FILTER_TYPE.REGEX:
 	              {
 	                valid = _this4.filterRegex(targetVal, filterVal);
 	                break;
 	              }
-	            case _Const2['default'].FILTER_TYPE.CUSTOM:
+	            case _Const2.default.FILTER_TYPE.CUSTOM:
 	              {
 	                valid = _this4.filterCustom(targetVal, filterVal, filterObj[key].value);
 	                break;
 	              }
 	            default:
 	              {
-	                if (filterObj[key].type === _Const2['default'].FILTER_TYPE.SELECT && filterFormatted && filterFormatted && format) {
+	                if (filterObj[key].type === _Const2.default.FILTER_TYPE.SELECT && filterFormatted && filterFormatted && format) {
 	                  filterVal = format(filterVal, row, formatExtraData, r);
 	                }
 	                valid = _this4.filterText(targetVal, filterVal);
@@ -22688,21 +22914,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }]);
 
 	  return TableDataStore;
-	})();
+	}();
 
 	exports.TableDataStore = TableDataStore;
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "TableDataStore.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
 /* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
 	'use strict';
 
-	Object.defineProperty(exports, '__esModule', {
+	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
 	var _react = __webpack_require__(2);
 
@@ -22716,18 +22944,19 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
-	exports['default'] = {
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = {
 	  renderReactSortCaret: function renderReactSortCaret(order) {
-	    var orderClass = (0, _classnames2['default'])('order', {
-	      'dropup': order === _Const2['default'].SORT_ASC
+	    var orderClass = (0, _classnames2.default)('order', {
+	      'dropup': order === _Const2.default.SORT_ASC
 	    });
-	    return _react2['default'].createElement(
+	    return _react2.default.createElement(
 	      'span',
 	      { className: orderClass },
-	      _react2['default'].createElement('span', { className: 'caret', style: { margin: '10px 5px' } })
+	      _react2.default.createElement('span', { className: 'caret', style: { margin: '10px 5px' } })
 	    );
 	  },
-
 	  getScrollBarWidth: function getScrollBarWidth() {
 	    var inner = document.createElement('p');
 	    inner.style.width = '100%';
@@ -22753,37 +22982,39 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	    return w1 - w2;
 	  },
-
 	  canUseDOM: function canUseDOM() {
 	    return typeof window !== 'undefined' && typeof window.document !== 'undefined';
 	  }
 	};
-	module.exports = exports['default'];
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "util.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
 /* 38 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* eslint block-scoped-var: 0 */
-	/* eslint vars-on-top: 0 */
-	/* eslint no-var: 0 */
-	/* eslint no-unused-vars: 0 */
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
 	'use strict';
 
-	Object.defineProperty(exports, '__esModule', {
+	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
 	var _util = __webpack_require__(37);
 
 	var _util2 = _interopRequireDefault(_util);
 
-	if (_util2['default'].canUseDOM()) {
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	if (_util2.default.canUseDOM()) {
 	  var filesaver = __webpack_require__(39);
 	  var saveAs = filesaver.saveAs;
-	}
+	} /* eslint block-scoped-var: 0 */
+	/* eslint vars-on-top: 0 */
+	/* eslint no-var: 0 */
+	/* eslint no-unused-vars: 0 */
+
 
 	function toString(data, keys) {
 	  var dataString = '';
@@ -22817,14 +23048,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 	};
 
-	exports['default'] = exportCSV;
-	module.exports = exports['default'];
+	exports.default = exportCSV;
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "csv_export_util.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
 /* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/* FileSaver.js
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+	"use strict";
+
+	/* FileSaver.js
 	 * A saveAs() FileSaver implementation.
 	 * 1.1.20151003
 	 *
@@ -22838,22 +23074,21 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	/*! @source http://purl.eligrey.com/github/FileSaver.js/blob/master/FileSaver.js */
 
-	"use strict";
-
-	var saveAs = saveAs || (function (view) {
+	var saveAs = saveAs || function (view) {
 		"use strict";
 		// IE <10 is explicitly unsupported
+
 		if (typeof navigator !== "undefined" && /MSIE [1-9]\./.test(navigator.userAgent)) {
 			return;
 		}
-		var doc = view.document,
-		   
+		var doc = view.document
 		// only get URL when necessary in case Blob.js hasn't overridden it yet
-		get_URL = function get_URL() {
+		,
+		    get_URL = function get_URL() {
 			return view.URL || view.webkitURL || view;
 		},
 		    save_link = doc.createElementNS("http://www.w3.org/1999/xhtml", "a"),
-		    can_use_save_link = ("download" in save_link),
+		    can_use_save_link = "download" in save_link,
 		    click = function click(node) {
 			var event = new MouseEvent("click");
 			node.dispatchEvent(event);
@@ -22867,14 +23102,14 @@ return /******/ (function(modules) { // webpackBootstrap
 			}, 0);
 		},
 		    force_saveable_type = "application/octet-stream",
-		    fs_min_size = 0,
-		   
+		    fs_min_size = 0
 		// See https://code.google.com/p/chromium/issues/detail?id=375297#c7 and
 		// https://github.com/eligrey/FileSaver.js/commit/485930a#commitcomment-8768047
 		// for the reasoning behind the timeout and revocation flow
-		arbitrary_revoke_timeout = 500,
-		    // in ms
-		revoke = function revoke(file) {
+		,
+		    arbitrary_revoke_timeout = 500 // in ms
+		,
+		    revoke = function revoke(file) {
 			var revoker = function revoker() {
 				if (typeof file === "string") {
 					// file is an object URL
@@ -22923,10 +23158,10 @@ return /******/ (function(modules) { // webpackBootstrap
 			    target_view,
 			    dispatch_all = function dispatch_all() {
 				dispatch(filesaver, "writestart progress write writeend".split(" "));
-			},
-			   
+			}
 			// on any filesys errors revert to saving with object URLs
-			fs_error = function fs_error() {
+			,
+			    fs_error = function fs_error() {
 				if (target_view && is_safari && typeof FileReader !== "undefined") {
 					// Safari doesn't allow downloading of blob urls
 					var reader = new FileReader();
@@ -23075,7 +23310,7 @@ return /******/ (function(modules) { // webpackBootstrap
 		FS_proto.error = FS_proto.onwritestart = FS_proto.onprogress = FS_proto.onwrite = FS_proto.onabort = FS_proto.onerror = FS_proto.onwriteend = null;
 
 		return saveAs;
-	})(typeof self !== "undefined" && self || typeof window !== "undefined" && window || undefined.content);
+	}(typeof self !== "undefined" && self || typeof window !== "undefined" && window || undefined.content);
 	// `self` is undefined in Firefox for Android content script context
 	// while `this` is nsIContentFrameMessageManager
 	// with an attribute `content` that corresponds to the window
@@ -23087,6 +23322,8 @@ return /******/ (function(modules) { // webpackBootstrap
 			return saveAs;
 		}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 	}
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "filesaver.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
 /* 40 */
@@ -23107,21 +23344,18 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 42 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
 	'use strict';
 
-	Object.defineProperty(exports, '__esModule', {
+	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
+	exports.Filter = undefined;
 
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
 
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _Const = __webpack_require__(4);
 
@@ -23129,22 +23363,32 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _events = __webpack_require__(43);
 
-	var Filter = (function (_EventEmitter) {
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Filter = exports.Filter = function (_EventEmitter) {
 	  _inherits(Filter, _EventEmitter);
 
 	  function Filter(data) {
 	    _classCallCheck(this, Filter);
 
-	    _get(Object.getPrototypeOf(Filter.prototype), 'constructor', this).call(this, data);
-	    this.currentFilter = {};
+	    var _this = _possibleConstructorReturn(this, (Filter.__proto__ || Object.getPrototypeOf(Filter)).call(this, data));
+
+	    _this.currentFilter = {};
+	    return _this;
 	  }
 
 	  _createClass(Filter, [{
 	    key: 'handleFilter',
 	    value: function handleFilter(dataField, value, type) {
-	      var filterType = type || _Const2['default'].FILTER_TYPE.CUSTOM;
+	      var filterType = type || _Const2.default.FILTER_TYPE.CUSTOM;
 
-	      if (value !== null && typeof value === 'object') {
+	      if (value !== null && (typeof value === 'undefined' ? 'undefined' : _typeof(value)) === 'object') {
 	        // value of the filter is an object
 	        var hasValue = true;
 	        for (var prop in value) {
@@ -23169,9 +23413,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }]);
 
 	  return Filter;
-	})(_events.EventEmitter);
+	}(_events.EventEmitter);
 
-	exports.Filter = Filter;
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "Filter.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
 /* 43 */
@@ -23236,12 +23480,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	      er = arguments[1];
 	      if (er instanceof Error) {
 	        throw er; // Unhandled 'error' event
-	      } else {
-	        // At least give some kind of context to the user
-	        var err = new Error('Uncaught, unspecified "error" event. (' + er + ')');
-	        err.context = er;
-	        throw err;
 	      }
+	      throw TypeError('Uncaught, unspecified "error" event.');
 	    }
 	  }
 
@@ -23264,11 +23504,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	        break;
 	      // slower
 	      default:
-	        args = Array.prototype.slice.call(arguments, 1);
+	        len = arguments.length;
+	        args = new Array(len - 1);
+	        for (i = 1; i < len; i++)
+	          args[i - 1] = arguments[i];
 	        handler.apply(this, args);
 	    }
 	  } else if (isObject(handler)) {
-	    args = Array.prototype.slice.call(arguments, 1);
+	    len = arguments.length;
+	    args = new Array(len - 1);
+	    for (i = 1; i < len; i++)
+	      args[i - 1] = arguments[i];
+
 	    listeners = handler.slice();
 	    len = listeners.length;
 	    for (i = 0; i < len; i++)
@@ -23306,6 +23553,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	  // Check for listener leak
 	  if (isObject(this._events[type]) && !this._events[type].warned) {
+	    var m;
 	    if (!isUndefined(this._maxListeners)) {
 	      m = this._maxListeners;
 	    } else {
@@ -23427,7 +23675,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	  if (isFunction(listeners)) {
 	    this.removeListener(type, listeners);
-	  } else if (listeners) {
+	  } else {
 	    // LIFO order
 	    while (listeners.length)
 	      this.removeListener(type, listeners[listeners.length - 1]);
@@ -23448,20 +23696,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	  return ret;
 	};
 
-	EventEmitter.prototype.listenerCount = function(type) {
-	  if (this._events) {
-	    var evlistener = this._events[type];
-
-	    if (isFunction(evlistener))
-	      return 1;
-	    else if (evlistener)
-	      return evlistener.length;
-	  }
-	  return 0;
-	};
-
 	EventEmitter.listenerCount = function(emitter, type) {
-	  return emitter.listenerCount(type);
+	  var ret;
+	  if (!emitter._events || !emitter._events[type])
+	    ret = 0;
+	  else if (isFunction(emitter._events[type]))
+	    ret = 1;
+	  else
+	    ret = emitter._events[type].length;
+	  return ret;
 	};
 
 	function isFunction(arg) {
@@ -23485,25 +23728,17 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 44 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* eslint default-case: 0 */
-	/* eslint guard-for-in: 0 */
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
 	'use strict';
 
-	Object.defineProperty(exports, '__esModule', {
+	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(2);
 
@@ -23521,43 +23756,52 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _util2 = _interopRequireDefault(_util);
 
-	var _filtersDate = __webpack_require__(45);
+	var _Date = __webpack_require__(45);
 
-	var _filtersDate2 = _interopRequireDefault(_filtersDate);
+	var _Date2 = _interopRequireDefault(_Date);
 
-	var _filtersText = __webpack_require__(46);
+	var _Text = __webpack_require__(46);
 
-	var _filtersText2 = _interopRequireDefault(_filtersText);
+	var _Text2 = _interopRequireDefault(_Text);
 
-	var _filtersRegex = __webpack_require__(47);
+	var _Regex = __webpack_require__(47);
 
-	var _filtersRegex2 = _interopRequireDefault(_filtersRegex);
+	var _Regex2 = _interopRequireDefault(_Regex);
 
-	var _filtersSelect = __webpack_require__(48);
+	var _Select = __webpack_require__(48);
 
-	var _filtersSelect2 = _interopRequireDefault(_filtersSelect);
+	var _Select2 = _interopRequireDefault(_Select);
 
-	var _filtersNumber = __webpack_require__(49);
+	var _Number = __webpack_require__(49);
 
-	var _filtersNumber2 = _interopRequireDefault(_filtersNumber);
+	var _Number2 = _interopRequireDefault(_Number);
 
-	var TableHeaderColumn = (function (_Component) {
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /* eslint default-case: 0 */
+	/* eslint guard-for-in: 0 */
+
+
+	var TableHeaderColumn = function (_Component) {
 	  _inherits(TableHeaderColumn, _Component);
 
 	  function TableHeaderColumn(props) {
-	    var _this = this;
-
 	    _classCallCheck(this, TableHeaderColumn);
 
-	    _get(Object.getPrototypeOf(TableHeaderColumn.prototype), 'constructor', this).call(this, props);
+	    var _this = _possibleConstructorReturn(this, (TableHeaderColumn.__proto__ || Object.getPrototypeOf(TableHeaderColumn)).call(this, props));
 
-	    this.handleColumnClick = function () {
+	    _this.handleColumnClick = function () {
 	      if (!_this.props.dataSort) return;
-	      var order = _this.props.sort === _Const2['default'].SORT_DESC ? _Const2['default'].SORT_ASC : _Const2['default'].SORT_DESC;
+	      var order = _this.props.sort === _Const2.default.SORT_DESC ? _Const2.default.SORT_ASC : _Const2.default.SORT_DESC;
 	      _this.props.onSort(order, _this.props.dataField);
 	    };
 
-	    this.handleFilter = this.handleFilter.bind(this);
+	    _this.handleFilter = _this.handleFilter.bind(_this);
+	    return _this;
 	  }
 
 	  _createClass(TableHeaderColumn, [{
@@ -23569,32 +23813,32 @@ return /******/ (function(modules) { // webpackBootstrap
 	    key: 'getFilters',
 	    value: function getFilters() {
 	      switch (this.props.filter.type) {
-	        case _Const2['default'].FILTER_TYPE.TEXT:
+	        case _Const2.default.FILTER_TYPE.TEXT:
 	          {
-	            return _react2['default'].createElement(_filtersText2['default'], _extends({ ref: 'textFilter' }, this.props.filter, {
+	            return _react2.default.createElement(_Text2.default, _extends({ ref: 'textFilter' }, this.props.filter, {
 	              columnName: this.props.children, filterHandler: this.handleFilter }));
 	          }
-	        case _Const2['default'].FILTER_TYPE.REGEX:
+	        case _Const2.default.FILTER_TYPE.REGEX:
 	          {
-	            return _react2['default'].createElement(_filtersRegex2['default'], _extends({ ref: 'regexFilter' }, this.props.filter, {
+	            return _react2.default.createElement(_Regex2.default, _extends({ ref: 'regexFilter' }, this.props.filter, {
 	              columnName: this.props.children, filterHandler: this.handleFilter }));
 	          }
-	        case _Const2['default'].FILTER_TYPE.SELECT:
+	        case _Const2.default.FILTER_TYPE.SELECT:
 	          {
-	            return _react2['default'].createElement(_filtersSelect2['default'], _extends({ ref: 'selectFilter' }, this.props.filter, {
+	            return _react2.default.createElement(_Select2.default, _extends({ ref: 'selectFilter' }, this.props.filter, {
 	              columnName: this.props.children, filterHandler: this.handleFilter }));
 	          }
-	        case _Const2['default'].FILTER_TYPE.NUMBER:
+	        case _Const2.default.FILTER_TYPE.NUMBER:
 	          {
-	            return _react2['default'].createElement(_filtersNumber2['default'], _extends({ ref: 'numberFilter' }, this.props.filter, {
+	            return _react2.default.createElement(_Number2.default, _extends({ ref: 'numberFilter' }, this.props.filter, {
 	              columnName: this.props.children, filterHandler: this.handleFilter }));
 	          }
-	        case _Const2['default'].FILTER_TYPE.DATE:
+	        case _Const2.default.FILTER_TYPE.DATE:
 	          {
-	            return _react2['default'].createElement(_filtersDate2['default'], _extends({ ref: 'dateFilter' }, this.props.filter, {
+	            return _react2.default.createElement(_Date2.default, _extends({ ref: 'dateFilter' }, this.props.filter, {
 	              columnName: this.props.children, filterHandler: this.handleFilter }));
 	          }
-	        case _Const2['default'].FILTER_TYPE.CUSTOM:
+	        case _Const2.default.FILTER_TYPE.CUSTOM:
 	          {
 	            return this.props.filter.getElement(this.handleFilter, this.props.filter.customFilterParameters);
 	          }
@@ -23608,7 +23852,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      var defaultCaret = undefined;
+	      var defaultCaret = void 0;
 	      var _props = this.props;
 	      var dataAlign = _props.dataAlign;
 	      var dataField = _props.dataField;
@@ -23626,29 +23870,29 @@ return /******/ (function(modules) { // webpackBootstrap
 	        display: hidden ? 'none' : null
 	      };
 	      if (sortIndicator) {
-	        defaultCaret = !dataSort ? null : _react2['default'].createElement(
+	        defaultCaret = !dataSort ? null : _react2.default.createElement(
 	          'span',
 	          { className: 'order' },
-	          _react2['default'].createElement(
+	          _react2.default.createElement(
 	            'span',
 	            { className: 'dropdown' },
-	            _react2['default'].createElement('span', { className: 'caret', style: { margin: '10px 0 10px 5px', color: '#ccc' } })
+	            _react2.default.createElement('span', { className: 'caret', style: { margin: '10px 0 10px 5px', color: '#ccc' } })
 	          ),
-	          _react2['default'].createElement(
+	          _react2.default.createElement(
 	            'span',
 	            { className: 'dropup' },
-	            _react2['default'].createElement('span', { className: 'caret', style: { margin: '10px 0', color: '#ccc' } })
+	            _react2.default.createElement('span', { className: 'caret', style: { margin: '10px 0', color: '#ccc' } })
 	          )
 	        );
 	      }
-	      var sortCaret = sort ? _util2['default'].renderReactSortCaret(sort) : defaultCaret;
+	      var sortCaret = sort ? _util2.default.renderReactSortCaret(sort) : defaultCaret;
 	      if (caretRender) {
 	        sortCaret = caretRender(sort, dataField);
 	      }
 	      var classes = (0, _classnames2['default'])(typeof className === 'function' ? className() : className, dataSort ? 'sort-column' : '');
 
 	      var title = typeof children === 'string' ? { title: children } : null;
-	      return _react2['default'].createElement(
+	      return _react2.default.createElement(
 	        'th',
 	        _extends({ ref: 'header-col',
 	          className: classes,
@@ -23657,9 +23901,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	        }, title),
 	        children,
 	        sortCaret,
-	        _react2['default'].createElement(
+	        _react2.default.createElement(
 	          'div',
-	          { onClick: function (e) {
+	          { onClick: function onClick(e) {
 	              return e.stopPropagation();
 	            } },
 	          this.props.filter ? this.getFilters() : null
@@ -23674,27 +23918,27 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 
 	      switch (this.props.filter.type) {
-	        case _Const2['default'].FILTER_TYPE.TEXT:
+	        case _Const2.default.FILTER_TYPE.TEXT:
 	          {
 	            this.refs.textFilter.cleanFiltered();
 	            break;
 	          }
-	        case _Const2['default'].FILTER_TYPE.REGEX:
+	        case _Const2.default.FILTER_TYPE.REGEX:
 	          {
 	            this.refs.regexFilter.cleanFiltered();
 	            break;
 	          }
-	        case _Const2['default'].FILTER_TYPE.SELECT:
+	        case _Const2.default.FILTER_TYPE.SELECT:
 	          {
 	            this.refs.selectFilter.cleanFiltered();
 	            break;
 	          }
-	        case _Const2['default'].FILTER_TYPE.NUMBER:
+	        case _Const2.default.FILTER_TYPE.NUMBER:
 	          {
 	            this.refs.numberFilter.cleanFiltered();
 	            break;
 	          }
-	        case _Const2['default'].FILTER_TYPE.DATE:
+	        case _Const2.default.FILTER_TYPE.DATE:
 	          {
 	            this.refs.dateFilter.cleanFiltered();
 	            break;
@@ -23706,27 +23950,27 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: function applyFilter(val) {
 	      if (this.props.filter === undefined) return;
 	      switch (this.props.filter.type) {
-	        case _Const2['default'].FILTER_TYPE.TEXT:
+	        case _Const2.default.FILTER_TYPE.TEXT:
 	          {
 	            this.refs.textFilter.applyFilter(val);
 	            break;
 	          }
-	        case _Const2['default'].FILTER_TYPE.REGEX:
+	        case _Const2.default.FILTER_TYPE.REGEX:
 	          {
 	            this.refs.regexFilter.applyFilter(val);
 	            break;
 	          }
-	        case _Const2['default'].FILTER_TYPE.SELECT:
+	        case _Const2.default.FILTER_TYPE.SELECT:
 	          {
 	            this.refs.selectFilter.applyFilter(val);
 	            break;
 	          }
-	        case _Const2['default'].FILTER_TYPE.NUMBER:
+	        case _Const2.default.FILTER_TYPE.NUMBER:
 	          {
 	            this.refs.numberFilter.applyFilter(val);
 	            break;
 	          }
-	        case _Const2['default'].FILTER_TYPE.DATE:
+	        case _Const2.default.FILTER_TYPE.DATE:
 	          {
 	            this.refs.dateFilter.applyFilter(val);
 	            break;
@@ -23736,11 +23980,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }]);
 
 	  return TableHeaderColumn;
-	})(_react.Component);
+	}(_react.Component);
 
 	var filterTypeArray = [];
-	for (var key in _Const2['default'].FILTER_TYPE) {
-	  filterTypeArray.push(_Const2['default'].FILTER_TYPE[key]);
+	for (var key in _Const2.default.FILTER_TYPE) {
+	  filterTypeArray.push(_Const2.default.FILTER_TYPE[key]);
 	}
 
 	TableHeaderColumn.propTypes = {
@@ -23781,7 +24025,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    customFilterParameters: _react.PropTypes.object
 	  }),
 	  sortIndicator: _react.PropTypes.bool,
-	  'export': _react.PropTypes.bool
+	  export: _react.PropTypes.bool
 	};
 
 	TableHeaderColumn.defaultProps = {
@@ -23811,30 +24055,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	  sortIndicator: true
 	};
 
-	exports['default'] = TableHeaderColumn;
-	module.exports = exports['default'];
+	exports.default = TableHeaderColumn;
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "TableHeaderColumn.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
 /* 45 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* eslint quotes: 0 */
-	/* eslint max-len: 0 */
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
 	'use strict';
 
-	Object.defineProperty(exports, '__esModule', {
+	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(2);
 
@@ -23844,22 +24081,34 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Const2 = _interopRequireDefault(_Const);
 
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /* eslint quotes: 0 */
+	/* eslint max-len: 0 */
+
+
 	var legalComparators = ['=', '>', '>=', '<', '<=', '!='];
 
 	function dateParser(d) {
 	  return d.getFullYear() + '-' + ("0" + (d.getMonth() + 1)).slice(-2) + '-' + ("0" + d.getDate()).slice(-2);
 	}
 
-	var DateFilter = (function (_Component) {
+	var DateFilter = function (_Component) {
 	  _inherits(DateFilter, _Component);
 
 	  function DateFilter(props) {
 	    _classCallCheck(this, DateFilter);
 
-	    _get(Object.getPrototypeOf(DateFilter.prototype), 'constructor', this).call(this, props);
-	    this.dateComparators = this.props.dateComparators || legalComparators;
-	    this.filter = this.filter.bind(this);
-	    this.onChangeComparator = this.onChangeComparator.bind(this);
+	    var _this = _possibleConstructorReturn(this, (DateFilter.__proto__ || Object.getPrototypeOf(DateFilter)).call(this, props));
+
+	    _this.dateComparators = _this.props.dateComparators || legalComparators;
+	    _this.filter = _this.filter.bind(_this);
+	    _this.onChangeComparator = _this.onChangeComparator.bind(_this);
+	    return _this;
 	  }
 
 	  _createClass(DateFilter, [{
@@ -23883,15 +24132,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	        return;
 	      }
 	      date = new Date(date);
-	      this.props.filterHandler({ date: date, comparator: comparator }, _Const2['default'].FILTER_TYPE.DATE);
+	      this.props.filterHandler({ date: date, comparator: comparator }, _Const2.default.FILTER_TYPE.DATE);
 	    }
 	  }, {
 	    key: 'getComparatorOptions',
 	    value: function getComparatorOptions() {
 	      var optionTags = [];
-	      optionTags.push(_react2['default'].createElement('option', { key: '-1' }));
+	      optionTags.push(_react2.default.createElement('option', { key: '-1' }));
 	      for (var i = 0; i < this.dateComparators.length; i++) {
-	        optionTags.push(_react2['default'].createElement(
+	        optionTags.push(_react2.default.createElement(
 	          'option',
 	          { key: i, value: this.dateComparators[i] },
 	          this.dateComparators[i]
@@ -23905,9 +24154,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var comparator = this.refs.dateFilterComparator.value;
 	      var dateValue = event.target.value;
 	      if (dateValue) {
-	        this.props.filterHandler({ date: new Date(dateValue), comparator: comparator }, _Const2['default'].FILTER_TYPE.DATE);
+	        this.props.filterHandler({ date: new Date(dateValue), comparator: comparator }, _Const2.default.FILTER_TYPE.DATE);
 	      } else {
-	        this.props.filterHandler(null, _Const2['default'].FILTER_TYPE.DATE);
+	        this.props.filterHandler(null, _Const2.default.FILTER_TYPE.DATE);
 	      }
 	    }
 	  }, {
@@ -23918,7 +24167,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      this.setState({ isPlaceholderSelected: value === '' });
 	      this.refs.dateFilterComparator.value = comparator;
 	      this.refs.inputDate.value = value;
-	      this.props.filterHandler({ date: new Date(value), comparator: comparator }, _Const2['default'].FILTER_TYPE.DATE);
+	      this.props.filterHandler({ date: new Date(value), comparator: comparator }, _Const2.default.FILTER_TYPE.DATE);
 	    }
 	  }, {
 	    key: 'applyFilter',
@@ -23929,7 +24178,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      this.setState({ isPlaceholderSelected: date === '' });
 	      this.refs.dateFilterComparator.value = comparator;
 	      this.refs.inputDate.value = dateParser(date);
-	      this.props.filterHandler({ date: date, comparator: comparator }, _Const2['default'].FILTER_TYPE.DATE);
+	      this.props.filterHandler({ date: date, comparator: comparator }, _Const2.default.FILTER_TYPE.DATE);
 	    }
 	  }, {
 	    key: 'componentDidMount',
@@ -23937,7 +24186,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var comparator = this.refs.dateFilterComparator.value;
 	      var dateValue = this.refs.inputDate.value;
 	      if (comparator && dateValue) {
-	        this.props.filterHandler({ date: new Date(dateValue), comparator: comparator }, _Const2['default'].FILTER_TYPE.DATE);
+	        this.props.filterHandler({ date: new Date(dateValue), comparator: comparator }, _Const2.default.FILTER_TYPE.DATE);
 	      }
 	    }
 	  }, {
@@ -23945,10 +24194,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: function render() {
 	      var defaultValue = this.props.defaultValue;
 
-	      return _react2['default'].createElement(
+	      return _react2.default.createElement(
 	        'div',
 	        { className: 'filter date-filter' },
-	        _react2['default'].createElement(
+	        _react2.default.createElement(
 	          'select',
 	          { ref: 'dateFilterComparator',
 	            className: 'date-filter-comparator form-control',
@@ -23956,7 +24205,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            defaultValue: defaultValue ? defaultValue.comparator : '' },
 	          this.getComparatorOptions()
 	        ),
-	        _react2['default'].createElement('input', { ref: 'inputDate',
+	        _react2.default.createElement('input', { ref: 'inputDate',
 	          className: 'filter date-filter-input form-control',
 	          type: 'date',
 	          onChange: this.filter,
@@ -23966,7 +24215,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }]);
 
 	  return DateFilter;
-	})(_react.Component);
+	}(_react.Component);
 
 	DateFilter.propTypes = {
 	  filterHandler: _react.PropTypes.func.isRequired,
@@ -23995,28 +24244,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	  columnName: _react.PropTypes.string
 	};
 
-	exports['default'] = DateFilter;
-	module.exports = exports['default'];
+	exports.default = DateFilter;
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "Date.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
 /* 46 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
 	'use strict';
 
-	Object.defineProperty(exports, '__esModule', {
+	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(2);
 
@@ -24026,28 +24270,38 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Const2 = _interopRequireDefault(_Const);
 
-	var TextFilter = (function (_Component) {
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var TextFilter = function (_Component) {
 	  _inherits(TextFilter, _Component);
 
 	  function TextFilter(props) {
 	    _classCallCheck(this, TextFilter);
 
-	    _get(Object.getPrototypeOf(TextFilter.prototype), 'constructor', this).call(this, props);
-	    this.filter = this.filter.bind(this);
-	    this.timeout = null;
+	    var _this = _possibleConstructorReturn(this, (TextFilter.__proto__ || Object.getPrototypeOf(TextFilter)).call(this, props));
+
+	    _this.filter = _this.filter.bind(_this);
+	    _this.timeout = null;
+	    return _this;
 	  }
 
 	  _createClass(TextFilter, [{
 	    key: 'filter',
 	    value: function filter(event) {
-	      var _this = this;
+	      var _this2 = this;
 
 	      if (this.timeout) {
 	        clearTimeout(this.timeout);
 	      }
 	      var filterValue = event.target.value;
 	      this.timeout = setTimeout(function () {
-	        _this.props.filterHandler(filterValue, _Const2['default'].FILTER_TYPE.TEXT);
+	        _this2.props.filterHandler(filterValue, _Const2.default.FILTER_TYPE.TEXT);
 	      }, this.props.delay);
 	    }
 	  }, {
@@ -24055,20 +24309,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: function cleanFiltered() {
 	      var value = this.props.defaultValue ? this.props.defaultValue : '';
 	      this.refs.inputText.value = value;
-	      this.props.filterHandler(value, _Const2['default'].FILTER_TYPE.TEXT);
+	      this.props.filterHandler(value, _Const2.default.FILTER_TYPE.TEXT);
 	    }
 	  }, {
 	    key: 'applyFilter',
 	    value: function applyFilter(filterText) {
 	      this.refs.inputText.value = filterText;
-	      this.props.filterHandler(filterText, _Const2['default'].FILTER_TYPE.TEXT);
+	      this.props.filterHandler(filterText, _Const2.default.FILTER_TYPE.TEXT);
 	    }
 	  }, {
 	    key: 'componentDidMount',
 	    value: function componentDidMount() {
 	      var defaultValue = this.refs.inputText.value;
 	      if (defaultValue) {
-	        this.props.filterHandler(defaultValue, _Const2['default'].FILTER_TYPE.TEXT);
+	        this.props.filterHandler(defaultValue, _Const2.default.FILTER_TYPE.TEXT);
 	      }
 	    }
 	  }, {
@@ -24084,7 +24338,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var columnName = _props.columnName;
 	      var defaultValue = _props.defaultValue;
 
-	      return _react2['default'].createElement('input', { ref: 'inputText',
+	      return _react2.default.createElement('input', { ref: 'inputText',
 	        className: 'filter text-filter form-control',
 	        type: 'text',
 	        onChange: this.filter,
@@ -24094,7 +24348,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }]);
 
 	  return TextFilter;
-	})(_react.Component);
+	}(_react.Component);
 
 	TextFilter.propTypes = {
 	  filterHandler: _react.PropTypes.func.isRequired,
@@ -24105,31 +24359,26 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 	TextFilter.defaultProps = {
-	  delay: _Const2['default'].FILTER_DELAY
+	  delay: _Const2.default.FILTER_DELAY
 	};
 
-	exports['default'] = TextFilter;
-	module.exports = exports['default'];
+	exports.default = TextFilter;
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "Text.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
 /* 47 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
 	'use strict';
 
-	Object.defineProperty(exports, '__esModule', {
+	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(2);
 
@@ -24139,28 +24388,38 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Const2 = _interopRequireDefault(_Const);
 
-	var RegexFilter = (function (_Component) {
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var RegexFilter = function (_Component) {
 	  _inherits(RegexFilter, _Component);
 
 	  function RegexFilter(props) {
 	    _classCallCheck(this, RegexFilter);
 
-	    _get(Object.getPrototypeOf(RegexFilter.prototype), 'constructor', this).call(this, props);
-	    this.filter = this.filter.bind(this);
-	    this.timeout = null;
+	    var _this = _possibleConstructorReturn(this, (RegexFilter.__proto__ || Object.getPrototypeOf(RegexFilter)).call(this, props));
+
+	    _this.filter = _this.filter.bind(_this);
+	    _this.timeout = null;
+	    return _this;
 	  }
 
 	  _createClass(RegexFilter, [{
 	    key: 'filter',
 	    value: function filter(event) {
-	      var _this = this;
+	      var _this2 = this;
 
 	      if (this.timeout) {
 	        clearTimeout(this.timeout);
 	      }
 	      var filterValue = event.target.value;
 	      this.timeout = setTimeout(function () {
-	        _this.props.filterHandler(filterValue, _Const2['default'].FILTER_TYPE.REGEX);
+	        _this2.props.filterHandler(filterValue, _Const2.default.FILTER_TYPE.REGEX);
 	      }, this.props.delay);
 	    }
 	  }, {
@@ -24168,20 +24427,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: function cleanFiltered() {
 	      var value = this.props.defaultValue ? this.props.defaultValue : '';
 	      this.refs.inputText.value = value;
-	      this.props.filterHandler(value, _Const2['default'].FILTER_TYPE.TEXT);
+	      this.props.filterHandler(value, _Const2.default.FILTER_TYPE.TEXT);
 	    }
 	  }, {
 	    key: 'applyFilter',
 	    value: function applyFilter(filterRegx) {
 	      this.refs.inputText.value = filterRegx;
-	      this.props.filterHandler(filterRegx, _Const2['default'].FILTER_TYPE.REGEX);
+	      this.props.filterHandler(filterRegx, _Const2.default.FILTER_TYPE.REGEX);
 	    }
 	  }, {
 	    key: 'componentDidMount',
 	    value: function componentDidMount() {
 	      var value = this.refs.inputText.value;
 	      if (value) {
-	        this.props.filterHandler(value, _Const2['default'].FILTER_TYPE.REGEX);
+	        this.props.filterHandler(value, _Const2.default.FILTER_TYPE.REGEX);
 	      }
 	    }
 	  }, {
@@ -24197,7 +24456,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var placeholder = _props.placeholder;
 	      var columnName = _props.columnName;
 
-	      return _react2['default'].createElement('input', { ref: 'inputText',
+	      return _react2.default.createElement('input', { ref: 'inputText',
 	        className: 'filter text-filter form-control',
 	        type: 'text',
 	        onChange: this.filter,
@@ -24207,7 +24466,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }]);
 
 	  return RegexFilter;
-	})(_react.Component);
+	}(_react.Component);
 
 	RegexFilter.propTypes = {
 	  filterHandler: _react.PropTypes.func.isRequired,
@@ -24218,31 +24477,26 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 	RegexFilter.defaultProps = {
-	  delay: _Const2['default'].FILTER_DELAY
+	  delay: _Const2.default.FILTER_DELAY
 	};
 
-	exports['default'] = RegexFilter;
-	module.exports = exports['default'];
+	exports.default = RegexFilter;
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "Regex.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
 /* 48 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
 	'use strict';
 
-	Object.defineProperty(exports, '__esModule', {
+	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(2);
 
@@ -24256,17 +24510,27 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Const2 = _interopRequireDefault(_Const);
 
-	var SelectFilter = (function (_Component) {
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var SelectFilter = function (_Component) {
 	  _inherits(SelectFilter, _Component);
 
 	  function SelectFilter(props) {
 	    _classCallCheck(this, SelectFilter);
 
-	    _get(Object.getPrototypeOf(SelectFilter.prototype), 'constructor', this).call(this, props);
-	    this.filter = this.filter.bind(this);
-	    this.state = {
-	      isPlaceholderSelected: this.props.defaultValue === undefined || !this.props.options.hasOwnProperty(this.props.defaultValue)
+	    var _this = _possibleConstructorReturn(this, (SelectFilter.__proto__ || Object.getPrototypeOf(SelectFilter)).call(this, props));
+
+	    _this.filter = _this.filter.bind(_this);
+	    _this.state = {
+	      isPlaceholderSelected: _this.props.defaultValue === undefined || !_this.props.options.hasOwnProperty(_this.props.defaultValue)
 	    };
+	    return _this;
 	  }
 
 	  _createClass(SelectFilter, [{
@@ -24275,7 +24539,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var value = event.target.value;
 
 	      this.setState({ isPlaceholderSelected: value === '' });
-	      this.props.filterHandler(value, _Const2['default'].FILTER_TYPE.SELECT);
+	      this.props.filterHandler(value, _Const2.default.FILTER_TYPE.SELECT);
 	    }
 	  }, {
 	    key: 'cleanFiltered',
@@ -24283,7 +24547,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var value = this.props.defaultValue !== undefined ? this.props.defaultValue : '';
 	      this.setState({ isPlaceholderSelected: value === '' });
 	      this.refs.selectInput.value = value;
-	      this.props.filterHandler(value, _Const2['default'].FILTER_TYPE.SELECT);
+	      this.props.filterHandler(value, _Const2.default.FILTER_TYPE.SELECT);
 	    }
 	  }, {
 	    key: 'applyFilter',
@@ -24291,7 +24555,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      filterOption = filterOption + '';
 	      this.setState({ isPlaceholderSelected: filterOption === '' });
 	      this.refs.selectInput.value = filterOption;
-	      this.props.filterHandler(filterOption, _Const2['default'].FILTER_TYPE.SELECT);
+	      this.props.filterHandler(filterOption, _Const2.default.FILTER_TYPE.SELECT);
 	    }
 	  }, {
 	    key: 'getOptions',
@@ -24302,13 +24566,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var placeholder = _props.placeholder;
 	      var columnName = _props.columnName;
 
-	      optionTags.push(_react2['default'].createElement(
+	      optionTags.push(_react2.default.createElement(
 	        'option',
 	        { key: '-1', value: '' },
 	        placeholder || 'Select ' + columnName + '...'
 	      ));
 	      Object.keys(options).map(function (key) {
-	        optionTags.push(_react2['default'].createElement(
+	        optionTags.push(_react2.default.createElement(
 	          'option',
 	          { key: key, value: key },
 	          options[key] + ''
@@ -24321,15 +24585,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: function componentDidMount() {
 	      var value = this.refs.selectInput.value;
 	      if (value) {
-	        this.props.filterHandler(value, _Const2['default'].FILTER_TYPE.SELECT);
+	        this.props.filterHandler(value, _Const2.default.FILTER_TYPE.SELECT);
 	      }
 	    }
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      var selectClass = (0, _classnames2['default'])('filter', 'select-filter', 'form-control', { 'placeholder-selected': this.state.isPlaceholderSelected });
+	      var selectClass = (0, _classnames2.default)('filter', 'select-filter', 'form-control', { 'placeholder-selected': this.state.isPlaceholderSelected });
 
-	      return _react2['default'].createElement(
+	      return _react2.default.createElement(
 	        'select',
 	        { ref: 'selectInput',
 	          className: selectClass,
@@ -24341,7 +24605,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }]);
 
 	  return SelectFilter;
-	})(_react.Component);
+	}(_react.Component);
 
 	SelectFilter.propTypes = {
 	  filterHandler: _react.PropTypes.func.isRequired,
@@ -24350,28 +24614,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	  columnName: _react.PropTypes.string
 	};
 
-	exports['default'] = SelectFilter;
-	module.exports = exports['default'];
+	exports.default = SelectFilter;
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "Select.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
 /* 49 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
 	'use strict';
 
-	Object.defineProperty(exports, '__esModule', {
+	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(2);
 
@@ -24385,29 +24644,39 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Const2 = _interopRequireDefault(_Const);
 
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
 	var legalComparators = ['=', '>', '>=', '<', '<=', '!='];
 
-	var NumberFilter = (function (_Component) {
+	var NumberFilter = function (_Component) {
 	  _inherits(NumberFilter, _Component);
 
 	  function NumberFilter(props) {
 	    _classCallCheck(this, NumberFilter);
 
-	    _get(Object.getPrototypeOf(NumberFilter.prototype), 'constructor', this).call(this, props);
-	    this.numberComparators = this.props.numberComparators || legalComparators;
-	    this.timeout = null;
-	    this.state = {
-	      isPlaceholderSelected: this.props.defaultValue === undefined || this.props.defaultValue.number === undefined || this.props.options && this.props.options.indexOf(this.props.defaultValue.number) === -1
+	    var _this = _possibleConstructorReturn(this, (NumberFilter.__proto__ || Object.getPrototypeOf(NumberFilter)).call(this, props));
+
+	    _this.numberComparators = _this.props.numberComparators || legalComparators;
+	    _this.timeout = null;
+	    _this.state = {
+	      isPlaceholderSelected: _this.props.defaultValue === undefined || _this.props.defaultValue.number === undefined || _this.props.options && _this.props.options.indexOf(_this.props.defaultValue.number) === -1
 	    };
-	    this.onChangeNumber = this.onChangeNumber.bind(this);
-	    this.onChangeNumberSet = this.onChangeNumberSet.bind(this);
-	    this.onChangeComparator = this.onChangeComparator.bind(this);
+	    _this.onChangeNumber = _this.onChangeNumber.bind(_this);
+	    _this.onChangeNumberSet = _this.onChangeNumberSet.bind(_this);
+	    _this.onChangeComparator = _this.onChangeComparator.bind(_this);
+	    return _this;
 	  }
 
 	  _createClass(NumberFilter, [{
 	    key: 'onChangeNumber',
 	    value: function onChangeNumber(event) {
-	      var _this = this;
+	      var _this2 = this;
 
 	      var comparator = this.refs.numberFilterComparator.value;
 	      if (comparator === '') {
@@ -24418,7 +24687,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 	      var filterValue = event.target.value;
 	      this.timeout = setTimeout(function () {
-	        _this.props.filterHandler({ number: filterValue, comparator: comparator }, _Const2['default'].FILTER_TYPE.NUMBER);
+	        _this2.props.filterHandler({ number: filterValue, comparator: comparator }, _Const2.default.FILTER_TYPE.NUMBER);
 	      }, this.props.delay);
 	    }
 	  }, {
@@ -24431,7 +24700,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      if (comparator === '') {
 	        return;
 	      }
-	      this.props.filterHandler({ number: value, comparator: comparator }, _Const2['default'].FILTER_TYPE.NUMBER);
+	      this.props.filterHandler({ number: value, comparator: comparator }, _Const2.default.FILTER_TYPE.NUMBER);
 	    }
 	  }, {
 	    key: 'onChangeComparator',
@@ -24441,7 +24710,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      if (value === '') {
 	        return;
 	      }
-	      this.props.filterHandler({ number: value, comparator: comparator }, _Const2['default'].FILTER_TYPE.NUMBER);
+	      this.props.filterHandler({ number: value, comparator: comparator }, _Const2.default.FILTER_TYPE.NUMBER);
 	    }
 	  }, {
 	    key: 'cleanFiltered',
@@ -24451,7 +24720,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      this.setState({ isPlaceholderSelected: value === '' });
 	      this.refs.numberFilterComparator.value = comparator;
 	      this.refs.numberFilter.value = value;
-	      this.props.filterHandler({ number: value, comparator: comparator }, _Const2['default'].FILTER_TYPE.NUMBER);
+	      this.props.filterHandler({ number: value, comparator: comparator }, _Const2.default.FILTER_TYPE.NUMBER);
 	    }
 	  }, {
 	    key: 'applyFilter',
@@ -24462,15 +24731,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	      this.setState({ isPlaceholderSelected: number === '' });
 	      this.refs.numberFilterComparator.value = comparator;
 	      this.refs.numberFilter.value = number;
-	      this.props.filterHandler({ number: number, comparator: comparator }, _Const2['default'].FILTER_TYPE.NUMBER);
+	      this.props.filterHandler({ number: number, comparator: comparator }, _Const2.default.FILTER_TYPE.NUMBER);
 	    }
 	  }, {
 	    key: 'getComparatorOptions',
 	    value: function getComparatorOptions() {
 	      var optionTags = [];
-	      optionTags.push(_react2['default'].createElement('option', { key: '-1' }));
+	      optionTags.push(_react2.default.createElement('option', { key: '-1' }));
 	      for (var i = 0; i < this.numberComparators.length; i++) {
-	        optionTags.push(_react2['default'].createElement(
+	        optionTags.push(_react2.default.createElement(
 	          'option',
 	          { key: i, value: this.numberComparators[i] },
 	          this.numberComparators[i]
@@ -24484,13 +24753,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var optionTags = [];
 	      var options = this.props.options;
 
-	      optionTags.push(_react2['default'].createElement(
+
+	      optionTags.push(_react2.default.createElement(
 	        'option',
 	        { key: '-1', value: '' },
 	        this.props.placeholder || 'Select ' + this.props.columnName + '...'
 	      ));
 	      for (var i = 0; i < options.length; i++) {
-	        optionTags.push(_react2['default'].createElement(
+	        optionTags.push(_react2.default.createElement(
 	          'option',
 	          { key: i, value: options[i] },
 	          options[i]
@@ -24504,7 +24774,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var comparator = this.refs.numberFilterComparator.value;
 	      var number = this.refs.numberFilter.value;
 	      if (comparator && number) {
-	        this.props.filterHandler({ number: number, comparator: comparator }, _Const2['default'].FILTER_TYPE.NUMBER);
+	        this.props.filterHandler({ number: number, comparator: comparator }, _Const2.default.FILTER_TYPE.NUMBER);
 	      }
 	    }
 	  }, {
@@ -24515,12 +24785,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      var selectClass = (0, _classnames2['default'])('select-filter', 'number-filter-input', 'form-control', { 'placeholder-selected': this.state.isPlaceholderSelected });
+	      var selectClass = (0, _classnames2.default)('select-filter', 'number-filter-input', 'form-control', { 'placeholder-selected': this.state.isPlaceholderSelected });
 
-	      return _react2['default'].createElement(
+	      return _react2.default.createElement(
 	        'div',
 	        { className: 'filter number-filter' },
-	        _react2['default'].createElement(
+	        _react2.default.createElement(
 	          'select',
 	          { ref: 'numberFilterComparator',
 	            className: 'number-filter-comparator form-control',
@@ -24528,14 +24798,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	            defaultValue: this.props.defaultValue ? this.props.defaultValue.comparator : '' },
 	          this.getComparatorOptions()
 	        ),
-	        this.props.options ? _react2['default'].createElement(
+	        this.props.options ? _react2.default.createElement(
 	          'select',
 	          { ref: 'numberFilter',
 	            className: selectClass,
 	            onChange: this.onChangeNumberSet,
 	            defaultValue: this.props.defaultValue ? this.props.defaultValue.number : '' },
 	          this.getNumberOptions()
-	        ) : _react2['default'].createElement('input', { ref: 'numberFilter',
+	        ) : _react2.default.createElement('input', { ref: 'numberFilter',
 	          type: 'number',
 	          className: 'number-filter-input form-control',
 	          placeholder: this.props.placeholder || 'Enter ' + this.props.columnName + '...',
@@ -24546,7 +24816,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }]);
 
 	  return NumberFilter;
-	})(_react.Component);
+	}(_react.Component);
 
 	NumberFilter.propTypes = {
 	  filterHandler: _react.PropTypes.func.isRequired,
@@ -24579,14 +24849,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 	NumberFilter.defaultProps = {
-	  delay: _Const2['default'].FILTER_DELAY
+	  delay: _Const2.default.FILTER_DELAY
 	};
 
-	exports['default'] = NumberFilter;
-	module.exports = exports['default'];
+	exports.default = NumberFilter;
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "Number.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ }
 /******/ ])
 });
 ;
-//# sourceMappingURL=react-bootstrap-table.js.map
+//# sourceMappingURL=tm-react-bootstrap-table.js.map
