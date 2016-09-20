@@ -18,7 +18,7 @@ var webpack = require('webpack');
 
 module.exports = {
   entry: {
-    'react-bootstrap-table': './src/index.js'
+    'tm-react-bootstrap-table': './src/index.js'
   },
   devtool: '#cheap-module-source-map',
   output: {
@@ -51,7 +51,7 @@ module.exports = {
     loaders: [{
       test: /\.js$/,
       exclude: /node_modules/,
-      loaders: ['babel']
+      loaders: ['babel?presets[]=react,presets[]=es2015,presets[]=stage-0']
     }]
   }
 };
