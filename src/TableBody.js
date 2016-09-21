@@ -19,7 +19,7 @@ class TableBody extends Component {
   }
 
   render() {
-    const tableClasses = classSet('table', {
+    const tableClasses = classSet('table ddes-table', {
       'table-striped': this.props.striped,
       'table-bordered': this.props.bordered,
       'table-hover': this.props.hover,
@@ -153,8 +153,8 @@ class TableBody extends Component {
 
     if (isSelectRowDefined) {
       const style = {
-        width: 30,
-        minWidth: 30
+        width: 33,
+        minWidth: 33
       };
       if (!this.props.selectRow.hideSelectColumn) {
         selectRowHeader = (<col style={ style } key={ -1 }></col>);
@@ -255,15 +255,18 @@ class TableBody extends Component {
 
   renderSelectRowColumn(selected, inputType, disabled, CustomComponent = null, rowIndex = null) {
     return (
-      <TableColumn dataAlign='center'>
+      <TableColumn dataAlign='center' className='col-chkbox'>
       { CustomComponent ?
         <CustomComponent type={ inputType } checked={ selected } disabled={ disabled }
           rowIndex={ rowIndex }
           onChange={ e=>this.handleSelectRowColumChange(e,
             e.currentTarget.parentElement.parentElement.parentElement.rowIndex) }/> :
-        <input type={ inputType } checked={ selected } disabled={ disabled }
-          onChange={ e=>this.handleSelectRowColumChange(e,
-            e.currentTarget.parentElement.parentElement.rowIndex) }/>
+        <div className='tm-custom-checkbox'>
+          <input type={ inputType } checked={ selected } disabled={ disabled }
+            onChange={ e=>this.handleSelectRowColumChange(e,
+              e.currentTarget.parentElement.parentElement.rowIndex) }/>
+          <label></label>
+        </div>
       }
       </TableColumn>
     );

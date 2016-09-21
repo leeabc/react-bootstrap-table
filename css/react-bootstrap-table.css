@@ -1,6 +1,30 @@
 /*editor error animate*/
 /*@import "~toastr/build/toastr.min.css";*/
 
+.tm-custom-checkbox {
+  height: 16px;
+  width: 16px;
+}
+
+.tm-custom-checkbox input,
+.tm-custom-checkbox label {
+  cursor: pointer;
+  font-size: 12px;
+  vertical-align: middle;
+  margin-right: 2px;
+}
+
+[data-toggle=table] .ddes-table-pagination.tm-pagination {
+  bottom: 0;
+  border-top-width: 1px;
+  position: relative;
+  width: 100%;
+}
+
+.react-bs-table-container {
+  position: relative;
+}
+
 .react-bs-table-container .react-bs-table-search-form {
   margin-bottom: 0px;
 }
@@ -43,12 +67,16 @@
   width: 100%;
 }
 
+.react-bs-container-body table.table {
+  border-top-width: 0;
+}
+
 .react-bs-table .table-bordered {
     border: 0px;
 }
 .react-bs-table .table-bordered > thead > tr > th,
 .react-bs-table .table-bordered > thead > tr > td {
-  border-bottom-width: 1px;
+  border-bottom-width: 2px;
 }
 .react-bs-table .table-bordered > tfoot > tr > th,
 .react-bs-table .table-bordered > tfoot > tr > td {
@@ -78,7 +106,9 @@
 }
 /*Topo*/
 .react-bs-table .table-bordered > thead > tr:first-child > th,
-.react-bs-table .table-bordered > thead > tr:first-child > td {
+.react-bs-table .table-bordered > thead > tr:first-child > td,
+.react-bs-table .table-bordered > tbody > tr:first-child > td,
+.react-bs-table > tbody > tr:first-child > td {
   border-top-width: 0px;
 }
 /*Baixo*/

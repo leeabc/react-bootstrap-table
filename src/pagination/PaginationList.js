@@ -63,7 +63,6 @@ class PaginationList extends Component {
     this.lastPage = this.props.pageStartIndex + this.totalPages - 1;
     const pageBtns = this.makePage();
     const pageListStyle = {
-      float: 'right',
       // override the margin-top defined in .pagination class in bootstrap.
       marginTop: '0px'
     };
@@ -106,8 +105,11 @@ class PaginationList extends Component {
       <div className='row'>
         <div className='col-md-12' style={ pagiContainerStyle }>
           { total }{ ' ' }
+          <ul className='pagination' style={ pageListStyle }>
+            { pageBtns }
+          </ul>
           <span className='dropdown' style={ dropDownStyle }>
-            <button className='btn btn-default dropdown-toggle'
+            <button className='btn btn-default btn-border dropdown-toggle'
               type='button' id='pageDropDown' data-toggle='dropdown'
               aria-expanded='true'>
               { sizePerPage }
@@ -120,9 +122,7 @@ class PaginationList extends Component {
               { sizePerPageOptions }
             </ul>
           </span>
-          <ul className='pagination' style={ pageListStyle }>
-            { pageBtns }
-          </ul>
+          <span className='per-page'> per page</span>
         </div>
       </div>
     );

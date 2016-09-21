@@ -28,12 +28,19 @@ export default class DefaultPaginationTable extends React.Component {
     const options = {
       paginationShowsTotal: true
     };
+    const selectRow = {
+      mode: 'checkbox',
+      bgColor: '#fcf8da',
+      clickToSelect: true,
+      hideSelectColumn: false
+    };
     return (
       <div>
         <BootstrapTable
           data={ products }
           pagination
           options={ options }
+          selectRow={ selectRow }
           caption={ <div><button className='btn btn-default btn-border'>God</button></div> }>
           <TableHeaderColumn dataField='id' isKey={ true }>Product ID</TableHeaderColumn>
           <TableHeaderColumn dataField='name'>Product Name</TableHeaderColumn>
