@@ -27,16 +27,19 @@ class TableHeader extends Component {
       'react-bs-container-header',
       'table-header-wrapper',
       this.props.headerContainerClass);
-    const tableClasses = classSet('table', 'table-hover', {
+    const tableClasses = classSet('table ddes-table', 'table-hover', {
       'table-bordered': this.props.bordered,
       'table-condensed': this.props.condensed
     }, this.props.tableHeaderClass);
     let selectRowHeaderCol = null;
     if (!this.props.hideSelectColumn) selectRowHeaderCol = this.renderSelectRowHeader();
     let i = 0;
+    const caption = typeof this.props.caption === 'undefined'
+      ? undefined
+      : <caption>{ this.props.caption }</caption>;
     return (
       <div ref='container' className={ containerClasses } style={ this.props.style }>
-        <table className={ tableClasses }>
+        <table className={ tableClasses }>{ caption }
           <thead>
             <tr ref='header'>
               { selectRowHeaderCol }
@@ -83,6 +86,7 @@ class TableHeader extends Component {
 TableHeader.propTypes = {
   headerContainerClass: PropTypes.string,
   tableHeaderClass: PropTypes.string,
+  caption: PropTypes.oneOfType([ PropTypes.element, PropTypes.string ]),
   style: PropTypes.object,
   rowSelectType: PropTypes.string,
   onSort: PropTypes.func,

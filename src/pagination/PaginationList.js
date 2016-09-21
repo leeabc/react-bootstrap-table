@@ -87,7 +87,7 @@ class PaginationList extends Component {
     let to = Math.min((sizePerPage * (currPage + offset) - 1), dataSize);
     if (to >= dataSize) to--;
     let total = paginationShowsTotal ? <span>
-      Showing rows { start } to&nbsp;{ to + 1 } of&nbsp;{ dataSize }
+      Record { start } -&nbsp;{ to + 1 } /&nbsp;{ dataSize }
     </span> : null;
 
     if (typeof paginationShowsTotal === 'function') {
@@ -98,45 +98,32 @@ class PaginationList extends Component {
       visibility: hideSizePerPage ? 'hidden' : 'visible'
     };
 
+    const pagiContainerStyle = {
+      textAlign: 'right'
+    };
+
     return (
-      <div className='row' style={ { marginTop: 15 } }>
-        {
-          sizePerPageList.length > 1
-          ? <div>
-              <div className='col-md-6'>
-                { total }{ ' ' }
-                <span className='dropdown' style={ dropDownStyle }>
-                  <button className='btn btn-default dropdown-toggle'
-                    type='button' id='pageDropDown' data-toggle='dropdown'
-                    aria-expanded='true'>
-                    { sizePerPage }
-                    <span>
-                      { ' ' }
-                      <span className='caret'/>
-                    </span>
-                  </button>
-                  <ul className='dropdown-menu' role='menu' aria-labelledby='pageDropDown'>
-                    { sizePerPageOptions }
-                  </ul>
-                </span>
-              </div>
-              <div className='col-md-6'>
-                <ul className='pagination' style={ pageListStyle }>
-                  { pageBtns }
-                </ul>
-              </div>
-            </div>
-          : <div>
-              <div className='col-md-6'>
-                { total }
-              </div>
-              <div className='col-md-6'>
-                <ul className='pagination' style={ pageListStyle }>
-                  { pageBtns }
-                </ul>
-              </div>
-            </div>
-        }
+      <div className='row'>
+        <div className='col-md-12' style={ pagiContainerStyle }>
+          { total }{ ' ' }
+          <span className='dropdown' style={ dropDownStyle }>
+            <button className='btn btn-default dropdown-toggle'
+              type='button' id='pageDropDown' data-toggle='dropdown'
+              aria-expanded='true'>
+              { sizePerPage }
+              <span>
+                { ' ' }
+                <span className='caret'/>
+              </span>
+            </button>
+            <ul className='dropdown-menu' role='menu' aria-labelledby='pageDropDown'>
+              { sizePerPageOptions }
+            </ul>
+          </span>
+          <ul className='pagination' style={ pageListStyle }>
+            { pageBtns }
+          </ul>
+        </div>
       </div>
     );
   }
@@ -157,6 +144,7 @@ class PaginationList extends Component {
         disabled = true;
         hidden = true;
       }
+      page = page === 0 ? 1 : page;
       return (
         <PageButton key={ page }
           changePage={ this.changePage }

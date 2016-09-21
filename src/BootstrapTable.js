@@ -261,7 +261,8 @@ class BootstrapTable extends Component {
     if (typeof this.props.options.sortIndicator === 'undefined') sortIndicator = true;
     return (
       <div className={ classSet('react-bs-table-container', this.props.containerClass) }
-        style={ this.props.containerStyle }>
+        style={ this.props.containerStyle }
+        data-toggle='table'>
         { toolBar }
         <div ref='table'
             className={ classSet('react-bs-table', this.props.tableContainerClass) }
@@ -272,6 +273,7 @@ class BootstrapTable extends Component {
             ref='header'
             headerContainerClass={ this.props.headerContainerClass }
             tableHeaderClass={ this.props.tableHeaderClass }
+            caption={ this.props.caption }
             style={ this.props.headerStyle }
             rowSelectType={ this.props.selectRow.mode }
             customComponent={ this.props.selectRow.customComponent }
@@ -787,7 +789,7 @@ class BootstrapTable extends Component {
       if (Math.ceil(dataSize / this.state.sizePerPage) <= 1 &&
         this.props.ignoreSinglePage) return null;
       return (
-        <div className='react-bs-table-pagination'>
+        <div className='react-bs-table-pagination ddes-table-pagination tm-pagination'>
           <PaginationList
             ref='pagination'
             currPage={ this.state.currPage }
@@ -981,6 +983,7 @@ BootstrapTable.propTypes = {
   height: PropTypes.oneOfType([ PropTypes.string, PropTypes.number ]),
   maxHeight: PropTypes.oneOfType([ PropTypes.string, PropTypes.number ]),
   data: PropTypes.oneOfType([ PropTypes.array, PropTypes.object ]),
+  caption: PropTypes.oneOfType([ PropTypes.element, PropTypes.string ]),
   remote: PropTypes.bool, // remote data, default is false
   striped: PropTypes.bool,
   bordered: PropTypes.bool,

@@ -25,11 +25,16 @@ export default class DefaultPaginationTable extends React.Component {
   }
 
   render() {
+    const options = {
+      paginationShowsTotal: true
+    };
     return (
       <div>
         <BootstrapTable
           data={ products }
-          pagination>
+          pagination
+          options={ options }
+          caption={ <div><button className='btn btn-default btn-border'>God</button></div> }>
           <TableHeaderColumn dataField='id' isKey={ true }>Product ID</TableHeaderColumn>
           <TableHeaderColumn dataField='name'>Product Name</TableHeaderColumn>
           <TableHeaderColumn dataField='price'>Product Price</TableHeaderColumn>
