@@ -4,6 +4,11 @@ import Const from '../Const';
 
 class PaginationList extends Component {
 
+  constructor(props) {
+    super(props)
+    this.state = { pageInput: this.props.currPage }
+  }
+
   changePage = page => {
     const {
       pageStartIndex,
@@ -27,9 +32,21 @@ class PaginationList extends Component {
     } else {
       pageNumber = parseInt(page, 10);
     }
-    if (pageNumber !== currPage) {
+    if (pageNumber !== currPage && pageNumber <= this.totalPages && pageNumber >= 1) {
       this.props.changePage(pageNumber, sizePerPage);
+      this.setState({ pageInput: pageNumber })
     }
+  }
+
+  handlePageInput = e => {
+    this.setState({
+      pageInput: e.target.value
+    })
+  }
+
+  changePageByInput = e => {
+    if (e.key !== 'Enter') return
+    this.changePage(this.state.pageInput)
   }
 
   changeSizePerPage = e => {
@@ -116,7 +133,7 @@ class PaginationList extends Component {
           </ul>
         </div>
         <div className='pagination-input'>
-          <input type='text' value={ this.props.currPage }/> /{ this.totalPages }
+          <input type='text' onKeyPress={ this.changePageByInput } onChange={ this.handlePageInput } value={ this.state.pageInput }/> /{ this.totalPages }
         </div>
         <div>
           <ul className='pagination' style={ pageListStyle }>
