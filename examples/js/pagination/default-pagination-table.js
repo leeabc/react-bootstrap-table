@@ -29,10 +29,7 @@ export default class DefaultPaginationTable extends React.Component {
       paginationShowsTotal: true
     };
     const selectRow = {
-      mode: 'checkbox',
-      bgColor: '#fcf8da',
-      clickToSelect: true,
-      hideSelectColumn: false
+      mode: 'checkbox'
     };
     return (
       <div>

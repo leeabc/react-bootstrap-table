@@ -1090,11 +1090,11 @@ BootstrapTable.defaultProps = {
   searchPlaceholder: undefined,
   selectRow: {
     mode: Const.ROW_SELECT_NONE,
-    bgColor: Const.ROW_SELECT_BG_COLOR,
+    bgColor: '#fcf8da',
     selected: [],
     onSelect: undefined,
     onSelectAll: undefined,
-    clickToSelect: false,
+    clickToSelect: true,
     hideSelectColumn: false,
     clickToSelectAndEditCell: false,
     showOnlySelected: false,

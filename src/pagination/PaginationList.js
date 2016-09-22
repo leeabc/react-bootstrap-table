@@ -103,9 +103,7 @@ class PaginationList extends Component {
     start = dataSize === 0 ? 0 : start + 1;
     let to = Math.min((sizePerPage * (currPage + offset) - 1), dataSize);
     if (to >= dataSize) to--;
-    let total = paginationShowsTotal ? <span>
-      Records { start + 1 } -&nbsp;{ to + 1 } /&nbsp;{ dataSize }
-    </span> : null;
+    let total = <span>Records { start + 1 } -&nbsp;{ to + 1 } /&nbsp;{ dataSize }</span>;
 
     if (typeof paginationShowsTotal === 'function') {
       total = paginationShowsTotal(start, to, dataSize);
