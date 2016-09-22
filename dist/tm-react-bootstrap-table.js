@@ -817,6 +817,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var toolBar = this.renderToolBar();
 	      var tableFilter = this.renderTableFilter(columns);
 	      var isSelectAll = this.isSelectAll();
+	      var hideSelectColumn = this.props.selectRow.hideSelectColumn ? this.props.selectRow.hideSelectColumn : false;
+	      var selectRow = _extends({}, this.props.selectRow, {
+	        clickToSelect: true,
+	        bgColor: '#fcf8da'
+	      });
 	      var sortIndicator = this.props.options.sortIndicator;
 	      if (typeof this.props.options.sortIndicator === 'undefined') sortIndicator = true;
 	      return _react2.default.createElement(
@@ -842,7 +847,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	              style: this.props.headerStyle,
 	              rowSelectType: this.props.selectRow.mode,
 	              customComponent: this.props.selectRow.customComponent,
-	              hideSelectColumn: this.props.selectRow.hideSelectColumn,
+	              hideSelectColumn: hideSelectColumn,
 	              sortName: sortInfo ? sortInfo.sortField : undefined,
 	              sortOrder: sortInfo ? sortInfo.order : undefined,
 	              sortIndicator: sortIndicator,
@@ -866,7 +871,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            hover: this.props.hover,
 	            keyField: this.store.getKeyField(),
 	            condensed: this.props.condensed,
-	            selectRow: this.props.selectRow,
+	            selectRow: selectRow,
 	            cellEdit: this.props.cellEdit,
 	            selectedRowKeys: this.state.selectedRowKeys,
 	            onRowClick: this.handleRowClick,
@@ -1280,7 +1285,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  pagination: false,
 	  searchPlaceholder: undefined,
 	  selectRow: {
-	    mode: _Const2.default.ROW_SELECT_NONE,
+	    mode: _Const2.default.ROW_SELECT_MULTI,
 	    bgColor: '#fcf8da',
 	    selected: [],
 	    onSelect: undefined,
@@ -1442,7 +1447,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  PRE_PAGE: '<',
 	  FIRST_PAGE: '<<',
 	  PAGE_START_INDEX: 1,
-	  ROW_SELECT_BG_COLOR: '#fcf8da',
+	  ROW_SELECT_BG_COLOR: '',
 	  ROW_SELECT_NONE: 'none',
 	  ROW_SELECT_SINGLE: 'radio',
 	  ROW_SELECT_MULTI: 'checkbox',

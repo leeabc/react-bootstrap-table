@@ -257,6 +257,11 @@ class BootstrapTable extends Component {
     const toolBar = this.renderToolBar();
     const tableFilter = this.renderTableFilter(columns);
     const isSelectAll = this.isSelectAll();
+    const hideSelectColumn = this.props.selectRow.hideSelectColumn ? this.props.selectRow.hideSelectColumn : false;
+    const selectRow = { ...this.props.selectRow,
+      clickToSelect: true,
+      bgColor: '#fcf8da'
+    };
     let sortIndicator = this.props.options.sortIndicator;
     if (typeof this.props.options.sortIndicator === 'undefined') sortIndicator = true;
     return (
@@ -277,7 +282,7 @@ class BootstrapTable extends Component {
             style={ this.props.headerStyle }
             rowSelectType={ this.props.selectRow.mode }
             customComponent={ this.props.selectRow.customComponent }
-            hideSelectColumn={ this.props.selectRow.hideSelectColumn }
+            hideSelectColumn={ hideSelectColumn }
             sortName={ sortInfo ? sortInfo.sortField : undefined }
             sortOrder={ sortInfo ? sortInfo.order : undefined }
             sortIndicator={ sortIndicator }
@@ -301,7 +306,7 @@ class BootstrapTable extends Component {
             hover={ this.props.hover }
             keyField={ this.store.getKeyField() }
             condensed={ this.props.condensed }
-            selectRow={ this.props.selectRow }
+            selectRow={ selectRow }
             cellEdit={ this.props.cellEdit }
             selectedRowKeys={ this.state.selectedRowKeys }
             onRowClick={ this.handleRowClick }
@@ -1089,7 +1094,7 @@ BootstrapTable.defaultProps = {
   pagination: false,
   searchPlaceholder: undefined,
   selectRow: {
-    mode: Const.ROW_SELECT_NONE,
+    mode: Const.ROW_SELECT_MULTI,
     bgColor: '#fcf8da',
     selected: [],
     onSelect: undefined,
