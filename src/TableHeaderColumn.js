@@ -79,7 +79,6 @@ class TableHeaderColumn extends Component {
       hidden,
       sort,
       dataSort,
-      sortIndicator,
       children,
       caretRender,
       className
@@ -88,34 +87,20 @@ class TableHeaderColumn extends Component {
       textAlign: headerAlign || dataAlign,
       display: hidden ? 'none' : null
     };
-    if (sortIndicator) {
-      defaultCaret = (!dataSort) ? null : (
-        <span className='order'>
-          <span className='dropdown'>
-            <span className='caret' style={ { margin: '10px 0 10px 5px', color: '#ccc' } }></span>
-          </span>
-          <span className='dropup'>
-            <span className='caret' style={ { margin: '10px 0', color: '#ccc' } }></span>
-          </span>
-        </span>
-      );
-    }
-    let sortCaret = sort ? Util.renderReactSortCaret(sort) : defaultCaret;
-    if (caretRender) {
-      sortCaret = caretRender(sort, dataField);
-    }
-    const classes = classSet(
-      typeof className === 'function' ? className() : className,
-      dataSort ? 'sort-column' : '');
+
+    let classes = this.props.className + ' ' + (dataSort ? 'sort-column sortable' : '');
+    classes += sort ? (' sort-' + sort) : '';
 
     const title = typeof children === 'string' ? { title: children } : null;
+    const childrenContent = dataSort ? <div className='sort-indicator'>{ children }</div> : children;
+
     return (
       <th ref='header-col'
           className={ classes }
           style={ thStyle }
           onClick={ this.handleColumnClick }
           { ...title }>
-        { children }{ sortCaret }
+        { childrenContent }
         <div onClick={ e => e.stopPropagation() }>
           { this.props.filter ? this.getFilters() : null }
         </div>

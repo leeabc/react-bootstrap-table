@@ -42,8 +42,8 @@ export default class DefaultPaginationTable extends React.Component {
           options={ options }
           selectRow={ selectRow }
           caption={ <div><button className='btn btn-default btn-border'>God</button></div> }>
-          <TableHeaderColumn dataField='id' isKey={ true }>Product ID</TableHeaderColumn>
-          <TableHeaderColumn dataField='name'>Product Name</TableHeaderColumn>
+          <TableHeaderColumn dataField='id' dataSort={ true } isKey={ true }>Product ID</TableHeaderColumn>
+          <TableHeaderColumn dataField='name' dataSort={ true }>Product Name</TableHeaderColumn>
           <TableHeaderColumn dataField='price'>Product Price</TableHeaderColumn>
         </BootstrapTable>
       </div>
