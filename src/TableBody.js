@@ -256,18 +256,12 @@ class TableBody extends Component {
   renderSelectRowColumn(selected, inputType, disabled, CustomComponent = null, rowIndex = null) {
     return (
       <TableColumn dataAlign='center' className='col-chkbox'>
-      { CustomComponent ?
-        <CustomComponent type={ inputType } checked={ selected } disabled={ disabled }
-          rowIndex={ rowIndex }
-          onChange={ e=>this.handleSelectRowColumChange(e,
-            e.currentTarget.parentElement.parentElement.parentElement.rowIndex) }/> :
         <div className='tm-custom-checkbox'>
           <input type={ inputType } checked={ selected } disabled={ disabled }
             onChange={ e=>this.handleSelectRowColumChange(e,
-              e.currentTarget.parentElement.parentElement.rowIndex) }/>
+              e.currentTarget.parentElement.parentElement.parentElement.rowIndex) }/>
           <label></label>
         </div>
-      }
       </TableColumn>
     );
   }
