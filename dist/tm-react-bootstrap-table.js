@@ -54,8 +54,6 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
@@ -80,13 +78,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.BootstrapTable = _BootstrapTable2.default;
 	exports.TableHeaderColumn = _TableHeaderColumn2.default;
 
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "index.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-
 /***/ },
 /* 1 */
 /***/ function(module, exports, __webpack_require__) {
-
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 	'use strict';
 
@@ -734,8 +728,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        });
 	      } else {
 	        // #125
-	        // remove !options.page for #709
-	        if (page > Math.ceil(nextProps.data.length / sizePerPage)) {
+	        if (!options.page && page > Math.ceil(nextProps.data.length / sizePerPage)) {
 	          page = 1;
 	        }
 	        var sortInfo = this.store.getSortInfo();
@@ -829,7 +822,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	      return _react2.default.createElement(
 	        'div',
 	        { className: (0, _classnames2.default)('react-bs-table-container', this.props.containerClass),
-	          style: this.props.containerStyle },
+	          style: this.props.containerStyle,
+	          'data-toggle': 'table' },
 	        toolBar,
 	        _react2.default.createElement(
 	          'div',
@@ -844,6 +838,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	              ref: 'header',
 	              headerContainerClass: this.props.headerContainerClass,
 	              tableHeaderClass: this.props.tableHeaderClass,
+	              caption: this.props.caption,
 	              style: this.props.headerStyle,
 	              rowSelectType: this.props.selectRow.mode,
 	              customComponent: this.props.selectRow.customComponent,
@@ -1047,7 +1042,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        if (Math.ceil(dataSize / this.state.sizePerPage) <= 1 && this.props.ignoreSinglePage) return null;
 	        return _react2.default.createElement(
 	          'div',
-	          { className: 'react-bs-table-pagination' },
+	          { className: 'react-bs-table-pagination table-pagination tm-pagination' },
 	          _react2.default.createElement(_PaginationList2.default, {
 	            ref: 'pagination',
 	            currPage: this.state.currPage,
@@ -1183,6 +1178,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  height: _react.PropTypes.oneOfType([_react.PropTypes.string, _react.PropTypes.number]),
 	  maxHeight: _react.PropTypes.oneOfType([_react.PropTypes.string, _react.PropTypes.number]),
 	  data: _react.PropTypes.oneOfType([_react.PropTypes.array, _react.PropTypes.object]),
+	  caption: _react.PropTypes.oneOfType([_react.PropTypes.element, _react.PropTypes.string]),
 	  remote: _react.PropTypes.bool, // remote data, default is false
 	  striped: _react.PropTypes.bool,
 	  bordered: _react.PropTypes.bool,
@@ -1285,11 +1281,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  searchPlaceholder: undefined,
 	  selectRow: {
 	    mode: _Const2.default.ROW_SELECT_NONE,
-	    bgColor: _Const2.default.ROW_SELECT_BG_COLOR,
+	    bgColor: '#fcf8da',
 	    selected: [],
 	    onSelect: undefined,
 	    onSelectAll: undefined,
-	    clickToSelect: false,
+	    clickToSelect: true,
 	    hideSelectColumn: false,
 	    clickToSelectAndEditCell: false,
 	    showOnlySelected: false,
@@ -1366,9 +1362,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  ignoreSinglePage: false
 	};
 
-	exports.default = BootstrapTable;
-
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "BootstrapTable.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+		exports.default = BootstrapTable;
 
 /***/ },
 /* 2 */
@@ -1432,9 +1426,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 4 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+/***/ function(module, exports) {
 
 	'use strict';
 
@@ -1450,7 +1442,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  PRE_PAGE: '<',
 	  FIRST_PAGE: '<<',
 	  PAGE_START_INDEX: 1,
-	  ROW_SELECT_BG_COLOR: '',
+	  ROW_SELECT_BG_COLOR: '#fcf8da',
 	  ROW_SELECT_NONE: 'none',
 	  ROW_SELECT_SINGLE: 'radio',
 	  ROW_SELECT_MULTI: 'checkbox',
@@ -1476,15 +1468,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	    DATE: 'DateFilter',
 	    CUSTOM: 'CustomFilter'
 	  }
-	};
-
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "Const.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+		};
 
 /***/ },
 /* 5 */
 /***/ function(module, exports, __webpack_require__) {
-
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 	'use strict';
 
@@ -1549,10 +1537,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      return _react2.default.createElement('input', { className: 'react-bs-select-all',
-	        type: 'checkbox',
-	        checked: this.props.checked,
-	        onChange: this.props.onChange });
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'tm-custom-checkbox' },
+	        _react2.default.createElement('input', { className: 'react-bs-select-all',
+	          type: 'checkbox',
+	          checked: this.props.checked,
+	          onChange: this.props.onChange }),
+	        _react2.default.createElement('label', null)
+	      );
 	    }
 	  }]);
 
@@ -1574,19 +1567,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var _this3 = this;
 
 	      var containerClasses = (0, _classnames2.default)('react-bs-container-header', 'table-header-wrapper', this.props.headerContainerClass);
-	      var tableClasses = (0, _classnames2.default)('table', 'table-hover', {
+	      var tableClasses = (0, _classnames2.default)('table ddes-table', 'table-hover', {
 	        'table-bordered': this.props.bordered,
 	        'table-condensed': this.props.condensed
 	      }, this.props.tableHeaderClass);
 	      var selectRowHeaderCol = null;
 	      if (!this.props.hideSelectColumn) selectRowHeaderCol = this.renderSelectRowHeader();
 	      var i = 0;
+	      var caption = typeof this.props.caption === 'undefined' ? undefined : _react2.default.createElement(
+	        'caption',
+	        null,
+	        this.props.caption
+	      );
 	      return _react2.default.createElement(
 	        'div',
 	        { ref: 'container', className: containerClasses, style: this.props.style },
 	        _react2.default.createElement(
 	          'table',
 	          { className: tableClasses },
+	          caption,
 	          _react2.default.createElement(
 	            'thead',
 	            null,
@@ -1629,7 +1628,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      } else if (this.props.rowSelectType === _Const2.default.ROW_SELECT_MULTI) {
 	        return _react2.default.createElement(
 	          _SelectRowHeaderColumn2.default,
-	          null,
+	          { className: 'col-chkbox' },
 	          _react2.default.createElement(Checkbox, {
 	            onChange: this.props.onSelectAllRow,
 	            checked: this.props.isSelectAll })
@@ -1646,6 +1645,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	TableHeader.propTypes = {
 	  headerContainerClass: _react.PropTypes.string,
 	  tableHeaderClass: _react.PropTypes.string,
+	  caption: _react.PropTypes.oneOfType([_react.PropTypes.element, _react.PropTypes.string]),
 	  style: _react.PropTypes.object,
 	  rowSelectType: _react.PropTypes.string,
 	  onSort: _react.PropTypes.func,
@@ -1661,9 +1661,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  customComponent: _react.PropTypes.func
 	};
 
-	exports.default = TableHeader;
-
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "TableHeader.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+		exports.default = TableHeader;
 
 /***/ },
 /* 6 */
@@ -1674,8 +1672,6 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ },
 /* 7 */
 /***/ function(module, exports, __webpack_require__) {
-
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 	'use strict';
 
@@ -1711,7 +1707,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'th',
-	        { style: { textAlign: 'center' } },
+	        { className: 'col-chkbox', style: { textAlign: 'center' } },
 	        this.props.children
 	      );
 	    }
@@ -1723,15 +1719,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	SelectRowHeaderColumn.propTypes = {
 	  children: _react.PropTypes.node
 	};
-	exports.default = SelectRowHeaderColumn;
-
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "SelectRowHeaderColumn.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+		exports.default = SelectRowHeaderColumn;
 
 /***/ },
 /* 8 */
 /***/ function(module, exports, __webpack_require__) {
-
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 	'use strict';
 
@@ -1868,7 +1860,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  _createClass(TableBody, [{
 	    key: 'render',
 	    value: function render() {
-	      var tableClasses = (0, _classnames2.default)('table', {
+	      var tableClasses = (0, _classnames2.default)('table ddes-table', {
 	        'table-striped': this.props.striped,
 	        'table-bordered': this.props.bordered,
 	        'table-hover': this.props.hover,
@@ -1884,7 +1876,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var tableRows = this.props.data.map(function (data, r) {
 	        var tableColumns = this.props.columns.map(function (column, i) {
 	          var fieldValue = data[column.name];
-	          if (column.name !== this.props.keyField && // Key field can't be edit
+	          if (this.editing && column.name !== this.props.keyField && // Key field can't be edit
 	          column.editable && // column is editable? default is true, user can set it false
 	          this.state.currEditCell !== null && this.state.currEditCell.rid === r && this.state.currEditCell.cid === i) {
 	            var editable = column.editable;
@@ -2004,8 +1996,8 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	      if (isSelectRowDefined) {
 	        var style = {
-	          width: 30,
-	          minWidth: 30
+	          width: 33,
+	          minWidth: 33
 	        };
 	        if (!this.props.selectRow.hideSelectColumn) {
 	          selectRowHeader = _react2.default.createElement('col', { style: style, key: -1 });
@@ -2042,15 +2034,16 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	      return _react2.default.createElement(
 	        _TableColumn2.default,
-	        { dataAlign: 'center' },
-	        CustomComponent ? _react2.default.createElement(CustomComponent, { type: inputType, checked: selected, disabled: disabled,
-	          rowIndex: rowIndex,
-	          onChange: function onChange(e) {
-	            return _this2.handleSelectRowColumChange(e, e.currentTarget.parentElement.parentElement.parentElement.rowIndex);
-	          } }) : _react2.default.createElement('input', { type: inputType, checked: selected, disabled: disabled,
-	          onChange: function onChange(e) {
-	            return _this2.handleSelectRowColumChange(e, e.currentTarget.parentElement.parentElement.rowIndex);
-	          } })
+	        { dataAlign: 'center', className: 'col-chkbox' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'tm-custom-checkbox' },
+	          _react2.default.createElement('input', { type: inputType, checked: selected, disabled: disabled,
+	            onChange: function onChange(e) {
+	              return _this2.handleSelectRowColumChange(e, e.currentTarget.parentElement.parentElement.parentElement.rowIndex);
+	            } }),
+	          _react2.default.createElement('label', null)
+	        )
 	      );
 	    }
 	  }, {
@@ -2079,15 +2072,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  tableBodyClass: _react.PropTypes.string,
 	  bodyContainerClass: _react.PropTypes.string
 	};
-	exports.default = TableBody;
-
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "TableBody.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+		exports.default = TableBody;
 
 /***/ },
 /* 9 */
 /***/ function(module, exports, __webpack_require__) {
-
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 	'use strict';
 
@@ -2216,15 +2205,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	TableRow.defaultProps = {
 	  onRowClick: undefined
 	};
-	exports.default = TableRow;
-
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "TableRow.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+		exports.default = TableRow;
 
 /***/ },
 /* 10 */
 /***/ function(module, exports, __webpack_require__) {
-
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 	'use strict';
 
@@ -2353,15 +2338,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  hidden: false,
 	  className: ''
 	};
-	exports.default = TableColumn;
-
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "TableColumn.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+		exports.default = TableColumn;
 
 /***/ },
 /* 11 */
 /***/ function(module, exports, __webpack_require__) {
-
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 	'use strict';
 
@@ -2577,15 +2558,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  fieldValue: _react.PropTypes.oneOfType([_react.PropTypes.string, _react.PropTypes.bool, _react.PropTypes.number, _react.PropTypes.array, _react.PropTypes.object])
 	};
 
-	exports.default = TableEditColumn;
-
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "TableEditColumn.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+		exports.default = TableEditColumn;
 
 /***/ },
 /* 12 */
 /***/ function(module, exports, __webpack_require__) {
-
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 	'use strict';
 
@@ -2709,13 +2686,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.default = editor;
 
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "Editor.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-
 /***/ },
 /* 13 */
 /***/ function(module, exports, __webpack_require__) {
-
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 	'use strict';
 
@@ -2776,9 +2749,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  return Notification;
 	}(_react.Component);
 
-	exports.default = Notification;
-
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "Notification.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+		exports.default = Notification;
 
 /***/ },
 /* 14 */
@@ -21193,8 +21164,6 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
@@ -21226,18 +21195,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	var PaginationList = function (_Component) {
 	  _inherits(PaginationList, _Component);
 
-	  function PaginationList() {
-	    var _ref;
-
-	    var _temp, _this, _ret;
-
+	  function PaginationList(props) {
 	    _classCallCheck(this, PaginationList);
 
-	    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-	      args[_key] = arguments[_key];
-	    }
+	    var _this = _possibleConstructorReturn(this, (PaginationList.__proto__ || Object.getPrototypeOf(PaginationList)).call(this, props));
 
-	    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = PaginationList.__proto__ || Object.getPrototypeOf(PaginationList)).call.apply(_ref, [this].concat(args))), _this), _this.changePage = function (page) {
+	    _this.changePage = function (page) {
 	      var _this$props = _this.props;
 	      var pageStartIndex = _this$props.pageStartIndex;
 	      var prePage = _this$props.prePage;
@@ -21248,22 +21211,36 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var sizePerPage = _this$props.sizePerPage;
 
 
-	      if (page === prePage) {
-	        page = currPage - 1 < pageStartIndex ? pageStartIndex : currPage - 1;
-	      } else if (page === nextPage) {
-	        page = currPage + 1 > _this.lastPage ? _this.lastPage : currPage + 1;
+	      var pageNumber = 0;
+	      if (page === 'prev') {
+	        pageNumber = currPage - 1 < pageStartIndex ? pageStartIndex : currPage - 1;
+	      } else if (page === 'next') {
+	        pageNumber = currPage + 1 > _this.lastPage ? _this.lastPage : currPage + 1;
 	      } else if (page === lastPage) {
-	        page = _this.lastPage;
+	        pageNumber = _this.lastPage;
 	      } else if (page === firstPage) {
-	        page = pageStartIndex;
+	        pageNumber = pageStartIndex;
 	      } else {
-	        page = parseInt(page, 10);
+	        pageNumber = parseInt(page, 10);
 	      }
+	      if (pageNumber !== currPage && pageNumber <= _this.totalPages && pageNumber >= 1) {
+	        _this.props.changePage(pageNumber, sizePerPage);
+	        _this.setState({ pageInput: pageNumber });
+	      }
+	    };
 
-	      if (page !== currPage) {
-	        _this.props.changePage(page, sizePerPage);
-	      }
-	    }, _this.changeSizePerPage = function (e) {
+	    _this.handlePageInput = function (e) {
+	      _this.setState({
+	        pageInput: e.target.value
+	      });
+	    };
+
+	    _this.changePageByInput = function (e) {
+	      if (e.key !== 'Enter') return;
+	      _this.changePage(_this.state.pageInput);
+	    };
+
+	    _this.changeSizePerPage = function (e) {
 	      e.preventDefault();
 
 	      var selectSize = parseInt(e.currentTarget.getAttribute('data-page'), 10);
@@ -21278,7 +21255,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	          _this.props.onSizePerPageList(selectSize);
 	        }
 	      }
-	    }, _temp), _possibleConstructorReturn(_this, _ret);
+	    };
+
+	    _this.state = { pageInput: _this.props.currPage };
+	    return _this;
 	  }
 
 	  _createClass(PaginationList, [{
@@ -21300,17 +21280,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	      this.lastPage = this.props.pageStartIndex + this.totalPages - 1;
 	      var pageBtns = this.makePage();
 	      var pageListStyle = {
-	        float: 'right',
 	        // override the margin-top defined in .pagination class in bootstrap.
-	        marginTop: '0px'
+	        margin: '0px'
 	      };
 
 	      var sizePerPageOptions = sizePerPageList.map(function (_sizePerPage) {
 	        var pageText = _sizePerPage.text || _sizePerPage;
 	        var pageNum = _sizePerPage.value || _sizePerPage;
+	        var selected = pageNum === sizePerPage ? 'selected' : '';
 	        return _react2.default.createElement(
 	          'li',
-	          { key: pageText, role: 'presentation' },
+	          { key: pageText, className: selected, role: 'presentation' },
 	          _react2.default.createElement(
 	            'a',
 	            { role: 'menuitem',
@@ -21324,19 +21304,18 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	      var offset = Math.abs(_Const2.default.PAGE_START_INDEX - pageStartIndex);
 	      var start = (currPage - pageStartIndex) * sizePerPage;
-	      start = dataSize === 0 ? 0 : start + 1;
 	      var to = Math.min(sizePerPage * (currPage + offset) - 1, dataSize);
 	      if (to >= dataSize) to--;
-	      var total = paginationShowsTotal ? _react2.default.createElement(
+	      var total = _react2.default.createElement(
 	        'span',
 	        null,
-	        'Showing rows ',
-	        start,
-	        ' to ',
+	        'Records ',
+	        start + 1,
+	        ' - ',
 	        to + 1,
-	        ' of ',
+	        ' / ',
 	        dataSize
-	      ) : null;
+	      );
 
 	      if (typeof paginationShowsTotal === 'function') {
 	        total = paginationShowsTotal(start, to, dataSize);
@@ -21348,63 +21327,50 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'row', style: { marginTop: 15 } },
-	        sizePerPageList.length > 1 ? _react2.default.createElement(
+	        { className: 'table-pagination-block' },
+	        _react2.default.createElement(
 	          'div',
-	          null,
+	          { className: 'pagination-records' },
+	          total,
+	          ' '
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'dropdown', style: dropDownStyle },
 	          _react2.default.createElement(
-	            'div',
-	            { className: 'col-md-6' },
-	            total,
-	            ' ',
+	            'button',
+	            { className: 'btn btn-xs btn-link dropdown-toggle',
+	              type: 'button', id: 'pageDropDown', 'data-toggle': 'dropdown',
+	              'aria-expanded': 'true' },
+	            sizePerPage,
+	            ' per page',
 	            _react2.default.createElement(
 	              'span',
-	              { className: 'dropdown', style: dropDownStyle },
-	              _react2.default.createElement(
-	                'button',
-	                { className: 'btn btn-default dropdown-toggle',
-	                  type: 'button', id: 'pageDropDown', 'data-toggle': 'dropdown',
-	                  'aria-expanded': 'true' },
-	                sizePerPage,
-	                _react2.default.createElement(
-	                  'span',
-	                  null,
-	                  ' ',
-	                  _react2.default.createElement('span', { className: 'caret' })
-	                )
-	              ),
-	              _react2.default.createElement(
-	                'ul',
-	                { className: 'dropdown-menu', role: 'menu', 'aria-labelledby': 'pageDropDown' },
-	                sizePerPageOptions
-	              )
+	              null,
+	              ' ',
+	              _react2.default.createElement('span', { className: 'caret' })
 	            )
 	          ),
 	          _react2.default.createElement(
-	            'div',
-	            { className: 'col-md-6' },
-	            _react2.default.createElement(
-	              'ul',
-	              { className: 'pagination', style: pageListStyle },
-	              pageBtns
-	            )
+	            'ul',
+	            { className: 'dropdown-menu dropdown-menu-multi-select', role: 'menu' },
+	            sizePerPageOptions
 	          )
-	        ) : _react2.default.createElement(
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'pagination-input' },
+	          _react2.default.createElement('input', { type: 'text', onKeyPress: this.changePageByInput, onChange: this.handlePageInput, value: this.state.pageInput }),
+	          ' /',
+	          this.totalPages
+	        ),
+	        _react2.default.createElement(
 	          'div',
 	          null,
 	          _react2.default.createElement(
-	            'div',
-	            { className: 'col-md-6' },
-	            total
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'col-md-6' },
-	            _react2.default.createElement(
-	              'ul',
-	              { className: 'pagination', style: pageListStyle },
-	              pageBtns
-	            )
+	            'ul',
+	            { className: 'pagination', style: pageListStyle },
+	            pageBtns
 	          )
 	        )
 	      );
@@ -21412,64 +21378,24 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }, {
 	    key: 'makePage',
 	    value: function makePage() {
-	      var pages = this.getPages();
+	      var pages = [{ node: _react2.default.createElement('span', { className: 'fa fa-angle-left' }), key: 'prev' }, { node: _react2.default.createElement('span', { className: 'fa fa-angle-right' }), key: 'next' }];
 	      return pages.map(function (page) {
-	        var isActive = page === this.props.currPage;
 	        var disabled = false;
-	        var hidden = false;
-	        if (this.props.currPage === this.props.pageStartIndex && (page === this.props.firstPage || page === this.props.prePage)) {
+	        if (this.props.currPage === this.props.pageStartIndex && page.key === 'prev') {
 	          disabled = true;
-	          hidden = true;
 	        }
-	        if (this.props.currPage === this.lastPage && (page === this.props.nextPage || page === this.props.lastPage)) {
+	        if (this.props.currPage === this.lastPage && page.key === 'next') {
 	          disabled = true;
-	          hidden = true;
 	        }
 	        return _react2.default.createElement(
 	          _PageButton2.default,
-	          { key: page,
+	          { key: page.key,
+	            btnKey: page.key,
 	            changePage: this.changePage,
-	            active: isActive,
-	            disable: disabled,
-	            hidden: hidden },
-	          page
+	            disable: disabled },
+	          page.node
 	        );
 	      }, this);
-	    }
-	  }, {
-	    key: 'getPages',
-	    value: function getPages() {
-	      var pages = void 0;
-	      var endPage = this.totalPages;
-	      if (endPage <= 0) return [];
-	      var startPage = Math.max(this.props.currPage - Math.floor(this.props.paginationSize / 2), this.props.pageStartIndex);
-	      endPage = startPage + this.props.paginationSize - 1;
-
-	      if (endPage > this.lastPage) {
-	        endPage = this.lastPage;
-	        startPage = endPage - this.props.paginationSize + 1;
-	      }
-
-	      if (startPage !== this.props.pageStartIndex && this.totalPages > this.props.paginationSize) {
-	        pages = [this.props.firstPage, this.props.prePage];
-	      } else if (this.totalPages > 1) {
-	        pages = [this.props.prePage];
-	      } else {
-	        pages = [];
-	      }
-
-	      for (var i = startPage; i <= endPage; i++) {
-	        if (i >= this.props.pageStartIndex) pages.push(i);
-	      }
-
-	      if (endPage < this.lastPage) {
-	        pages.push(this.props.nextPage);
-	        pages.push(this.props.lastPage);
-	      } else if (endPage === this.lastPage && this.props.currPage !== this.lastPage) {
-	        pages.push(this.props.nextPage);
-	      }
-
-	      return pages;
 	    }
 	  }]);
 
@@ -21496,15 +21422,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  pageStartIndex: _Const2.default.PAGE_START_INDEX
 	};
 
-	exports.default = PaginationList;
-
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "PaginationList.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+		exports.default = PaginationList;
 
 /***/ },
 /* 33 */
 /***/ function(module, exports, __webpack_require__) {
-
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 	'use strict';
 
@@ -21540,7 +21462,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	    _this.pageBtnClick = function (e) {
 	      e.preventDefault();
-	      _this.props.changePage(e.currentTarget.textContent);
+	      _this.props.changePage(_this.props.btnKey);
 	    };
 
 	    return _this;
@@ -21552,15 +21474,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var classes = (0, _classnames2.default)({
 	        'active': this.props.active,
 	        'disabled': this.props.disable,
-	        'hidden': this.props.hidden,
-	        'page-item': true
+	        'hidden': this.props.hidden
 	      });
 	      return _react2.default.createElement(
 	        'li',
 	        { className: classes },
 	        _react2.default.createElement(
 	          'a',
-	          { href: '#', onClick: this.pageBtnClick, className: 'page-link' },
+	          { href: '#', onClick: this.pageBtnClick },
 	          this.props.children
 	        )
 	      );
@@ -21575,18 +21496,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	  active: _react.PropTypes.bool,
 	  disable: _react.PropTypes.bool,
 	  hidden: _react.PropTypes.bool,
+	  btnKey: _react.PropTypes.string,
 	  children: _react.PropTypes.node
 	};
 
-	exports.default = PageButton;
-
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "PageButton.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+		exports.default = PageButton;
 
 /***/ },
 /* 34 */
 /***/ function(module, exports, __webpack_require__) {
-
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 	'use strict';
 
@@ -22112,15 +22030,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  closeText: _Const2.default.CLOSE_BTN_TEXT
 	};
 
-	exports.default = ToolBar;
-
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "ToolBar.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+		exports.default = ToolBar;
 
 /***/ },
 /* 35 */
 /***/ function(module, exports, __webpack_require__) {
-
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 	'use strict';
 
@@ -22249,15 +22163,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  rowSelectType: _react.PropTypes.string,
 	  onFilter: _react.PropTypes.func
 	};
-	exports.default = TableFilter;
-
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "TableFilter.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+		exports.default = TableFilter;
 
 /***/ },
 /* 36 */
 /***/ function(module, exports, __webpack_require__) {
-
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 	'use strict';
 
@@ -22918,13 +22828,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.TableDataStore = TableDataStore;
 
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "TableDataStore.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-
 /***/ },
 /* 37 */
 /***/ function(module, exports, __webpack_require__) {
-
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 	'use strict';
 
@@ -22985,15 +22891,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  canUseDOM: function canUseDOM() {
 	    return typeof window !== 'undefined' && typeof window.document !== 'undefined';
 	  }
-	};
-
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "util.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+		};
 
 /***/ },
 /* 38 */
 /***/ function(module, exports, __webpack_require__) {
-
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 	'use strict';
 
@@ -23050,15 +22952,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.default = exportCSV;
 
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "csv_export_util.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-
 /***/ },
 /* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-
-	"use strict";
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;"use strict";
 
 	/* FileSaver.js
 	 * A saveAs() FileSaver implementation.
@@ -23323,8 +23221,6 @@ return /******/ (function(modules) { // webpackBootstrap
 		}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 	}
 
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "filesaver.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-
 /***/ },
 /* 40 */
 /***/ function(module, exports) {
@@ -23343,8 +23239,6 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ },
 /* 42 */
 /***/ function(module, exports, __webpack_require__) {
-
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 	'use strict';
 
@@ -23414,8 +23308,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	  return Filter;
 	}(_events.EventEmitter);
-
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "Filter.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
 /* 43 */
@@ -23728,8 +23620,6 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 44 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
@@ -23743,10 +23633,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _react = __webpack_require__(2);
 
 	var _react2 = _interopRequireDefault(_react);
-
-	var _classnames = __webpack_require__(3);
-
-	var _classnames2 = _interopRequireDefault(_classnames);
 
 	var _Const = __webpack_require__(4);
 
@@ -23855,43 +23741,28 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var defaultCaret = void 0;
 	      var _props = this.props;
 	      var dataAlign = _props.dataAlign;
-	      var dataField = _props.dataField;
 	      var headerAlign = _props.headerAlign;
 	      var hidden = _props.hidden;
 	      var sort = _props.sort;
 	      var dataSort = _props.dataSort;
-	      var sortIndicator = _props.sortIndicator;
 	      var children = _props.children;
 	      var caretRender = _props.caretRender;
-	      var className = _props.className;
 
 	      var thStyle = {
 	        textAlign: headerAlign || dataAlign,
 	        display: hidden ? 'none' : null
 	      };
-	      if (sortIndicator) {
-	        defaultCaret = !dataSort ? null : _react2.default.createElement(
-	          'span',
-	          { className: 'order' },
-	          _react2.default.createElement(
-	            'span',
-	            { className: 'dropdown' },
-	            _react2.default.createElement('span', { className: 'caret', style: { margin: '10px 0 10px 5px', color: '#ccc' } })
-	          ),
-	          _react2.default.createElement(
-	            'span',
-	            { className: 'dropup' },
-	            _react2.default.createElement('span', { className: 'caret', style: { margin: '10px 0', color: '#ccc' } })
-	          )
-	        );
-	      }
-	      var sortCaret = sort ? _util2.default.renderReactSortCaret(sort) : defaultCaret;
-	      if (caretRender) {
-	        sortCaret = caretRender(sort, dataField);
-	      }
-	      var classes = (0, _classnames2['default'])(typeof className === 'function' ? className() : className, dataSort ? 'sort-column' : '');
+
+	      var classes = this.props.className + ' ' + (dataSort ? 'sort-column sortable' : '');
+	      classes += sort ? ' sort-' + sort : '';
 
 	      var title = typeof children === 'string' ? { title: children } : null;
+	      var childrenContent = dataSort ? _react2.default.createElement(
+	        'div',
+	        { className: 'sort-indicator' },
+	        children
+	      ) : children;
+
 	      return _react2.default.createElement(
 	        'th',
 	        _extends({ ref: 'header-col',
@@ -23899,8 +23770,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          style: thStyle,
 	          onClick: this.handleColumnClick
 	        }, title),
-	        children,
-	        sortCaret,
+	        childrenContent,
 	        _react2.default.createElement(
 	          'div',
 	          { onClick: function onClick(e) {
@@ -24001,7 +23871,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  hidden: _react.PropTypes.bool,
 	  hiddenOnInsert: _react.PropTypes.bool,
 	  searchable: _react.PropTypes.bool,
-	  className: _react.PropTypes.oneOfType([_react.PropTypes.string, _react.PropTypes.func]),
+	  className: _react.PropTypes.string,
 	  width: _react.PropTypes.string,
 	  sortFunc: _react.PropTypes.func,
 	  sortFuncExtraData: _react.PropTypes.any,
@@ -24055,15 +23925,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  sortIndicator: true
 	};
 
-	exports.default = TableHeaderColumn;
-
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "TableHeaderColumn.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+		exports.default = TableHeaderColumn;
 
 /***/ },
 /* 45 */
 /***/ function(module, exports, __webpack_require__) {
-
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 	'use strict';
 
@@ -24244,15 +24110,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  columnName: _react.PropTypes.string
 	};
 
-	exports.default = DateFilter;
-
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "Date.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+		exports.default = DateFilter;
 
 /***/ },
 /* 46 */
 /***/ function(module, exports, __webpack_require__) {
-
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 	'use strict';
 
@@ -24362,15 +24224,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  delay: _Const2.default.FILTER_DELAY
 	};
 
-	exports.default = TextFilter;
-
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "Text.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+		exports.default = TextFilter;
 
 /***/ },
 /* 47 */
 /***/ function(module, exports, __webpack_require__) {
-
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 	'use strict';
 
@@ -24480,15 +24338,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  delay: _Const2.default.FILTER_DELAY
 	};
 
-	exports.default = RegexFilter;
-
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "Regex.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+		exports.default = RegexFilter;
 
 /***/ },
 /* 48 */
 /***/ function(module, exports, __webpack_require__) {
-
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 	'use strict';
 
@@ -24614,15 +24468,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  columnName: _react.PropTypes.string
 	};
 
-	exports.default = SelectFilter;
-
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "Select.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+		exports.default = SelectFilter;
 
 /***/ },
 /* 49 */
 /***/ function(module, exports, __webpack_require__) {
-
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
 	'use strict';
 
@@ -24852,9 +24702,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  delay: _Const2.default.FILTER_DELAY
 	};
 
-	exports.default = NumberFilter;
-
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/henry/Projects/tm-react-bootstrap-table/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "Number.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+		exports.default = NumberFilter;
 
 /***/ }
 /******/ ])
