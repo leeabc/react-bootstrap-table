@@ -789,7 +789,7 @@ class BootstrapTable extends Component {
       if (Math.ceil(dataSize / this.state.sizePerPage) <= 1 &&
         this.props.ignoreSinglePage) return null;
       return (
-        <div className='react-bs-table-pagination ddes-table-pagination tm-pagination'>
+        <div className='react-bs-table-pagination table-pagination tm-pagination'>
           <PaginationList
             ref='pagination'
             currPage={ this.state.currPage }

@@ -14,7 +14,7 @@
   margin-right: 2px;
 }
 
-[data-toggle=table] .ddes-table-pagination.tm-pagination {
+[data-toggle=table] .table-pagination {
   bottom: 0;
   border-top-width: 1px;
   position: relative;
@@ -23,6 +23,11 @@
 
 .react-bs-table-container {
   position: relative;
+}
+
+.react-bs-table-pagination .dropdown {
+  border-left: 1px solid #ddd;
+  display: inline-block;
 }
 
 .react-bs-table-container .react-bs-table-search-form {

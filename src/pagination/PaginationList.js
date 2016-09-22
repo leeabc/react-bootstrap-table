@@ -15,20 +15,20 @@ class PaginationList extends Component {
       sizePerPage
     } = this.props;
 
-    if (page === prePage) {
-      page = (currPage - 1) < pageStartIndex ? pageStartIndex : currPage - 1;
-    } else if (page === nextPage) {
-      page = (currPage + 1) > this.lastPage ? this.lastPage : currPage + 1;
+    let pageNumber = 0
+    if (page === 'prev') {
+      pageNumber = (currPage - 1) < pageStartIndex ? pageStartIndex : currPage - 1;
+    } else if (page === 'next') {
+      pageNumber = (currPage + 1) > this.lastPage ? this.lastPage : currPage + 1;
     } else if (page === lastPage) {
-      page = this.lastPage;
+      pageNumber = this.lastPage;
     } else if (page === firstPage) {
-      page = pageStartIndex;
+      pageNumber = pageStartIndex;
     } else {
-      page = parseInt(page, 10);
+      pageNumber = parseInt(page, 10);
     }
-
-    if (page !== currPage) {
-      this.props.changePage(page, sizePerPage);
+    if (pageNumber !== currPage) {
+      this.props.changePage(pageNumber, sizePerPage);
     }
   }
 
@@ -64,14 +64,15 @@ class PaginationList extends Component {
     const pageBtns = this.makePage();
     const pageListStyle = {
       // override the margin-top defined in .pagination class in bootstrap.
-      marginTop: '0px'
+      margin: '0px'
     };
 
     const sizePerPageOptions = sizePerPageList.map((_sizePerPage) => {
       const pageText = _sizePerPage.text || _sizePerPage;
       const pageNum = _sizePerPage.value || _sizePerPage;
+      const selected = pageNum === sizePerPage ? 'selected' : '';
       return (
-        <li key={ pageText } role='presentation'>
+        <li key={ pageText } className={ selected } role='presentation'>
           <a role='menuitem'
             tabIndex='-1' href='#'
             data-page={ pageNum }
@@ -86,7 +87,7 @@ class PaginationList extends Component {
     let to = Math.min((sizePerPage * (currPage + offset) - 1), dataSize);
     if (to >= dataSize) to--;
     let total = paginationShowsTotal ? <span>
-      Record { start } -&nbsp;{ to + 1 } /&nbsp;{ dataSize }
+      Records { start + 1 } -&nbsp;{ to + 1 } /&nbsp;{ dataSize }
     </span> : null;
 
     if (typeof paginationShowsTotal === 'function') {
@@ -97,101 +98,59 @@ class PaginationList extends Component {
       visibility: hideSizePerPage ? 'hidden' : 'visible'
     };
 
-    const pagiContainerStyle = {
-      textAlign: 'right'
-    };
-
     return (
-      <div className='row'>
-        <div className='col-md-12' style={ pagiContainerStyle }>
-          { total }{ ' ' }
+      <div className='table-pagination-block'>
+        <div className='pagination-records'>{ total }{ ' ' }</div>
+        <div className='dropdown' style={ dropDownStyle }>
+          <button className='btn btn-xs btn-link dropdown-toggle'
+            type='button' id='pageDropDown' data-toggle='dropdown'
+            aria-expanded='true'>
+            { sizePerPage } per page
+            <span>
+              { ' ' }
+              <span className='caret'/>
+            </span>
+          </button>
+          <ul className='dropdown-menu dropdown-menu-multi-select' role='menu'>
+            { sizePerPageOptions }
+          </ul>
+        </div>
+        <div className='pagination-input'>
+          <input type='text' value={ this.props.currPage }/> /{ this.totalPages }
+        </div>
+        <div>
           <ul className='pagination' style={ pageListStyle }>
             { pageBtns }
           </ul>
-          <span className='dropdown' style={ dropDownStyle }>
-            <button className='btn btn-default btn-border dropdown-toggle'
-              type='button' id='pageDropDown' data-toggle='dropdown'
-              aria-expanded='true'>
-              { sizePerPage }
-              <span>
-                { ' ' }
-                <span className='caret'/>
-              </span>
-            </button>
-            <ul className='dropdown-menu' role='menu' aria-labelledby='pageDropDown'>
-              { sizePerPageOptions }
-            </ul>
-          </span>
-          <span className='per-page'> per page</span>
         </div>
       </div>
     );
   }
 
   makePage() {
-    const pages = this.getPages();
+    const pages = [
+      { node: <span className='fa fa-angle-left'></span>, key: 'prev' },
+      { node: <span className='fa fa-angle-right'></span>, key: 'next' }
+    ];
     return pages.map(function(page) {
-      const isActive = page === this.props.currPage;
       let disabled = false;
-      let hidden = false;
       if (this.props.currPage === this.props.pageStartIndex &&
-        (page === this.props.firstPage || page === this.props.prePage)) {
+        (page.key === 'prev')) {
         disabled = true;
-        hidden = true;
       }
       if (this.props.currPage === this.lastPage &&
-        (page === this.props.nextPage || page === this.props.lastPage)) {
+        (page.key === 'next')) {
         disabled = true;
-        hidden = true;
       }
-      page = page === 0 ? 1 : page;
       return (
-        <PageButton key={ page }
+        <PageButton key={ page.key }
+          btnKey={ page.key }
           changePage={ this.changePage }
-          active={ isActive }
-          disable={ disabled }
-          hidden={ hidden }>
-          { page }
+          disable={ disabled }>
+          { page.node }
         </PageButton>
       );
     }, this);
-  }
-
-  getPages() {
-    let pages;
-    let endPage = this.totalPages;
-    if (endPage <= 0) return [];
-    let startPage = Math.max(
-      this.props.currPage - Math.floor(this.props.paginationSize / 2),
-      this.props.pageStartIndex
-    );
-    endPage = startPage + this.props.paginationSize - 1;
-
-    if (endPage > this.lastPage) {
-      endPage = this.lastPage;
-      startPage = endPage - this.props.paginationSize + 1;
-    }
-
-    if (startPage !== this.props.pageStartIndex && this.totalPages > this.props.paginationSize) {
-      pages = [ this.props.firstPage, this.props.prePage ];
-    } else if (this.totalPages > 1) {
-      pages = [ this.props.prePage ];
-    } else {
-      pages = [];
-    }
-
-    for (let i = startPage; i <= endPage; i++) {
-      if (i >= this.props.pageStartIndex) pages.push(i);
-    }
-
-    if (endPage < this.lastPage) {
-      pages.push(this.props.nextPage);
-      pages.push(this.props.lastPage);
-    } else if (endPage === this.lastPage && this.props.currPage !== this.lastPage) {
-      pages.push(this.props.nextPage);
-    }
-
-    return pages;
   }
 }
 PaginationList.propTypes = {

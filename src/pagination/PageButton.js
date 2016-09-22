@@ -9,7 +9,7 @@ class PageButton extends Component {
 
   pageBtnClick = e => {
     e.preventDefault();
-    this.props.changePage(e.currentTarget.textContent);
+    this.props.changePage(this.props.btnKey);
   }
 
   render() {
@@ -31,6 +31,7 @@ PageButton.propTypes = {
   active: PropTypes.bool,
   disable: PropTypes.bool,
   hidden: PropTypes.bool,
+  btnKey: PropTypes.string,
   children: PropTypes.node
 };
 
