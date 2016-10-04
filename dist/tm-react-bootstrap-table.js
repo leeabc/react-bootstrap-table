@@ -728,7 +728,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	        });
 	      } else {
 	        // #125
-	        if (!options.page && page > Math.ceil(nextProps.data.length / sizePerPage)) {
+	        // remove !options.page for #709
+	        if (page > Math.ceil(nextProps.data.length / sizePerPage)) {
 	          page = 1;
 	        }
 	        var sortInfo = this.store.getSortInfo();
@@ -1454,7 +1455,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  CELL_EDIT_NONE: 'none',
 	  CELL_EDIT_CLICK: 'click',
 	  CELL_EDIT_DBCLICK: 'dbclick',
-	  SIZE_PER_PAGE_LIST: [10, 25, 30, 50],
+	  SIZE_PER_PAGE_LIST: [15, 30, 50, 100],
 	  PAGINATION_SIZE: 5,
 	  NO_DATA_TEXT: 'There is no data to display',
 	  SHOW_ONLY_SELECT: 'Show Selected Only',
@@ -1828,7 +1829,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 
 	    _this.handleEditCell = function (rowIndex, columnIndex, e) {
-	      _this.editing = true;
 	      if (_this._isSelectRowDefined()) {
 	        columnIndex--;
 	        if (_this.props.selectRow.hideSelectColumn) columnIndex++;
@@ -1858,7 +1858,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	    _this.state = {
 	      currEditCell: null
 	    };
-	    _this.editing = false;
 	    return _this;
 	  }
 
@@ -1881,7 +1880,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var tableRows = this.props.data.map(function (data, r) {
 	        var tableColumns = this.props.columns.map(function (column, i) {
 	          var fieldValue = data[column.name];
-	          if (this.editing && column.name !== this.props.keyField && // Key field can't be edit
+	          if (column.name !== this.props.keyField && // Key field can't be edit
 	          column.editable && // column is editable? default is true, user can set it false
 	          this.state.currEditCell !== null && this.state.currEditCell.rid === r && this.state.currEditCell.cid === i) {
 	            var editable = column.editable;
@@ -1974,8 +1973,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	          )
 	        ));
 	      }
-
-	      this.editing = false;
 
 	      return _react2.default.createElement(
 	        'div',
@@ -21309,13 +21306,14 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	      var offset = Math.abs(_Const2.default.PAGE_START_INDEX - pageStartIndex);
 	      var start = (currPage - pageStartIndex) * sizePerPage;
+	      start = dataSize === 0 ? 0 : start + 1;
 	      var to = Math.min(sizePerPage * (currPage + offset) - 1, dataSize);
 	      if (to >= dataSize) to--;
 	      var total = _react2.default.createElement(
 	        'span',
 	        null,
 	        'Records ',
-	        start + 1,
+	        start,
 	        ' - ',
 	        to + 1,
 	        ' / ',
@@ -21479,14 +21477,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var classes = (0, _classnames2.default)({
 	        'active': this.props.active,
 	        'disabled': this.props.disable,
-	        'hidden': this.props.hidden
+	        'hidden': this.props.hidden,
+	        'page-item': true
 	      });
 	      return _react2.default.createElement(
 	        'li',
 	        { className: classes },
 	        _react2.default.createElement(
 	          'a',
-	          { href: '#', onClick: this.pageBtnClick },
+	          { href: '#', onClick: this.pageBtnClick, className: 'page-link' },
 	          this.props.children
 	        )
 	      );
@@ -23639,6 +23638,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _classnames = __webpack_require__(3);
+
+	var _classnames2 = _interopRequireDefault(_classnames);
+
 	var _Const = __webpack_require__(4);
 
 	var _Const2 = _interopRequireDefault(_Const);
@@ -23746,12 +23749,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var defaultCaret = void 0;
 	      var _props = this.props;
 	      var dataAlign = _props.dataAlign;
+	      var dataField = _props.dataField;
 	      var headerAlign = _props.headerAlign;
 	      var hidden = _props.hidden;
 	      var sort = _props.sort;
 	      var dataSort = _props.dataSort;
 	      var children = _props.children;
 	      var caretRender = _props.caretRender;
+	      var className = _props.className;
 
 	      var thStyle = {
 	        textAlign: headerAlign || dataAlign,
@@ -23876,7 +23881,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  hidden: _react.PropTypes.bool,
 	  hiddenOnInsert: _react.PropTypes.bool,
 	  searchable: _react.PropTypes.bool,
-	  className: _react.PropTypes.string,
+	  className: _react.PropTypes.oneOfType([_react.PropTypes.string, _react.PropTypes.func]),
 	  width: _react.PropTypes.string,
 	  sortFunc: _react.PropTypes.func,
 	  sortFuncExtraData: _react.PropTypes.any,
