@@ -19,7 +19,7 @@ class TableBody extends Component {
   }
 
   render() {
-    const tableClasses = classSet('table ddes-table', {
+    let tableClasses = classSet('table ddes-table', {
       'table-striped': this.props.striped,
       'table-bordered': this.props.bordered,
       'table-hover': this.props.hover,
@@ -123,11 +123,22 @@ class TableBody extends Component {
       );
     }, this);
 
+    let emptyTableMask = null;
+    let bodyContainerClass = 'react-bs-container-body';
+
     if (tableRows.length === 0) {
+      emptyTableMask = (
+        <div className='empty-table-mask'>
+          { this.props.noDataText || Const.NO_DATA_TEXT }
+        </div>
+      );
+      tableClasses += ' react-bs-table-no-data hide';
+      bodyContainerClass += ' empty-table-container';
+
       tableRows.push(
-        <TableRow key='##table-empty##'>
+        <TableRow key='##table-empty##' className='react-bs-table-no-data-tr'>
           <td colSpan={ this.props.columns.length + (isSelectRowDefined ? 1 : 0) }
-              className='react-bs-table-no-data'>
+              className='react-bs-table-no-data-td'>
               { this.props.noDataText || Const.NO_DATA_TEXT }
           </td>
         </TableRow>
@@ -136,8 +147,9 @@ class TableBody extends Component {
 
     return (
       <div ref='container'
-        className={ classSet('react-bs-container-body', this.props.bodyContainerClass) }
+        className={ classSet(bodyContainerClass, this.props.bodyContainerClass) }
         style={ this.props.style }>
+        { emptyTableMask }
         <table className={ tableClasses }>
           { tableHeader }
           <tbody ref='tbody'>
