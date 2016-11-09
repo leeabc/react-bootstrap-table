@@ -1460,7 +1460,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  CELL_EDIT_DBCLICK: 'dbclick',
 	  SIZE_PER_PAGE_LIST: [15, 30, 50, 100],
 	  PAGINATION_SIZE: 5,
-	  NO_DATA_TEXT: 'There is no data to display',
+	  NO_DATA_TEXT: 'No data to display.',
 	  SHOW_ONLY_SELECT: 'Show Selected Only',
 	  SHOW_ALL: 'Show All',
 	  EXPORT_CSV_TEXT: 'Export to CSV',
@@ -1964,14 +1964,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	        );
 	      }, this);
 
+	      var emptyTableMask = null;
+	      var bodyContainerClass = 'react-bs-container-body';
+
 	      if (tableRows.length === 0) {
+	        emptyTableMask = _react2.default.createElement(
+	          'div',
+	          { className: 'empty-table-mask' },
+	          this.props.noDataText || _Const2.default.NO_DATA_TEXT
+	        );
+	        tableClasses += ' react-bs-table-no-data hide';
+	        bodyContainerClass += ' empty-table-container';
+
 	        tableRows.push(_react2.default.createElement(
 	          _TableRow2.default,
-	          { key: '##table-empty##' },
+	          { key: '##table-empty##', className: 'react-bs-table-no-data-tr' },
 	          _react2.default.createElement(
 	            'td',
 	            { colSpan: this.props.columns.length + (isSelectRowDefined ? 1 : 0),
-	              className: 'react-bs-table-no-data' },
+	              className: 'react-bs-table-no-data-td' },
 	            this.props.noDataText || _Const2.default.NO_DATA_TEXT
 	          )
 	        ));
@@ -1980,8 +1991,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	      return _react2.default.createElement(
 	        'div',
 	        { ref: 'container',
-	          className: (0, _classnames2.default)('react-bs-container-body', this.props.bodyContainerClass),
+	          className: (0, _classnames2.default)(bodyContainerClass, this.props.bodyContainerClass),
 	          style: this.props.style },
+	        emptyTableMask,
 	        _react2.default.createElement(
 	          'table',
 	          { className: tableClasses },
