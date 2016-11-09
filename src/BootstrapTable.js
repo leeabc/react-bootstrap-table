@@ -934,6 +934,9 @@ class BootstrapTable extends Component {
       }
     } else {
       React.Children.forEach(this.props.children, (child, i) => {
+        if (header.childNodes[0].classList.contains('col-chkbox')) {
+          i++;
+        }
         if (child.props.width) {
           header.childNodes[i].style.width = `${child.props.width}px`;
           header.childNodes[i].style.minWidth = `${child.props.width}px`;

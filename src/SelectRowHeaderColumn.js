@@ -4,7 +4,7 @@ class SelectRowHeaderColumn extends Component {
 
   render() {
     return (
-      <th className='col-chkbox' style={ { textAlign: 'center' } }>
+      <th className='col-chkbox'>
         { this.props.children }
       </th>
     );

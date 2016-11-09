@@ -532,6 +532,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	        }
 	      } else {
 	        _react2.default.Children.forEach(_this.props.children, function (child, i) {
+	          if (header.childNodes[0].classList.contains('col-chkbox')) {
+	            i++;
+	          }
 	          if (child.props.width) {
 	            header.childNodes[i].style.width = child.props.width + 'px';
 	            header.childNodes[i].style.minWidth = child.props.width + 'px';
@@ -1713,7 +1716,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'th',
-	        { className: 'col-chkbox', style: { textAlign: 'center' } },
+	        { className: 'col-chkbox' },
 	        this.props.children
 	      );
 	    }
