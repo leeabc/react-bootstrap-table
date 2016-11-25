@@ -39,15 +39,6 @@ gulp.task('prod', ['umdBuild'], function() {
   gulp.src(['./src/**/*.js', './src/*js'])
     .pipe(babel())
     .pipe(gulp.dest('./lib'));
-  // build the css
-  gulp.src('./css/tm-react-bootstrap-table.css')
-    .pipe(concatCss("./tm-react-bootstrap-table.min.css"))
-    .pipe(cssmin())
-    .pipe(gulp.dest('./dist'));
-  gulp.src(['./css/tm-react-bootstrap-table.css', './css/toastr.css'])
-    .pipe(concatCss('./tm-react-bootstrap-table-all.min.css'))
-    .pipe(cssmin())
-    .pipe(gulp.dest('./dist'));
 });
 
 // build umd bundles for https://npmcdn.com/ and for browser <script> tag

@@ -46,7 +46,12 @@ class PaginationList extends Component {
 
   changePageByInput = e => {
     if (e.key !== 'Enter') return
-    this.changePage(this.state.pageInput)
+
+    const page = this.state.pageInput > this.totalPages
+      ? this.totalPages
+      : this.state.pageInput
+
+    this.changePage(page)
   }
 
   changeSizePerPage = e => {
@@ -57,8 +62,8 @@ class PaginationList extends Component {
     if (selectSize !== this.props.sizePerPage) {
       this.totalPages = Math.ceil(this.props.dataSize / selectSize);
       this.lastPage = this.props.pageStartIndex + this.totalPages - 1;
-      if (currPage > this.lastPage) currPage = this.lastPage;
-      this.props.changePage(currPage, selectSize);
+      this.props.changePage(1, selectSize);
+      this.setState({ pageInput: 1 });
       if (this.props.onSizePerPageList) {
         this.props.onSizePerPageList(selectSize);
       }
