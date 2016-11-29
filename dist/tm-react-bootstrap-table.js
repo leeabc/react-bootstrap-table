@@ -8972,6 +8972,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 
 	  _createClass(PaginationList, [{
+	    key: 'componentWillReceiveProps',
+	    value: function componentWillReceiveProps(nextProps) {
+	      if (nextProps.currPage !== this.state.pageInput) {
+	        this.setState({ pageInput: nextProps.currPage });
+	      }
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
 	      var _this2 = this;

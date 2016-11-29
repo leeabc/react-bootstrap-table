@@ -70,6 +70,12 @@ class PaginationList extends Component {
     }
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.currPage !== this.state.pageInput) {
+      this.setState({ pageInput: nextProps.currPage })
+    }
+  }
+
   render() {
     const {
       currPage,
