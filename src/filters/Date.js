@@ -1,6 +1,7 @@
+import PropTypes from 'prop-types';
 /* eslint quotes: 0 */
 /* eslint max-len: 0 */
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import Const from '../Const';
 
 const legalComparators = [ '=', '>', '>=', '<', '<=', '!=' ];

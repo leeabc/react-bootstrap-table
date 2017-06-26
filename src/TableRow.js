@@ -1,5 +1,6 @@
 import classSet from 'classnames';
-import React, { Component, PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 
 class TableRow extends Component {
 

@@ -1,6 +1,7 @@
+import PropTypes from 'prop-types';
 /* eslint no-alert: 0 */
 /* eslint max-len: 0 */
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import classSet from 'classnames';
 import Const from './Const';
 import TableHeader from './TableHeader';
@@ -1060,11 +1061,11 @@ BootstrapTable.propTypes = {
     onSortChange: PropTypes.func,
     onPageChange: PropTypes.func,
     onSizePerPageList: PropTypes.func,
-    onFilterChange: React.PropTypes.func,
-    onSearchChange: React.PropTypes.func,
-    onAddRow: React.PropTypes.func,
-    onExportToCSV: React.PropTypes.func,
-    onCellEdit: React.PropTypes.func,
+    onFilterChange: PropTypes.func,
+    onSearchChange: PropTypes.func,
+    onAddRow: PropTypes.func,
+    onExportToCSV: PropTypes.func,
+    onCellEdit: PropTypes.func,
     noDataText: PropTypes.oneOfType([ PropTypes.string, PropTypes.object ]),
     handleConfirmDeleteRow: PropTypes.func,
     prePage: PropTypes.string,
